@@ -11,7 +11,7 @@ from nngeometry.metrics import FIM
 from nngeometry.object import PMatKFAC, PMatDiag, PVector
 
 
-def L2SP_Fisher(model, w0_dic, new_layers, num_lowlrs, inp):
+def L2SP_Fisher(model, w0_dic, new_layers, num_lowlrs, loader):
     existing_l2_reg = None
     new_l2_reg = None
 
@@ -64,21 +64,23 @@ def L2SP_Fisher(model, w0_dic, new_layers, num_lowlrs, inp):
     l2_reg = existing_l2_reg * 0.004 + new_l2_reg * 0.0005
 
     # Compute Fisher loss
-    fisher_reg = EWC(model, inp).penalty(model)
+    fisher_reg = EWC(model, loader).penalty(model)
     l2_reg += fisher_reg * 0.004
     # print(l2_reg)
 
     return l2_reg
 
 class EWC(object):
-    def __init__(self, model: nn.Module, train_set):
+    def __init__(self, model: nn.Module, loader):
         self.model = model
-        self.train_set = train_set
+        # self.train_set = train_set
+        self.loader = loader
         self.Fisher, self.v0 = self.compute_fisher(self.model, PMatKFAC)
 
     def compute_fisher(self, model, Representation):
-        fisher_set = deepcopy(self.train_set)
-        fisher_loader = DataLoader(fisher_set, batch_size=50, shuffle=False, num_workers=6)
+        # fisher_set = deepcopy(self.train_set)
+        # fisher_loader = DataLoader(fisher_set, batch_size=50, shuffle=False, num_workers=6)
+        fisher_loader = self.loader
         F_diag = FIM(model=model,
                      loader=fisher_loader,
                      representation=Representation,
