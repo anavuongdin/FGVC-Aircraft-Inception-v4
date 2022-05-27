@@ -67,7 +67,7 @@ class EWC(object):
     def __init__(self, model: nn.Module, train_set):
         self.model = model
         self.train_set = train_set
-        self.Fisher, self.v0 = self.compute_fisher(self.model, PMatKFA)
+        self.Fisher, self.v0 = self.compute_fisher(self.model, PMatKFAC)
 
     def compute_fisher(self, model, Representation):
         fisher_set = deepcopy(self.train_set)
