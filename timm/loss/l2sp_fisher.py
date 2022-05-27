@@ -1,4 +1,5 @@
 import torch
+import torch.nn as nn
 from nngeometry.metrics import FIM
 from nngeometry.object import PMatKFAC, PMatDiag, PVector
 
