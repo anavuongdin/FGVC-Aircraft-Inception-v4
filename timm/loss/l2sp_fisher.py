@@ -1,5 +1,12 @@
 import torch
 import torch.nn as nn
+import numpy as np
+import torch.optim as optim
+from torch.utils.data import DataLoader
+from copy import deepcopy
+from torch.nn import functional as F
+from tqdm.notebook import tqdm
+
 from nngeometry.metrics import FIM
 from nngeometry.object import PMatKFAC, PMatDiag, PVector
 
