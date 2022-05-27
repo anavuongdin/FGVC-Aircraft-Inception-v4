@@ -84,7 +84,7 @@ class EWC(object):
         F_diag = FIM(model=model,
                      loader=fisher_loader,
                      representation=Representation,
-                     n_output=30,
+                     n_output=200,
                      variant='classif_logits',
                      device='cuda')
 
