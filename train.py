@@ -37,7 +37,7 @@ from timm.data import create_dataset, create_loader, resolve_data_config, Mixup,
 from timm.models import create_model, safe_model_name, resume_checkpoint, load_checkpoint,\
     convert_splitbn_model, model_parameters
 from timm.utils import *
-from timm.loss import LabelSmoothingCrossEntropy, SoftTargetCrossEntropy, JsdCrossEntropy, L2SP
+from timm.loss import LabelSmoothingCrossEntropy, SoftTargetCrossEntropy, JsdCrossEntropy, L2SP, L2SP_Fisher
 from timm.optim import create_optimizer
 from timm.scheduler import create_scheduler
 from timm.utils import ApexScaler, NativeScaler
@@ -677,7 +677,7 @@ def train_one_epoch(
             output, hidden = model(input)
             loss = loss_fn(output, target)
             if args.L2SP:
-                l2_reg = L2SP(model, w0_dict, new_layers, num_lowlrs)
+                l2_reg = L2SP_Fisher(model, w0_dict, new_layers, num_lowlrs, input)
                 loss += l2_reg
 
         # save hidden states
