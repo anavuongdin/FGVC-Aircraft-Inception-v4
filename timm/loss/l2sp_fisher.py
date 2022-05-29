@@ -7,11 +7,8 @@ from copy import deepcopy
 from torch.nn import functional as F
 from tqdm.notebook import tqdm
 
-from nngeometry.metrics import FIM
-from nngeometry.object import PMatKFAC, PMatDiag, PVector
 
-
-def L2SP_Fisher(model, w0_dic, new_layers, num_lowlrs, loader):
+def L2SP_Fisher(model, w0_dic, new_layers, num_lowlrs, inp, output):
     existing_l2_reg = None
     new_l2_reg = None
 
@@ -64,36 +61,40 @@ def L2SP_Fisher(model, w0_dic, new_layers, num_lowlrs, loader):
     l2_reg = existing_l2_reg * 0.004 + new_l2_reg * 0.0005
 
     # Compute Fisher loss
-    fisher_reg = EWC(model, loader).penalty(model)
+    FIM, order = Fisher(model, inp, output).get_FIM()
+    fisher_reg = torch.pow(w - w0, 2).sum() * FIM[0][order[name]]
+    # print("Fisher reg: {}".format(fisher_reg.shape))
     l2_reg += fisher_reg * 0.004
     # print(l2_reg)
 
     return l2_reg
 
-class EWC(object):
-    def __init__(self, model: nn.Module, loader):
-        self.model = model
-        # self.train_set = train_set
-        self.loader = loader
-        self.Fisher, self.v0 = self.compute_fisher(self.model, PMatKFAC)
+class Fisher(object):
+    def __init__(self, model, inp, output):
+      self.model = deepcopy(model)
+      # self.output = output
+      self.inp = inp.clone().detach()
+      self.N = len(self.inp)
+      # print("Input: {}".format(self.inp.shape))
+    
+    def get_FIM(self):
+      self.output, _ = self.model(self.inp)
+      avg = (self.output.sum() / self.N).detach()
+      # print("Output: {}".format(output.shape))
+      f = F.log_softmax(self.output, dim=1).sum()
+      f.backward()
+      # print("T: {}".format(T.shape))
+      order = {}
+      counter = 0
+      with torch.no_grad():
+        grads = []
+        for name, param in self.model.named_parameters():
+          grads.append(param.grad.view(-1))
+          order[name] = counter
+          counter += 1
+        
+        grads = torch.cat(grads).unsqueeze(0)
 
-    def compute_fisher(self, model, Representation):
-        # fisher_set = deepcopy(self.train_set)
-        # fisher_loader = DataLoader(fisher_set, batch_size=50, shuffle=False, num_workers=6)
-        fisher_loader = self.loader
-        F_diag = FIM(model=model,
-                     loader=fisher_loader,
-                     representation=Representation,
-                     n_output=200,
-                     variant='classif_logits',
-                     device='cuda')
+      # print("Grads: {}".format(grads.shape))
+      return torch.pow(grads, 2) * avg, order
 
-        v0 = PVector.from_model(model).clone().detach()
-
-        return F_diag, v0
-
-    def penalty(self, model: nn.Module):
-        v = PVector.from_model(model)
-        regularization_loss = self.Fisher.vTMv(v - self.v0)
-
-        return regularization_loss

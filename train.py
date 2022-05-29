@@ -677,7 +677,7 @@ def train_one_epoch(
             output, hidden = model(input)
             loss = loss_fn(output, target)
             if args.L2SP:
-                l2_reg = L2SP_Fisher(model, w0_dict, new_layers, num_lowlrs, loader)
+                l2_reg = L2SP_Fisher(model, w0_dict, new_layers, num_lowlrs, input, output)
                 loss += l2_reg
 
         # save hidden states
