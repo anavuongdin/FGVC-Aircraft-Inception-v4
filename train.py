@@ -639,7 +639,9 @@ def main():
         pass
     if best_metric is not None:
         _logger.info('*** Best metric: {0} (epoch {1})'.format(best_metric, best_epoch))
-
+        torch.save({
+            'model_state_dict': model.state_dict(),
+            }, './experiments/model.pt')
 
 def train_one_epoch(
         epoch, model, loader, optimizer, loss_fn, args,
