@@ -69,7 +69,6 @@ def L2SP_Fisher(model, w0_dic, new_layers, num_lowlrs, inp, output):
     # Compute Fisher loss
     
     # print("Fisher reg: {}".format(fisher_reg.shape))
-    l2_reg += fisher_reg * 0.004
     # print(l2_reg)
 
     return l2_reg
