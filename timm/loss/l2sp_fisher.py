@@ -83,7 +83,6 @@ class Fisher(object):
     
     def get_FIM(self):
       self.output, _ = self.model(self.inp)
-      avg = (self.output.sum() / self.N).detach()
       # print("Output: {}".format(output.shape))
       f = F.log_softmax(self.output, dim=1).sum()
       f.backward()
@@ -100,5 +99,5 @@ class Fisher(object):
         grads = torch.cat(grads).unsqueeze(0)
 
       # print("Grads: {}".format(grads.shape))
-      return torch.pow(grads, 2) * avg, order
+      return torch.pow(grads, 2) / self.N, order
 
