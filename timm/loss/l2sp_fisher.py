@@ -11,7 +11,9 @@ from tqdm.notebook import tqdm
 def L2SP_Fisher(model, w0_dic, new_layers, num_lowlrs, inp, output):
     existing_l2_reg = None
     new_l2_reg = None
+    existing_fisher_reg = None
 
+    FIM, order = Fisher(model, inp, output).get_FIM()
     for name, w in model.named_parameters():
         # print(name)
         # if 'weight' not in name:  # I don't know if that is true: I was told that Facebook regularized biases too.
@@ -46,6 +48,10 @@ def L2SP_Fisher(model, w0_dic, new_layers, num_lowlrs, inp, output):
                 else:
                     existing_l2_reg += 5 * (torch.pow(w - w0, 2).sum() / 2)
                 # print('existing: ' + str(existing_l2_reg) + ' ' + str(name))
+                if existing_fisher_reg is None:
+                    existing_fisher_reg = 10 * (torch.pow(w - w0, 2).sum() / 2) * FIM[0][order[name]]
+                else:
+                    existing_fisher_reg += 5 * (torch.pow(w - w0, 2).sum() / 2) * FIM[0][order[name]]
             else:
                 if new_l2_reg is None:
                     new_l2_reg = torch.pow(w, 2).sum() / 2
@@ -58,11 +64,10 @@ def L2SP_Fisher(model, w0_dic, new_layers, num_lowlrs, inp, output):
 
     # print('existing: ' + str(existing_l2_reg))
     # print('new: ' + str(new_l2_reg))
-    l2_reg = existing_l2_reg * 0.004 + new_l2_reg * 0.0005
+    l2_reg = existing_l2_reg * 0.004 + new_l2_reg * 0.0005 + existing_fisher_reg * 0.00004
 
     # Compute Fisher loss
-    FIM, order = Fisher(model, inp, output).get_FIM()
-    fisher_reg = torch.pow(w - w0, 2).sum() * FIM[0][order[name]]
+    
     # print("Fisher reg: {}".format(fisher_reg.shape))
     l2_reg += fisher_reg * 0.004
     # print(l2_reg)
