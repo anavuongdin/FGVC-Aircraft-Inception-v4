@@ -23,6 +23,7 @@ import yaml
 import os
 import logging
 from collections import OrderedDict
+from copy import deepcopy
 from contextlib import suppress
 from datetime import datetime
 
@@ -37,10 +38,12 @@ from timm.data import create_dataset, create_loader, resolve_data_config, Mixup,
 from timm.models import create_model, safe_model_name, resume_checkpoint, load_checkpoint,\
     convert_splitbn_model, model_parameters
 from timm.utils import *
-from timm.loss import LabelSmoothingCrossEntropy, SoftTargetCrossEntropy, JsdCrossEntropy, L2SP, L2SP_Fisher
+from timm.loss import LabelSmoothingCrossEntropy, SoftTargetCrossEntropy, JsdCrossEntropy, L2SP, L2SP_Fisher, Fisher
 from timm.optim import create_optimizer
 from timm.scheduler import create_scheduler
 from timm.utils import ApexScaler, NativeScaler
+
+original_model = None
 
 try:
     from apex import amp
@@ -573,6 +576,8 @@ def main():
         with open(os.path.join(output_dir, 'args.yaml'), 'w') as f:
             f.write(args_text)
         w0_dict = None
+        global original_model
+        original_model = deepcopy(model)
         if args.L2SP:
             w0_dict = {}
             # Extract the intitial weights transferred from ImageNet
@@ -660,6 +665,7 @@ def train_one_epoch(
     data_time_m = AverageMeter()
     losses_m = AverageMeter()
 
+    global original_model
     model.train()
 
     end = time.time()
@@ -679,7 +685,8 @@ def train_one_epoch(
             output, hidden = model(input)
             loss = loss_fn(output, target)
             if args.L2SP:
-                l2_reg = L2SP_Fisher(model, w0_dict, new_layers, num_lowlrs, input, output)
+                FIM, order = Fisher(original_model, input).get_FIM()
+                l2_reg = L2SP_Fisher(model, w0_dict, new_layers, num_lowlrs, FIM, order)
                 loss += l2_reg
 
         # save hidden states

@@ -8,12 +8,11 @@ from torch.nn import functional as F
 from tqdm.notebook import tqdm
 
 
-def L2SP_Fisher(model, w0_dic, new_layers, num_lowlrs, inp, output):
+def L2SP_Fisher(model, w0_dic, new_layers, num_lowlrs, FIM, order):
     existing_l2_reg = None
     new_l2_reg = None
     existing_fisher_reg = None
 
-    FIM, order = Fisher(model, inp, output).get_FIM()
     for name, w in model.named_parameters():
         # print(name)
         # if 'weight' not in name:  # I don't know if that is true: I was told that Facebook regularized biases too.
@@ -74,7 +73,7 @@ def L2SP_Fisher(model, w0_dic, new_layers, num_lowlrs, inp, output):
     return l2_reg
 
 class Fisher(object):
-    def __init__(self, model, inp, output):
+    def __init__(self, model, inp):
       self.model = deepcopy(model)
       # self.output = output
       self.inp = inp.clone().detach()
