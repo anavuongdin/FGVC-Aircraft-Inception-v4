@@ -1,0 +1,2120 @@
+Training with a single process on 1 GPUs.
+using Torch native amp
+Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-cadene/inceptionv4-8e4777a0.pth)
+Downloading: "https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-cadene/inceptionv4-8e4777a0.pth" to /root/.cache/torch/hub/checkpoints/inceptionv4-8e4777a0.pth
+new_layers 1
+Model inception_v4 created, param count:41304201
+Use FGVC mean&std
+Data processing configuration for current model + dataset:
+	input_size: (3, 299, 299)
+	interpolation: bicubic
+	mean: (0.48933587508932375, 0.5183537408957618, 0.5387914411673883)
+	std: (0.22388883112804625, 0.21641635409388751, 0.24615605842636115)
+	crop_pct: 0.875
+last_linear.bias
+last_linear.weight
+features.21.branch3.1.bn.bias
+features.21.branch3.1.bn.weight
+features.21.branch3.1.conv.weight
+features.21.branch2_3b.bn.bias
+features.21.branch2_3b.bn.weight
+features.21.branch2_3b.conv.weight
+features.21.branch2_3a.bn.bias
+features.21.branch2_3a.bn.weight
+features.21.branch2_3a.conv.weight
+features.21.branch2_2.bn.bias
+features.21.branch2_2.bn.weight
+features.21.branch2_2.conv.weight
+features.21.branch2_1.bn.bias
+features.21.branch2_1.bn.weight
+features.21.branch2_1.conv.weight
+features.21.branch2_0.bn.bias
+features.21.branch2_0.bn.weight
+features.21.branch2_0.conv.weight
+features.21.branch1_1b.bn.bias
+features.21.branch1_1b.bn.weight
+features.21.branch1_1b.conv.weight
+features.21.branch1_1a.bn.bias
+features.21.branch1_1a.bn.weight
+features.21.branch1_1a.conv.weight
+features.21.branch1_0.bn.bias
+features.21.branch1_0.bn.weight
+features.21.branch1_0.conv.weight
+features.21.branch0.bn.bias
+features.21.branch0.bn.weight
+features.21.branch0.conv.weight
+features.20.branch3.1.bn.bias
+features.20.branch3.1.bn.weight
+features.20.branch3.1.conv.weight
+features.20.branch2_3b.bn.bias
+features.20.branch2_3b.bn.weight
+features.20.branch2_3b.conv.weight
+features.20.branch2_3a.bn.bias
+features.20.branch2_3a.bn.weight
+features.20.branch2_3a.conv.weight
+features.20.branch2_2.bn.bias
+features.20.branch2_2.bn.weight
+features.20.branch2_2.conv.weight
+features.20.branch2_1.bn.bias
+features.20.branch2_1.bn.weight
+features.20.branch2_1.conv.weight
+features.20.branch2_0.bn.bias
+features.20.branch2_0.bn.weight
+features.20.branch2_0.conv.weight
+features.20.branch1_1b.bn.bias
+features.20.branch1_1b.bn.weight
+features.20.branch1_1b.conv.weight
+features.20.branch1_1a.bn.bias
+features.20.branch1_1a.bn.weight
+features.20.branch1_1a.conv.weight
+features.20.branch1_0.bn.bias
+features.20.branch1_0.bn.weight
+features.20.branch1_0.conv.weight
+features.20.branch0.bn.bias
+features.20.branch0.bn.weight
+features.20.branch0.conv.weight
+features.19.branch3.1.bn.bias
+features.19.branch3.1.bn.weight
+features.19.branch3.1.conv.weight
+features.19.branch2_3b.bn.bias
+features.19.branch2_3b.bn.weight
+features.19.branch2_3b.conv.weight
+features.19.branch2_3a.bn.bias
+features.19.branch2_3a.bn.weight
+features.19.branch2_3a.conv.weight
+features.19.branch2_2.bn.bias
+features.19.branch2_2.bn.weight
+features.19.branch2_2.conv.weight
+features.19.branch2_1.bn.bias
+features.19.branch2_1.bn.weight
+features.19.branch2_1.conv.weight
+features.19.branch2_0.bn.bias
+features.19.branch2_0.bn.weight
+features.19.branch2_0.conv.weight
+features.19.branch1_1b.bn.bias
+features.19.branch1_1b.bn.weight
+features.19.branch1_1b.conv.weight
+features.19.branch1_1a.bn.bias
+features.19.branch1_1a.bn.weight
+features.19.branch1_1a.conv.weight
+features.19.branch1_0.bn.bias
+features.19.branch1_0.bn.weight
+features.19.branch1_0.conv.weight
+features.19.branch0.bn.bias
+features.19.branch0.bn.weight
+features.19.branch0.conv.weight
+features.18.branch1.3.bn.bias
+features.18.branch1.3.bn.weight
+features.18.branch1.3.conv.weight
+features.18.branch1.2.bn.bias
+features.18.branch1.2.bn.weight
+features.18.branch1.2.conv.weight
+features.18.branch1.1.bn.bias
+features.18.branch1.1.bn.weight
+features.18.branch1.1.conv.weight
+features.18.branch1.0.bn.bias
+features.18.branch1.0.bn.weight
+features.18.branch1.0.conv.weight
+features.18.branch0.1.bn.bias
+features.18.branch0.1.bn.weight
+features.18.branch0.1.conv.weight
+features.18.branch0.0.bn.bias
+features.18.branch0.0.bn.weight
+features.18.branch0.0.conv.weight
+features.17.branch3.1.bn.bias
+features.17.branch3.1.bn.weight
+features.17.branch3.1.conv.weight
+features.17.branch2.4.bn.bias
+features.17.branch2.4.bn.weight
+features.17.branch2.4.conv.weight
+features.17.branch2.3.bn.bias
+features.17.branch2.3.bn.weight
+features.17.branch2.3.conv.weight
+features.17.branch2.2.bn.bias
+features.17.branch2.2.bn.weight
+features.17.branch2.2.conv.weight
+features.17.branch2.1.bn.bias
+features.17.branch2.1.bn.weight
+features.17.branch2.1.conv.weight
+features.17.branch2.0.bn.bias
+features.17.branch2.0.bn.weight
+features.17.branch2.0.conv.weight
+features.17.branch1.2.bn.bias
+features.17.branch1.2.bn.weight
+features.17.branch1.2.conv.weight
+features.17.branch1.1.bn.bias
+features.17.branch1.1.bn.weight
+features.17.branch1.1.conv.weight
+features.17.branch1.0.bn.bias
+features.17.branch1.0.bn.weight
+features.17.branch1.0.conv.weight
+features.17.branch0.bn.bias
+features.17.branch0.bn.weight
+features.17.branch0.conv.weight
+features.16.branch3.1.bn.bias
+features.16.branch3.1.bn.weight
+features.16.branch3.1.conv.weight
+features.16.branch2.4.bn.bias
+features.16.branch2.4.bn.weight
+features.16.branch2.4.conv.weight
+features.16.branch2.3.bn.bias
+features.16.branch2.3.bn.weight
+features.16.branch2.3.conv.weight
+features.16.branch2.2.bn.bias
+features.16.branch2.2.bn.weight
+features.16.branch2.2.conv.weight
+features.16.branch2.1.bn.bias
+features.16.branch2.1.bn.weight
+features.16.branch2.1.conv.weight
+features.16.branch2.0.bn.bias
+features.16.branch2.0.bn.weight
+features.16.branch2.0.conv.weight
+features.16.branch1.2.bn.bias
+features.16.branch1.2.bn.weight
+features.16.branch1.2.conv.weight
+features.16.branch1.1.bn.bias
+features.16.branch1.1.bn.weight
+features.16.branch1.1.conv.weight
+features.16.branch1.0.bn.bias
+features.16.branch1.0.bn.weight
+features.16.branch1.0.conv.weight
+features.16.branch0.bn.bias
+features.16.branch0.bn.weight
+features.16.branch0.conv.weight
+features.15.branch3.1.bn.bias
+features.15.branch3.1.bn.weight
+features.15.branch3.1.conv.weight
+features.15.branch2.4.bn.bias
+features.15.branch2.4.bn.weight
+features.15.branch2.4.conv.weight
+features.15.branch2.3.bn.bias
+features.15.branch2.3.bn.weight
+features.15.branch2.3.conv.weight
+features.15.branch2.2.bn.bias
+features.15.branch2.2.bn.weight
+features.15.branch2.2.conv.weight
+features.15.branch2.1.bn.bias
+features.15.branch2.1.bn.weight
+features.15.branch2.1.conv.weight
+features.15.branch2.0.bn.bias
+features.15.branch2.0.bn.weight
+features.15.branch2.0.conv.weight
+features.15.branch1.2.bn.bias
+features.15.branch1.2.bn.weight
+features.15.branch1.2.conv.weight
+features.15.branch1.1.bn.bias
+features.15.branch1.1.bn.weight
+features.15.branch1.1.conv.weight
+features.15.branch1.0.bn.bias
+features.15.branch1.0.bn.weight
+features.15.branch1.0.conv.weight
+features.15.branch0.bn.bias
+features.15.branch0.bn.weight
+features.15.branch0.conv.weight
+features.14.branch3.1.bn.bias
+features.14.branch3.1.bn.weight
+features.14.branch3.1.conv.weight
+features.14.branch2.4.bn.bias
+features.14.branch2.4.bn.weight
+features.14.branch2.4.conv.weight
+features.14.branch2.3.bn.bias
+features.14.branch2.3.bn.weight
+features.14.branch2.3.conv.weight
+features.14.branch2.2.bn.bias
+features.14.branch2.2.bn.weight
+features.14.branch2.2.conv.weight
+features.14.branch2.1.bn.bias
+features.14.branch2.1.bn.weight
+features.14.branch2.1.conv.weight
+features.14.branch2.0.bn.bias
+features.14.branch2.0.bn.weight
+features.14.branch2.0.conv.weight
+features.14.branch1.2.bn.bias
+features.14.branch1.2.bn.weight
+features.14.branch1.2.conv.weight
+features.14.branch1.1.bn.bias
+features.14.branch1.1.bn.weight
+features.14.branch1.1.conv.weight
+features.14.branch1.0.bn.bias
+features.14.branch1.0.bn.weight
+features.14.branch1.0.conv.weight
+features.14.branch0.bn.bias
+features.14.branch0.bn.weight
+features.14.branch0.conv.weight
+features.13.branch3.1.bn.bias
+features.13.branch3.1.bn.weight
+features.13.branch3.1.conv.weight
+features.13.branch2.4.bn.bias
+features.13.branch2.4.bn.weight
+features.13.branch2.4.conv.weight
+features.13.branch2.3.bn.bias
+features.13.branch2.3.bn.weight
+features.13.branch2.3.conv.weight
+features.13.branch2.2.bn.bias
+features.13.branch2.2.bn.weight
+features.13.branch2.2.conv.weight
+features.13.branch2.1.bn.bias
+features.13.branch2.1.bn.weight
+features.13.branch2.1.conv.weight
+features.13.branch2.0.bn.bias
+features.13.branch2.0.bn.weight
+features.13.branch2.0.conv.weight
+features.13.branch1.2.bn.bias
+features.13.branch1.2.bn.weight
+features.13.branch1.2.conv.weight
+features.13.branch1.1.bn.bias
+features.13.branch1.1.bn.weight
+features.13.branch1.1.conv.weight
+features.13.branch1.0.bn.bias
+features.13.branch1.0.bn.weight
+features.13.branch1.0.conv.weight
+features.13.branch0.bn.bias
+features.13.branch0.bn.weight
+features.13.branch0.conv.weight
+features.12.branch3.1.bn.bias
+features.12.branch3.1.bn.weight
+features.12.branch3.1.conv.weight
+features.12.branch2.4.bn.bias
+features.12.branch2.4.bn.weight
+features.12.branch2.4.conv.weight
+features.12.branch2.3.bn.bias
+features.12.branch2.3.bn.weight
+features.12.branch2.3.conv.weight
+features.12.branch2.2.bn.bias
+features.12.branch2.2.bn.weight
+features.12.branch2.2.conv.weight
+features.12.branch2.1.bn.bias
+features.12.branch2.1.bn.weight
+features.12.branch2.1.conv.weight
+features.12.branch2.0.bn.bias
+features.12.branch2.0.bn.weight
+features.12.branch2.0.conv.weight
+features.12.branch1.2.bn.bias
+features.12.branch1.2.bn.weight
+features.12.branch1.2.conv.weight
+features.12.branch1.1.bn.bias
+features.12.branch1.1.bn.weight
+features.12.branch1.1.conv.weight
+features.12.branch1.0.bn.bias
+features.12.branch1.0.bn.weight
+features.12.branch1.0.conv.weight
+features.12.branch0.bn.bias
+features.12.branch0.bn.weight
+features.12.branch0.conv.weight
+features.11.branch3.1.bn.bias
+features.11.branch3.1.bn.weight
+features.11.branch3.1.conv.weight
+features.11.branch2.4.bn.bias
+features.11.branch2.4.bn.weight
+features.11.branch2.4.conv.weight
+features.11.branch2.3.bn.bias
+features.11.branch2.3.bn.weight
+features.11.branch2.3.conv.weight
+features.11.branch2.2.bn.bias
+features.11.branch2.2.bn.weight
+features.11.branch2.2.conv.weight
+features.11.branch2.1.bn.bias
+features.11.branch2.1.bn.weight
+features.11.branch2.1.conv.weight
+features.11.branch2.0.bn.bias
+features.11.branch2.0.bn.weight
+features.11.branch2.0.conv.weight
+features.11.branch1.2.bn.bias
+features.11.branch1.2.bn.weight
+features.11.branch1.2.conv.weight
+features.11.branch1.1.bn.bias
+features.11.branch1.1.bn.weight
+features.11.branch1.1.conv.weight
+features.11.branch1.0.bn.bias
+features.11.branch1.0.bn.weight
+features.11.branch1.0.conv.weight
+features.11.branch0.bn.bias
+features.11.branch0.bn.weight
+features.11.branch0.conv.weight
+features.10.branch1.2.bn.bias
+features.10.branch1.2.bn.weight
+features.10.branch1.2.conv.weight
+features.10.branch1.1.bn.bias
+features.10.branch1.1.bn.weight
+features.10.branch1.1.conv.weight
+features.10.branch1.0.bn.bias
+features.10.branch1.0.bn.weight
+features.10.branch1.0.conv.weight
+features.10.branch0.bn.bias
+features.10.branch0.bn.weight
+features.10.branch0.conv.weight
+features.9.branch3.1.bn.bias
+features.9.branch3.1.bn.weight
+features.9.branch3.1.conv.weight
+features.9.branch2.2.bn.bias
+features.9.branch2.2.bn.weight
+features.9.branch2.2.conv.weight
+features.9.branch2.1.bn.bias
+features.9.branch2.1.bn.weight
+features.9.branch2.1.conv.weight
+features.9.branch2.0.bn.bias
+features.9.branch2.0.bn.weight
+features.9.branch2.0.conv.weight
+features.9.branch1.1.bn.bias
+features.9.branch1.1.bn.weight
+features.9.branch1.1.conv.weight
+features.9.branch1.0.bn.bias
+features.9.branch1.0.bn.weight
+features.9.branch1.0.conv.weight
+features.9.branch0.bn.bias
+features.9.branch0.bn.weight
+features.9.branch0.conv.weight
+features.8.branch3.1.bn.bias
+features.8.branch3.1.bn.weight
+features.8.branch3.1.conv.weight
+features.8.branch2.2.bn.bias
+features.8.branch2.2.bn.weight
+features.8.branch2.2.conv.weight
+features.8.branch2.1.bn.bias
+features.8.branch2.1.bn.weight
+features.8.branch2.1.conv.weight
+features.8.branch2.0.bn.bias
+features.8.branch2.0.bn.weight
+features.8.branch2.0.conv.weight
+features.8.branch1.1.bn.bias
+features.8.branch1.1.bn.weight
+features.8.branch1.1.conv.weight
+features.8.branch1.0.bn.bias
+features.8.branch1.0.bn.weight
+features.8.branch1.0.conv.weight
+features.8.branch0.bn.bias
+features.8.branch0.bn.weight
+features.8.branch0.conv.weight
+features.7.branch3.1.bn.bias
+features.7.branch3.1.bn.weight
+features.7.branch3.1.conv.weight
+features.7.branch2.2.bn.bias
+features.7.branch2.2.bn.weight
+features.7.branch2.2.conv.weight
+features.7.branch2.1.bn.bias
+features.7.branch2.1.bn.weight
+features.7.branch2.1.conv.weight
+features.7.branch2.0.bn.bias
+features.7.branch2.0.bn.weight
+features.7.branch2.0.conv.weight
+features.7.branch1.1.bn.bias
+features.7.branch1.1.bn.weight
+features.7.branch1.1.conv.weight
+features.7.branch1.0.bn.bias
+features.7.branch1.0.bn.weight
+features.7.branch1.0.conv.weight
+features.7.branch0.bn.bias
+features.7.branch0.bn.weight
+features.7.branch0.conv.weight
+features.6.branch3.1.bn.bias
+features.6.branch3.1.bn.weight
+features.6.branch3.1.conv.weight
+features.6.branch2.2.bn.bias
+features.6.branch2.2.bn.weight
+features.6.branch2.2.conv.weight
+features.6.branch2.1.bn.bias
+features.6.branch2.1.bn.weight
+features.6.branch2.1.conv.weight
+features.6.branch2.0.bn.bias
+features.6.branch2.0.bn.weight
+features.6.branch2.0.conv.weight
+features.6.branch1.1.bn.bias
+features.6.branch1.1.bn.weight
+features.6.branch1.1.conv.weight
+features.6.branch1.0.bn.bias
+features.6.branch1.0.bn.weight
+features.6.branch1.0.conv.weight
+features.6.branch0.bn.bias
+features.6.branch0.bn.weight
+features.6.branch0.conv.weight
+features.5.conv.bn.bias
+features.5.conv.bn.weight
+features.5.conv.conv.weight
+features.4.branch1.3.bn.bias
+features.4.branch1.3.bn.weight
+features.4.branch1.3.conv.weight
+features.4.branch1.2.bn.bias
+features.4.branch1.2.bn.weight
+features.4.branch1.2.conv.weight
+features.4.branch1.1.bn.bias
+features.4.branch1.1.bn.weight
+features.4.branch1.1.conv.weight
+features.4.branch1.0.bn.bias
+features.4.branch1.0.bn.weight
+features.4.branch1.0.conv.weight
+features.4.branch0.1.bn.bias
+features.4.branch0.1.bn.weight
+features.4.branch0.1.conv.weight
+features.4.branch0.0.bn.bias
+features.4.branch0.0.bn.weight
+features.4.branch0.0.conv.weight
+features.3.conv.bn.bias
+features.3.conv.bn.weight
+features.3.conv.conv.weight
+features.2.bn.bias
+features.2.bn.weight
+features.2.conv.weight
+features.1.bn.bias
+features.1.bn.weight
+features.1.conv.weight
+features.0.bn.bias
+features.0.bn.weight
+features.0.conv.weight
+Using native Torch AMP. Training in mixed precision.
+Scheduled epochs: 80
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/functional.py:424: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/functional.py:424: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/functional.py:424: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/functional.py:424: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/functional.py:424: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/functional.py:424: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/functional.py:424: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/functional.py:424: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/functional.py:424: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/functional.py:424: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/functional.py:424: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/functional.py:424: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/functional.py:424: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/functional.py:424: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/functional.py:424: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/functional.py:424: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+Train: 0 [   0/104 (  0%)]  Loss:  8.629520 (8.6295)  Time: 22.733s,    1.41/s  (22.733s,    1.41/s)  LR: 1.000e-04  Data: 10.271 (10.271)
+Train: 0 [  50/104 ( 49%)]  Loss:  8.680115 (8.6884)  Time: 1.015s,   31.52/s  (1.431s,   22.36/s)  LR: 1.000e-04  Data: 0.008 (0.213)
+Train: 0 [ 100/104 ( 97%)]  Loss:  8.744467 (8.6808)  Time: 0.877s,   36.50/s  (1.180s,   27.12/s)  LR: 1.000e-04  Data: 0.006 (0.112)
+Train: 0 [ 103/104 (100%)]  Loss:  8.686153 (8.6804)  Time: 0.869s,   36.84/s  (1.171s,   27.33/s)  LR: 1.000e-04  Data: 0.000 (0.109)
+Test: [   0/104]  Time: 11.916 (11.916)  Loss:  4.5820 (4.5820)  Acc@1:  0.0000 ( 0.0000)  Acc@5:  0.0000 ( 0.0000)
+Test: [  50/104]  Time: 0.574 (0.960)  Loss:  4.6328 (4.6405)  Acc@1:  0.0000 ( 1.2868)  Acc@5:  3.1250 ( 6.8015)
+Test: [ 100/104]  Time: 0.125 (0.750)  Loss:  4.3945 (4.6631)  Acc@1: 25.0000 ( 1.2995)  Acc@5: 50.0000 ( 5.8168)
+Test: [ 104/104]  Time: 0.811 (0.733)  Loss:  4.8594 (4.6649)  Acc@1:  0.0000 ( 1.2601)  Acc@5:  0.0000 ( 5.7006)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-0.pth.tar', 1.2601260126012601)
+
+Epoch: 0 took 199.641s. It used 00:03:19 and still needs 04:26:11 to complete!
+
+Train: 1 [   0/104 (  0%)]  Loss:  8.634898 (8.6349)  Time: 16.117s,    1.99/s  (16.117s,    1.99/s)  LR: 6.733e-03  Data: 10.074 (10.074)
+Train: 1 [  50/104 ( 49%)]  Loss:  8.659300 (8.6396)  Time: 1.035s,   30.93/s  (1.459s,   21.93/s)  LR: 6.733e-03  Data: 0.008 (0.212)
+Train: 1 [ 100/104 ( 97%)]  Loss:  8.610291 (8.5951)  Time: 0.864s,   37.02/s  (1.205s,   26.57/s)  LR: 6.733e-03  Data: 0.006 (0.112)
+Train: 1 [ 103/104 (100%)]  Loss:  8.515794 (8.5920)  Time: 0.915s,   34.99/s  (1.195s,   26.77/s)  LR: 6.733e-03  Data: 0.000 (0.108)
+Test: [   0/104]  Time: 10.751 (10.751)  Loss:  4.6328 (4.6328)  Acc@1:  0.0000 ( 0.0000)  Acc@5:  3.1250 ( 3.1250)
+Test: [  50/104]  Time: 0.563 (0.929)  Loss:  3.9785 (4.4071)  Acc@1:  3.1250 ( 1.8382)  Acc@5: 46.8750 (10.4167)
+Test: [ 100/104]  Time: 0.123 (0.728)  Loss:  3.3262 (4.2848)  Acc@1: 46.8750 ( 6.1262)  Acc@5: 93.7500 (21.1324)
+Test: [ 104/104]  Time: 0.053 (0.704)  Loss:  4.5625 (4.2964)  Acc@1:  0.0000 ( 5.9706)  Acc@5:  0.0000 (20.6421)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-1.pth.tar', 5.9705970597059705)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-0.pth.tar', 1.2601260126012601)
+
+Epoch: 1 took 199.109s. It used 00:06:38 and still needs 04:22:30 to complete!
+
+Train: 2 [   0/104 (  0%)]  Loss:  8.444939 (8.4449)  Time: 14.912s,    2.15/s  (14.912s,    2.15/s)  LR: 1.337e-02  Data: 9.594 (9.594)
+Train: 2 [  50/104 ( 49%)]  Loss:  8.276302 (8.3439)  Time: 0.961s,   33.31/s  (1.400s,   22.86/s)  LR: 1.337e-02  Data: 0.015 (0.203)
+Train: 2 [ 100/104 ( 97%)]  Loss:  8.356200 (8.2542)  Time: 0.907s,   35.29/s  (1.167s,   27.43/s)  LR: 1.337e-02  Data: 0.006 (0.107)
+Train: 2 [ 103/104 (100%)]  Loss:  7.901719 (8.2471)  Time: 0.851s,   37.59/s  (1.158s,   27.64/s)  LR: 1.337e-02  Data: 0.000 (0.104)
+Test: [   0/104]  Time: 10.505 (10.505)  Loss:  3.8965 (3.8965)  Acc@1:  0.0000 ( 0.0000)  Acc@5: 40.6250 (40.6250)
+Test: [  50/104]  Time: 0.549 (0.921)  Loss:  1.9561 (3.7265)  Acc@1: 50.0000 ( 9.6814)  Acc@5: 90.6250 (29.0441)
+Test: [ 100/104]  Time: 0.124 (0.723)  Loss:  2.4648 (3.4341)  Acc@1:  0.0000 (13.4282)  Acc@5: 96.8750 (40.1918)
+Test: [ 104/104]  Time: 0.043 (0.699)  Loss:  3.9883 (3.4449)  Acc@1:  0.0000 (13.2613)  Acc@5:  0.0000 (40.0540)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-2.pth.tar', 13.261326132613261)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-1.pth.tar', 5.9705970597059705)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-0.pth.tar', 1.2601260126012601)
+
+Epoch: 2 took 194.951s. It used 00:09:53 and still needs 04:17:16 to complete!
+
+Train: 3 [   0/104 (  0%)]  Loss:  8.178148 (8.1781)  Time: 15.246s,    2.10/s  (15.246s,    2.10/s)  LR: 2.000e-02  Data: 10.219 (10.219)
+Train: 3 [  50/104 ( 49%)]  Loss:  7.975459 (7.9534)  Time: 1.131s,   28.29/s  (1.431s,   22.37/s)  LR: 2.000e-02  Data: 0.018 (0.215)
+Train: 3 [ 100/104 ( 97%)]  Loss:  8.319820 (7.8793)  Time: 0.861s,   37.16/s  (1.182s,   27.08/s)  LR: 2.000e-02  Data: 0.006 (0.113)
+Train: 3 [ 103/104 (100%)]  Loss:  7.587841 (7.8763)  Time: 0.853s,   37.51/s  (1.172s,   27.29/s)  LR: 2.000e-02  Data: 0.000 (0.110)
+Test: [   0/104]  Time: 10.542 (10.542)  Loss:  3.0449 (3.0449)  Acc@1: 12.5000 (12.5000)  Acc@5: 62.5000 (62.5000)
+Test: [  50/104]  Time: 0.570 (0.916)  Loss:  2.5840 (3.3157)  Acc@1: 40.6250 (13.6642)  Acc@5: 75.0000 (42.8309)
+Test: [ 100/104]  Time: 0.126 (0.723)  Loss:  1.2236 (2.9212)  Acc@1: 90.6250 (21.5037)  Acc@5: 100.0000 (55.4455)
+Test: [ 104/104]  Time: 0.042 (0.700)  Loss:  1.9736 (2.9087)  Acc@1: 80.0000 (22.0522)  Acc@5: 100.0000 (56.3756)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-3.pth.tar', 22.05220522052205)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-2.pth.tar', 13.261326132613261)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-1.pth.tar', 5.9705970597059705)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-0.pth.tar', 1.2601260126012601)
+
+Epoch: 3 took 196.258s. It used 00:13:09 and still needs 04:13:26 to complete!
+
+Train: 4 [   0/104 (  0%)]  Loss:  7.378719 (7.3787)  Time: 15.007s,    2.13/s  (15.007s,    2.13/s)  LR: 2.000e-02  Data: 9.422 (9.422)
+Train: 4 [  50/104 ( 49%)]  Loss:  6.948510 (7.6070)  Time: 1.045s,   30.64/s  (1.392s,   22.99/s)  LR: 2.000e-02  Data: 0.008 (0.200)
+Train: 4 [ 100/104 ( 97%)]  Loss:  7.246475 (7.5391)  Time: 0.859s,   37.24/s  (1.164s,   27.50/s)  LR: 2.000e-02  Data: 0.006 (0.105)
+Train: 4 [ 103/104 (100%)]  Loss:  7.218161 (7.5330)  Time: 0.852s,   37.58/s  (1.155s,   27.70/s)  LR: 2.000e-02  Data: 0.000 (0.102)
+Test: [   0/104]  Time: 10.614 (10.614)  Loss:  3.2422 (3.2422)  Acc@1:  0.0000 ( 0.0000)  Acc@5: 59.3750 (59.3750)
+Test: [  50/104]  Time: 0.546 (0.920)  Loss:  1.2539 (3.0528)  Acc@1: 68.7500 (17.5858)  Acc@5: 93.7500 (47.6103)
+Test: [ 100/104]  Time: 0.124 (0.723)  Loss:  2.1133 (2.6589)  Acc@1:  9.3750 (23.8552)  Acc@5: 96.8750 (60.6745)
+Test: [ 104/104]  Time: 0.043 (0.699)  Loss:  3.6621 (2.6702)  Acc@1:  0.0000 (23.3723)  Acc@5: 20.0000 (60.2160)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-4.pth.tar', 23.37233723372337)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-3.pth.tar', 22.05220522052205)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-2.pth.tar', 13.261326132613261)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-1.pth.tar', 5.9705970597059705)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-0.pth.tar', 1.2601260126012601)
+
+Epoch: 4 took 194.473s. It used 00:16:24 and still needs 04:09:23 to complete!
+
+Train: 5 [   0/104 (  0%)]  Loss:  7.886963 (7.8870)  Time: 15.446s,    2.07/s  (15.446s,    2.07/s)  LR: 2.000e-02  Data: 10.437 (10.437)
+Train: 5 [  50/104 ( 49%)]  Loss:  7.594332 (7.3472)  Time: 1.017s,   31.47/s  (1.427s,   22.43/s)  LR: 2.000e-02  Data: 0.019 (0.220)
+Train: 5 [ 100/104 ( 97%)]  Loss:  6.755073 (7.2979)  Time: 0.909s,   35.19/s  (1.180s,   27.11/s)  LR: 2.000e-02  Data: 0.006 (0.116)
+Train: 5 [ 103/104 (100%)]  Loss:  7.169051 (7.2983)  Time: 0.854s,   37.46/s  (1.171s,   27.33/s)  LR: 2.000e-02  Data: 0.000 (0.113)
+Test: [   0/104]  Time: 10.641 (10.641)  Loss:  3.8145 (3.8145)  Acc@1:  3.1250 ( 3.1250)  Acc@5: 37.5000 (37.5000)
+Test: [  50/104]  Time: 0.556 (0.920)  Loss:  0.7622 (2.6300)  Acc@1: 87.5000 (26.7157)  Acc@5: 93.7500 (61.3971)
+Test: [ 100/104]  Time: 0.123 (0.723)  Loss:  1.4121 (2.2831)  Acc@1: 78.1250 (34.6844)  Acc@5: 90.6250 (71.8750)
+Test: [ 104/104]  Time: 0.043 (0.700)  Loss:  0.9751 (2.2734)  Acc@1: 100.0000 (35.0735)  Acc@5: 100.0000 (72.2172)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-5.pth.tar', 35.07350735073507)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-4.pth.tar', 23.37233723372337)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-3.pth.tar', 22.05220522052205)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-2.pth.tar', 13.261326132613261)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-1.pth.tar', 5.9705970597059705)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-0.pth.tar', 1.2601260126012601)
+
+Epoch: 5 took 196.093s. It used 00:19:40 and still needs 04:05:56 to complete!
+
+Train: 6 [   0/104 (  0%)]  Loss:  6.673921 (6.6739)  Time: 14.351s,    2.23/s  (14.351s,    2.23/s)  LR: 2.000e-02  Data: 9.124 (9.124)
+Train: 6 [  50/104 ( 49%)]  Loss:  7.013380 (7.0555)  Time: 1.019s,   31.41/s  (1.387s,   23.06/s)  LR: 2.000e-02  Data: 0.008 (0.193)
+Train: 6 [ 100/104 ( 97%)]  Loss:  6.660769 (7.0762)  Time: 0.860s,   37.20/s  (1.160s,   27.59/s)  LR: 2.000e-02  Data: 0.006 (0.102)
+Train: 6 [ 103/104 (100%)]  Loss:  7.060461 (7.0741)  Time: 0.860s,   37.23/s  (1.151s,   27.80/s)  LR: 2.000e-02  Data: 0.000 (0.099)
+Test: [   0/104]  Time: 10.453 (10.453)  Loss:  1.9717 (1.9717)  Acc@1: 59.3750 (59.3750)  Acc@5: 81.2500 (81.2500)
+Test: [  50/104]  Time: 0.540 (0.915)  Loss:  1.3193 (2.3508)  Acc@1: 68.7500 (28.9828)  Acc@5: 90.6250 (71.3848)
+Test: [ 100/104]  Time: 0.125 (0.720)  Loss:  0.6587 (2.0787)  Acc@1: 87.5000 (36.5408)  Acc@5: 100.0000 (78.2178)
+Test: [ 104/104]  Time: 0.060 (0.697)  Loss:  0.5439 (2.0609)  Acc@1: 80.0000 (37.2037)  Acc@5: 100.0000 (78.6679)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-6.pth.tar', 37.2037203720372)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-5.pth.tar', 35.07350735073507)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-4.pth.tar', 23.37233723372337)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-3.pth.tar', 22.05220522052205)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-2.pth.tar', 13.261326132613261)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-1.pth.tar', 5.9705970597059705)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-0.pth.tar', 1.2601260126012601)
+
+Epoch: 6 took 194.187s. It used 00:22:54 and still needs 04:02:12 to complete!
+
+Train: 7 [   0/104 (  0%)]  Loss:  7.378227 (7.3782)  Time: 16.016s,    2.00/s  (16.016s,    2.00/s)  LR: 2.000e-02  Data: 10.953 (10.953)
+Train: 7 [  50/104 ( 49%)]  Loss:  7.383139 (6.8866)  Time: 1.057s,   30.26/s  (1.418s,   22.57/s)  LR: 2.000e-02  Data: 0.013 (0.229)
+Train: 7 [ 100/104 ( 97%)]  Loss:  6.985473 (6.8937)  Time: 0.862s,   37.12/s  (1.174s,   27.26/s)  LR: 2.000e-02  Data: 0.006 (0.120)
+Train: 7 [ 103/104 (100%)]  Loss:  6.374382 (6.8887)  Time: 0.849s,   37.69/s  (1.165s,   27.46/s)  LR: 2.000e-02  Data: 0.000 (0.116)
+Test: [   0/104]  Time: 10.734 (10.734)  Loss:  2.7344 (2.7344)  Acc@1: 12.5000 (12.5000)  Acc@5: 62.5000 (62.5000)
+Test: [  50/104]  Time: 0.552 (0.918)  Loss:  1.5791 (2.5020)  Acc@1: 62.5000 (28.8603)  Acc@5: 93.7500 (69.1176)
+Test: [ 100/104]  Time: 0.123 (0.721)  Loss:  0.9160 (2.0808)  Acc@1: 81.2500 (41.4295)  Acc@5: 100.0000 (79.3007)
+Test: [ 104/104]  Time: 0.050 (0.698)  Loss:  3.0684 (2.0714)  Acc@1:  0.0000 (41.8542)  Acc@5: 100.0000 (79.6280)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-7.pth.tar', 41.85418541854185)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-6.pth.tar', 37.2037203720372)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-5.pth.tar', 35.07350735073507)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-4.pth.tar', 23.37233723372337)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-3.pth.tar', 22.05220522052205)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-2.pth.tar', 13.261326132613261)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-1.pth.tar', 5.9705970597059705)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-0.pth.tar', 1.2601260126012601)
+
+Epoch: 7 took 195.335s. It used 00:26:10 and still needs 03:58:46 to complete!
+
+Train: 8 [   0/104 (  0%)]  Loss:  6.219143 (6.2191)  Time: 14.680s,    2.18/s  (14.680s,    2.18/s)  LR: 2.000e-02  Data: 9.654 (9.654)
+Train: 8 [  50/104 ( 49%)]  Loss:  6.549549 (6.6660)  Time: 1.057s,   30.28/s  (1.389s,   23.04/s)  LR: 2.000e-02  Data: 0.014 (0.203)
+Train: 8 [ 100/104 ( 97%)]  Loss:  6.209001 (6.6196)  Time: 0.859s,   37.25/s  (1.161s,   27.57/s)  LR: 2.000e-02  Data: 0.006 (0.107)
+Train: 8 [ 103/104 (100%)]  Loss:  7.374905 (6.6220)  Time: 0.859s,   37.27/s  (1.152s,   27.77/s)  LR: 2.000e-02  Data: 0.000 (0.104)
+Test: [   0/104]  Time: 10.530 (10.530)  Loss:  2.9531 (2.9531)  Acc@1: 21.8750 (21.8750)  Acc@5: 62.5000 (62.5000)
+Test: [  50/104]  Time: 0.968 (0.940)  Loss:  2.0703 (2.5382)  Acc@1: 40.6250 (24.4485)  Acc@5: 84.3750 (69.2402)
+Test: [ 100/104]  Time: 0.124 (0.741)  Loss:  3.0254 (2.1222)  Acc@1:  9.3750 (38.4592)  Acc@5: 81.2500 (77.1968)
+Test: [ 104/104]  Time: 0.044 (0.717)  Loss:  0.6548 (2.0897)  Acc@1: 100.0000 (39.6640)  Acc@5: 100.0000 (77.7678)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-7.pth.tar', 41.85418541854185)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-8.pth.tar', 39.663966396639665)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-6.pth.tar', 37.2037203720372)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-5.pth.tar', 35.07350735073507)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-4.pth.tar', 23.37233723372337)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-3.pth.tar', 22.05220522052205)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-2.pth.tar', 13.261326132613261)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-1.pth.tar', 5.9705970597059705)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-0.pth.tar', 1.2601260126012601)
+
+Epoch: 8 took 195.935s. It used 00:29:25 and still needs 03:55:27 to complete!
+
+Train: 9 [   0/104 (  0%)]  Loss:  6.099960 (6.1000)  Time: 14.893s,    2.15/s  (14.893s,    2.15/s)  LR: 2.000e-02  Data: 9.904 (9.904)
+Train: 9 [  50/104 ( 49%)]  Loss:  6.308084 (6.5207)  Time: 1.003s,   31.91/s  (1.396s,   22.93/s)  LR: 2.000e-02  Data: 0.014 (0.208)
+Train: 9 [ 100/104 ( 97%)]  Loss:  5.777528 (6.5226)  Time: 0.860s,   37.21/s  (1.165s,   27.46/s)  LR: 2.000e-02  Data: 0.006 (0.110)
+Train: 9 [ 103/104 (100%)]  Loss:  6.964293 (6.5223)  Time: 0.857s,   37.34/s  (1.157s,   27.67/s)  LR: 2.000e-02  Data: 0.000 (0.107)
+Test: [   0/104]  Time: 10.377 (10.377)  Loss:  2.8262 (2.8262)  Acc@1: 18.7500 (18.7500)  Acc@5: 65.6250 (65.6250)
+Test: [  50/104]  Time: 0.575 (0.912)  Loss:  0.6030 (2.1358)  Acc@1: 87.5000 (36.2745)  Acc@5: 93.7500 (77.0221)
+Test: [ 100/104]  Time: 0.124 (0.721)  Loss:  1.5205 (1.8971)  Acc@1: 53.1250 (43.5025)  Acc@5: 96.8750 (82.5186)
+Test: [ 104/104]  Time: 0.042 (0.697)  Loss:  0.5576 (1.8813)  Acc@1: 100.0000 (44.2244)  Acc@5: 100.0000 (82.7783)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-9.pth.tar', 44.224422442244226)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-7.pth.tar', 41.85418541854185)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-8.pth.tar', 39.663966396639665)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-6.pth.tar', 37.2037203720372)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-5.pth.tar', 35.07350735073507)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-4.pth.tar', 23.37233723372337)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-3.pth.tar', 22.05220522052205)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-2.pth.tar', 13.261326132613261)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-1.pth.tar', 5.9705970597059705)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-0.pth.tar', 1.2601260126012601)
+
+Epoch: 9 took 194.374s. It used 00:32:40 and still needs 03:51:58 to complete!
+
+Train: 10 [   0/104 (  0%)]  Loss:  6.614050 (6.6141)  Time: 15.061s,    2.12/s  (15.061s,    2.12/s)  LR: 1.800e-02  Data: 10.120 (10.120)
+Train: 10 [  50/104 ( 49%)]  Loss:  6.443968 (6.2813)  Time: 1.091s,   29.34/s  (1.388s,   23.05/s)  LR: 1.800e-02  Data: 0.019 (0.211)
+Train: 10 [ 100/104 ( 97%)]  Loss:  6.862096 (6.2456)  Time: 0.867s,   36.93/s  (1.160s,   27.59/s)  LR: 1.800e-02  Data: 0.006 (0.111)
+Train: 10 [ 103/104 (100%)]  Loss:  5.848799 (6.2447)  Time: 0.861s,   37.17/s  (1.152s,   27.78/s)  LR: 1.800e-02  Data: 0.000 (0.108)
+Test: [   0/104]  Time: 10.515 (10.515)  Loss:  2.4551 (2.4551)  Acc@1: 37.5000 (37.5000)  Acc@5: 78.1250 (78.1250)
+Test: [  50/104]  Time: 0.567 (0.954)  Loss:  0.8843 (2.0621)  Acc@1: 71.8750 (37.4387)  Acc@5: 93.7500 (82.1078)
+Test: [ 100/104]  Time: 0.125 (0.739)  Loss:  0.5630 (1.7156)  Acc@1: 87.5000 (49.2574)  Acc@5: 100.0000 (86.8502)
+Test: [ 104/104]  Time: 0.043 (0.715)  Loss:  1.0234 (1.6990)  Acc@1: 60.0000 (49.7450)  Acc@5: 100.0000 (87.0387)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-10.pth.tar', 49.744974497449746)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-9.pth.tar', 44.224422442244226)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-7.pth.tar', 41.85418541854185)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-8.pth.tar', 39.663966396639665)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-6.pth.tar', 37.2037203720372)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-5.pth.tar', 35.07350735073507)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-4.pth.tar', 23.37233723372337)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-3.pth.tar', 22.05220522052205)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-2.pth.tar', 13.261326132613261)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-1.pth.tar', 5.9705970597059705)
+
+Epoch: 10 took 195.643s. It used 00:35:55 and still needs 03:48:39 to complete!
+
+Train: 11 [   0/104 (  0%)]  Loss:  6.622534 (6.6225)  Time: 14.462s,    2.21/s  (14.462s,    2.21/s)  LR: 1.800e-02  Data: 9.575 (9.575)
+Train: 11 [  50/104 ( 49%)]  Loss:  5.707664 (6.1077)  Time: 0.985s,   32.50/s  (1.392s,   22.98/s)  LR: 1.800e-02  Data: 0.021 (0.203)
+Train: 11 [ 100/104 ( 97%)]  Loss:  6.642346 (6.1528)  Time: 0.858s,   37.31/s  (1.162s,   27.54/s)  LR: 1.800e-02  Data: 0.006 (0.107)
+Train: 11 [ 103/104 (100%)]  Loss:  5.775562 (6.1456)  Time: 0.853s,   37.52/s  (1.153s,   27.74/s)  LR: 1.800e-02  Data: 0.000 (0.104)
+Test: [   0/104]  Time: 10.599 (10.599)  Loss:  2.4863 (2.4863)  Acc@1: 31.2500 (31.2500)  Acc@5: 75.0000 (75.0000)
+Test: [  50/104]  Time: 0.529 (0.922)  Loss:  0.8750 (1.8321)  Acc@1: 75.0000 (40.9926)  Acc@5: 87.5000 (83.5172)
+Test: [ 100/104]  Time: 0.125 (0.722)  Loss:  1.2100 (1.5630)  Acc@1: 71.8750 (52.1658)  Acc@5: 100.0000 (86.9740)
+Test: [ 104/104]  Time: 0.042 (0.698)  Loss:  0.0562 (1.5306)  Acc@1: 100.0000 (53.2253)  Acc@5: 100.0000 (87.3387)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-11.pth.tar', 53.22532253225322)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-10.pth.tar', 49.744974497449746)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-9.pth.tar', 44.224422442244226)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-7.pth.tar', 41.85418541854185)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-8.pth.tar', 39.663966396639665)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-6.pth.tar', 37.2037203720372)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-5.pth.tar', 35.07350735073507)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-4.pth.tar', 23.37233723372337)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-3.pth.tar', 22.05220522052205)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-2.pth.tar', 13.261326132613261)
+
+Epoch: 11 took 194.108s. It used 00:39:10 and still needs 03:45:13 to complete!
+
+Train: 12 [   0/104 (  0%)]  Loss:  5.797121 (5.7971)  Time: 14.412s,    2.22/s  (14.412s,    2.22/s)  LR: 1.800e-02  Data: 9.356 (9.356)
+Train: 12 [  50/104 ( 49%)]  Loss:  6.766080 (6.0641)  Time: 1.041s,   30.73/s  (1.392s,   22.99/s)  LR: 1.800e-02  Data: 0.007 (0.199)
+Train: 12 [ 100/104 ( 97%)]  Loss:  5.504276 (6.0138)  Time: 0.875s,   36.56/s  (1.168s,   27.39/s)  LR: 1.800e-02  Data: 0.006 (0.105)
+Train: 12 [ 103/104 (100%)]  Loss:  5.668505 (6.0044)  Time: 0.901s,   35.50/s  (1.160s,   27.59/s)  LR: 1.800e-02  Data: 0.000 (0.102)
+Test: [   0/104]  Time: 10.740 (10.740)  Loss:  1.2100 (1.2100)  Acc@1: 81.2500 (81.2500)  Acc@5: 96.8750 (96.8750)
+Test: [  50/104]  Time: 0.566 (0.926)  Loss:  1.2734 (1.9099)  Acc@1: 71.8750 (40.3186)  Acc@5: 90.6250 (85.2328)
+Test: [ 100/104]  Time: 0.124 (0.726)  Loss:  1.5918 (1.6460)  Acc@1: 43.7500 (49.5668)  Acc@5: 100.0000 (88.3663)
+Test: [ 104/104]  Time: 0.042 (0.702)  Loss:  0.5391 (1.6142)  Acc@1: 80.0000 (50.7351)  Acc@5: 100.0000 (88.6289)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-11.pth.tar', 53.22532253225322)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-12.pth.tar', 50.735073507350734)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-10.pth.tar', 49.744974497449746)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-9.pth.tar', 44.224422442244226)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-7.pth.tar', 41.85418541854185)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-8.pth.tar', 39.663966396639665)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-6.pth.tar', 37.2037203720372)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-5.pth.tar', 35.07350735073507)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-4.pth.tar', 23.37233723372337)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-3.pth.tar', 22.05220522052205)
+
+Epoch: 12 took 195.196s. It used 00:42:25 and still needs 03:41:53 to complete!
+
+Train: 13 [   0/104 (  0%)]  Loss:  6.205858 (6.2059)  Time: 14.868s,    2.15/s  (14.868s,    2.15/s)  LR: 1.800e-02  Data: 9.773 (9.773)
+Train: 13 [  50/104 ( 49%)]  Loss:  5.677278 (6.0767)  Time: 0.958s,   33.40/s  (1.398s,   22.90/s)  LR: 1.800e-02  Data: 0.016 (0.206)
+Train: 13 [ 100/104 ( 97%)]  Loss:  5.373635 (6.0251)  Time: 0.910s,   35.17/s  (1.167s,   27.43/s)  LR: 1.800e-02  Data: 0.006 (0.109)
+Train: 13 [ 103/104 (100%)]  Loss:  7.023221 (6.0339)  Time: 0.855s,   37.44/s  (1.158s,   27.64/s)  LR: 1.800e-02  Data: 0.000 (0.106)
+Test: [   0/104]  Time: 10.469 (10.469)  Loss:  2.4863 (2.4863)  Acc@1: 28.1250 (28.1250)  Acc@5: 65.6250 (65.6250)
+Test: [  50/104]  Time: 0.563 (0.917)  Loss:  0.9639 (1.7576)  Acc@1: 81.2500 (46.0172)  Acc@5: 93.7500 (87.9902)
+Test: [ 100/104]  Time: 0.124 (0.722)  Loss:  0.3762 (1.5522)  Acc@1: 100.0000 (55.9406)  Acc@5: 100.0000 (90.0990)
+Test: [ 104/104]  Time: 0.044 (0.698)  Loss:  0.2465 (1.5216)  Acc@1: 100.0000 (56.9757)  Acc@5: 100.0000 (90.3390)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-13.pth.tar', 56.975697569756974)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-11.pth.tar', 53.22532253225322)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-12.pth.tar', 50.735073507350734)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-10.pth.tar', 49.744974497449746)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-9.pth.tar', 44.224422442244226)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-7.pth.tar', 41.85418541854185)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-8.pth.tar', 39.663966396639665)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-6.pth.tar', 37.2037203720372)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-5.pth.tar', 35.07350735073507)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-4.pth.tar', 23.37233723372337)
+
+Epoch: 13 took 194.605s. It used 00:45:39 and still needs 03:38:32 to complete!
+
+Train: 14 [   0/104 (  0%)]  Loss:  5.245699 (5.2457)  Time: 14.778s,    2.17/s  (14.778s,    2.17/s)  LR: 1.800e-02  Data: 9.735 (9.735)
+Train: 14 [  50/104 ( 49%)]  Loss:  6.762358 (5.7695)  Time: 1.014s,   31.55/s  (1.400s,   22.86/s)  LR: 1.800e-02  Data: 0.019 (0.204)
+Train: 14 [ 100/104 ( 97%)]  Loss:  6.718662 (5.7580)  Time: 0.874s,   36.63/s  (1.179s,   27.13/s)  LR: 1.800e-02  Data: 0.007 (0.108)
+Train: 14 [ 103/104 (100%)]  Loss:  5.185863 (5.7608)  Time: 0.856s,   37.40/s  (1.170s,   27.34/s)  LR: 1.800e-02  Data: 0.000 (0.105)
+Test: [   0/104]  Time: 10.483 (10.483)  Loss:  1.5088 (1.5088)  Acc@1: 65.6250 (65.6250)  Acc@5: 84.3750 (84.3750)
+Test: [  50/104]  Time: 0.574 (0.916)  Loss:  1.3564 (1.7038)  Acc@1: 65.6250 (46.8750)  Acc@5: 90.6250 (87.4387)
+Test: [ 100/104]  Time: 0.126 (0.722)  Loss:  0.7422 (1.5115)  Acc@1: 84.3750 (55.3527)  Acc@5: 100.0000 (89.8515)
+Test: [ 104/104]  Time: 0.044 (0.698)  Loss:  0.3652 (1.4817)  Acc@1: 100.0000 (56.4956)  Acc@5: 100.0000 (90.1290)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-13.pth.tar', 56.975697569756974)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-14.pth.tar', 56.495649564956494)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-11.pth.tar', 53.22532253225322)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-12.pth.tar', 50.735073507350734)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-10.pth.tar', 49.744974497449746)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-9.pth.tar', 44.224422442244226)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-7.pth.tar', 41.85418541854185)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-8.pth.tar', 39.663966396639665)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-6.pth.tar', 37.2037203720372)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-5.pth.tar', 35.07350735073507)
+
+Epoch: 14 took 195.878s. It used 00:48:55 and still needs 03:35:17 to complete!
+
+Train: 15 [   0/104 (  0%)]  Loss:  4.939083 (4.9391)  Time: 16.401s,    1.95/s  (16.401s,    1.95/s)  LR: 1.800e-02  Data: 10.754 (10.754)
+Train: 15 [  50/104 ( 49%)]  Loss:  5.855838 (5.6653)  Time: 1.071s,   29.88/s  (1.385s,   23.11/s)  LR: 1.800e-02  Data: 0.008 (0.224)
+Train: 15 [ 100/104 ( 97%)]  Loss:  4.821342 (5.6440)  Time: 0.860s,   37.22/s  (1.161s,   27.56/s)  LR: 1.800e-02  Data: 0.006 (0.117)
+Train: 15 [ 103/104 (100%)]  Loss:  5.619028 (5.6388)  Time: 0.854s,   37.47/s  (1.153s,   27.76/s)  LR: 1.800e-02  Data: 0.000 (0.114)
+Test: [   0/104]  Time: 10.676 (10.676)  Loss:  2.4922 (2.4922)  Acc@1:  9.3750 ( 9.3750)  Acc@5: 81.2500 (81.2500)
+Test: [  50/104]  Time: 0.571 (0.930)  Loss:  0.7017 (1.7507)  Acc@1: 87.5000 (43.9338)  Acc@5: 90.6250 (86.9485)
+Test: [ 100/104]  Time: 0.123 (0.731)  Loss:  0.3088 (1.4856)  Acc@1: 93.7500 (54.4554)  Acc@5: 100.0000 (89.8824)
+Test: [ 104/104]  Time: 0.042 (0.707)  Loss:  0.5298 (1.4629)  Acc@1: 80.0000 (55.2655)  Acc@5: 100.0000 (90.0090)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-13.pth.tar', 56.975697569756974)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-14.pth.tar', 56.495649564956494)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-15.pth.tar', 55.26552655265527)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-11.pth.tar', 53.22532253225322)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-12.pth.tar', 50.735073507350734)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-10.pth.tar', 49.744974497449746)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-9.pth.tar', 44.224422442244226)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-7.pth.tar', 41.85418541854185)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-8.pth.tar', 39.663966396639665)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-6.pth.tar', 37.2037203720372)
+
+Epoch: 15 took 194.980s. It used 00:52:10 and still needs 03:31:58 to complete!
+
+Train: 16 [   0/104 (  0%)]  Loss:  5.213542 (5.2135)  Time: 14.762s,    2.17/s  (14.762s,    2.17/s)  LR: 1.800e-02  Data: 9.931 (9.931)
+Train: 16 [  50/104 ( 49%)]  Loss:  6.532394 (5.7014)  Time: 0.952s,   33.62/s  (1.421s,   22.51/s)  LR: 1.800e-02  Data: 0.008 (0.211)
+Train: 16 [ 100/104 ( 97%)]  Loss:  5.198569 (5.6251)  Time: 0.925s,   34.61/s  (1.177s,   27.19/s)  LR: 1.800e-02  Data: 0.006 (0.111)
+Train: 16 [ 103/104 (100%)]  Loss:  5.029145 (5.6176)  Time: 0.863s,   37.08/s  (1.168s,   27.40/s)  LR: 1.800e-02  Data: 0.000 (0.108)
+Test: [   0/104]  Time: 10.639 (10.639)  Loss:  1.7842 (1.7842)  Acc@1: 53.1250 (53.1250)  Acc@5: 84.3750 (84.3750)
+Test: [  50/104]  Time: 0.559 (0.919)  Loss:  1.0293 (1.5548)  Acc@1: 71.8750 (51.0417)  Acc@5: 93.7500 (90.0735)
+Test: [ 100/104]  Time: 0.123 (0.723)  Loss:  0.2382 (1.3826)  Acc@1: 96.8750 (59.3131)  Acc@5: 100.0000 (91.5223)
+Test: [ 104/104]  Time: 0.048 (0.699)  Loss:  0.2659 (1.3464)  Acc@1: 100.0000 (60.4860)  Acc@5: 100.0000 (91.7792)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-16.pth.tar', 60.486048604860486)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-13.pth.tar', 56.975697569756974)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-14.pth.tar', 56.495649564956494)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-15.pth.tar', 55.26552655265527)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-11.pth.tar', 53.22532253225322)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-12.pth.tar', 50.735073507350734)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-10.pth.tar', 49.744974497449746)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-9.pth.tar', 44.224422442244226)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-7.pth.tar', 41.85418541854185)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-8.pth.tar', 39.663966396639665)
+
+Epoch: 16 took 195.896s. It used 00:55:26 and still needs 03:28:43 to complete!
+
+Train: 17 [   0/104 (  0%)]  Loss:  4.939545 (4.9395)  Time: 14.834s,    2.16/s  (14.834s,    2.16/s)  LR: 1.800e-02  Data: 10.017 (10.017)
+Train: 17 [  50/104 ( 49%)]  Loss:  5.514660 (5.4955)  Time: 1.106s,   28.94/s  (1.395s,   22.94/s)  LR: 1.800e-02  Data: 0.019 (0.210)
+Train: 17 [ 100/104 ( 97%)]  Loss:  4.839421 (5.4307)  Time: 0.873s,   36.67/s  (1.162s,   27.53/s)  LR: 1.800e-02  Data: 0.006 (0.111)
+Train: 17 [ 103/104 (100%)]  Loss:  6.628736 (5.4329)  Time: 0.866s,   36.95/s  (1.154s,   27.73/s)  LR: 1.800e-02  Data: 0.000 (0.108)
+Test: [   0/104]  Time: 10.563 (10.563)  Loss:  2.6738 (2.6738)  Acc@1:  0.0000 ( 0.0000)  Acc@5: 78.1250 (78.1250)
+Test: [  50/104]  Time: 0.564 (0.920)  Loss:  0.7036 (1.7430)  Acc@1: 84.3750 (46.3848)  Acc@5: 93.7500 (87.1324)
+Test: [ 100/104]  Time: 0.125 (0.720)  Loss:  0.6680 (1.4199)  Acc@1: 78.1250 (57.8280)  Acc@5: 100.0000 (90.5012)
+Test: [ 104/104]  Time: 0.042 (0.697)  Loss:  0.0914 (1.3838)  Acc@1: 100.0000 (58.9859)  Acc@5: 100.0000 (90.7891)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-16.pth.tar', 60.486048604860486)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-17.pth.tar', 58.985898589858984)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-13.pth.tar', 56.975697569756974)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-14.pth.tar', 56.495649564956494)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-15.pth.tar', 55.26552655265527)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-11.pth.tar', 53.22532253225322)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-12.pth.tar', 50.735073507350734)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-10.pth.tar', 49.744974497449746)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-9.pth.tar', 44.224422442244226)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-7.pth.tar', 41.85418541854185)
+
+Epoch: 17 took 194.082s. It used 00:58:40 and still needs 03:25:22 to complete!
+
+Train: 18 [   0/104 (  0%)]  Loss:  6.374967 (6.3750)  Time: 14.237s,    2.25/s  (14.237s,    2.25/s)  LR: 1.800e-02  Data: 9.226 (9.226)
+Train: 18 [  50/104 ( 49%)]  Loss:  4.958752 (5.2912)  Time: 0.998s,   32.06/s  (1.418s,   22.56/s)  LR: 1.800e-02  Data: 0.013 (0.197)
+Train: 18 [ 100/104 ( 97%)]  Loss:  4.855523 (5.3841)  Time: 0.862s,   37.12/s  (1.176s,   27.20/s)  LR: 1.800e-02  Data: 0.006 (0.104)
+Train: 18 [ 103/104 (100%)]  Loss:  4.975850 (5.3905)  Time: 0.854s,   37.46/s  (1.168s,   27.41/s)  LR: 1.800e-02  Data: 0.000 (0.101)
+Test: [   0/104]  Time: 10.249 (10.249)  Loss:  1.3672 (1.3672)  Acc@1: 46.8750 (46.8750)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.566 (0.918)  Loss:  0.5840 (1.6582)  Acc@1: 87.5000 (51.2868)  Acc@5: 93.7500 (87.0711)
+Test: [ 100/104]  Time: 0.124 (0.721)  Loss:  0.3040 (1.3811)  Acc@1: 100.0000 (60.2104)  Acc@5: 100.0000 (90.6559)
+Test: [ 104/104]  Time: 0.042 (0.697)  Loss:  0.0435 (1.3555)  Acc@1: 100.0000 (61.1761)  Acc@5: 100.0000 (90.8791)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-18.pth.tar', 61.17611761176118)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-16.pth.tar', 60.486048604860486)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-17.pth.tar', 58.985898589858984)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-13.pth.tar', 56.975697569756974)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-14.pth.tar', 56.495649564956494)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-15.pth.tar', 55.26552655265527)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-11.pth.tar', 53.22532253225322)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-12.pth.tar', 50.735073507350734)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-10.pth.tar', 49.744974497449746)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-9.pth.tar', 44.224422442244226)
+
+Epoch: 18 took 195.558s. It used 01:01:56 and still needs 03:22:06 to complete!
+
+Train: 19 [   0/104 (  0%)]  Loss:  6.082159 (6.0822)  Time: 14.316s,    2.24/s  (14.316s,    2.24/s)  LR: 1.800e-02  Data: 9.208 (9.208)
+Train: 19 [  50/104 ( 49%)]  Loss:  5.525826 (5.3206)  Time: 1.070s,   29.91/s  (1.388s,   23.06/s)  LR: 1.800e-02  Data: 0.025 (0.196)
+Train: 19 [ 100/104 ( 97%)]  Loss:  6.082319 (5.3379)  Time: 0.862s,   37.13/s  (1.161s,   27.55/s)  LR: 1.800e-02  Data: 0.006 (0.104)
+Train: 19 [ 103/104 (100%)]  Loss:  5.582683 (5.3486)  Time: 0.855s,   37.44/s  (1.153s,   27.76/s)  LR: 1.800e-02  Data: 0.000 (0.101)
+Test: [   0/104]  Time: 10.635 (10.635)  Loss:  1.0508 (1.0508)  Acc@1: 87.5000 (87.5000)  Acc@5: 96.8750 (96.8750)
+Test: [  50/104]  Time: 0.516 (0.919)  Loss:  1.0176 (1.7284)  Acc@1: 71.8750 (45.1593)  Acc@5: 93.7500 (87.2549)
+Test: [ 100/104]  Time: 0.124 (0.720)  Loss:  0.8530 (1.5423)  Acc@1: 78.1250 (53.2797)  Acc@5: 96.8750 (88.6757)
+Test: [ 104/104]  Time: 0.048 (0.697)  Loss:  1.1006 (1.5227)  Acc@1: 40.0000 (53.7654)  Acc@5: 100.0000 (88.9289)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-18.pth.tar', 61.17611761176118)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-16.pth.tar', 60.486048604860486)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-17.pth.tar', 58.985898589858984)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-13.pth.tar', 56.975697569756974)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-14.pth.tar', 56.495649564956494)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-15.pth.tar', 55.26552655265527)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-19.pth.tar', 53.765376537653765)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-11.pth.tar', 53.22532253225322)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-12.pth.tar', 50.735073507350734)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-10.pth.tar', 49.744974497449746)
+
+Epoch: 19 took 193.927s. It used 01:05:10 and still needs 03:18:46 to complete!
+
+Train: 20 [   0/104 (  0%)]  Loss:  4.977050 (4.9771)  Time: 16.251s,    1.97/s  (16.251s,    1.97/s)  LR: 1.620e-02  Data: 11.054 (11.054)
+Train: 20 [  50/104 ( 49%)]  Loss:  4.757058 (5.3331)  Time: 0.996s,   32.14/s  (1.416s,   22.60/s)  LR: 1.620e-02  Data: 0.022 (0.231)
+Train: 20 [ 100/104 ( 97%)]  Loss:  4.711786 (5.2884)  Time: 0.863s,   37.10/s  (1.176s,   27.21/s)  LR: 1.620e-02  Data: 0.006 (0.121)
+Train: 20 [ 103/104 (100%)]  Loss:  4.988944 (5.2732)  Time: 0.853s,   37.53/s  (1.167s,   27.42/s)  LR: 1.620e-02  Data: 0.000 (0.118)
+Test: [   0/104]  Time: 10.630 (10.630)  Loss:  2.2305 (2.2305)  Acc@1: 37.5000 (37.5000)  Acc@5: 71.8750 (71.8750)
+Test: [  50/104]  Time: 0.588 (0.923)  Loss:  0.8047 (1.5040)  Acc@1: 81.2500 (54.4730)  Acc@5: 93.7500 (90.6863)
+Test: [ 100/104]  Time: 0.124 (0.723)  Loss:  0.5513 (1.3137)  Acc@1: 93.7500 (61.8502)  Acc@5: 96.8750 (92.3267)
+Test: [ 104/104]  Time: 0.045 (0.699)  Loss:  0.5698 (1.2873)  Acc@1: 100.0000 (62.7663)  Acc@5: 100.0000 (92.5293)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-20.pth.tar', 62.76627662766277)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-18.pth.tar', 61.17611761176118)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-16.pth.tar', 60.486048604860486)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-17.pth.tar', 58.985898589858984)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-13.pth.tar', 56.975697569756974)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-14.pth.tar', 56.495649564956494)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-15.pth.tar', 55.26552655265527)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-19.pth.tar', 53.765376537653765)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-11.pth.tar', 53.22532253225322)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-12.pth.tar', 50.735073507350734)
+
+Epoch: 20 took 195.683s. It used 01:08:25 and still needs 03:15:31 to complete!
+
+Train: 21 [   0/104 (  0%)]  Loss:  4.863172 (4.8632)  Time: 15.181s,    2.11/s  (15.181s,    2.11/s)  LR: 1.620e-02  Data: 10.201 (10.201)
+Train: 21 [  50/104 ( 49%)]  Loss:  6.136821 (5.0906)  Time: 1.102s,   29.03/s  (1.401s,   22.84/s)  LR: 1.620e-02  Data: 0.020 (0.214)
+Train: 21 [ 100/104 ( 97%)]  Loss:  4.754025 (5.0811)  Time: 0.859s,   37.25/s  (1.166s,   27.44/s)  LR: 1.620e-02  Data: 0.006 (0.112)
+Train: 21 [ 103/104 (100%)]  Loss:  5.227184 (5.0839)  Time: 0.866s,   36.93/s  (1.158s,   27.63/s)  LR: 1.620e-02  Data: 0.000 (0.109)
+Test: [   0/104]  Time: 10.669 (10.669)  Loss:  0.7744 (0.7744)  Acc@1: 81.2500 (81.2500)  Acc@5: 96.8750 (96.8750)
+Test: [  50/104]  Time: 0.576 (0.918)  Loss:  0.6792 (1.5639)  Acc@1: 84.3750 (50.0000)  Acc@5: 93.7500 (91.1152)
+Test: [ 100/104]  Time: 0.124 (0.740)  Loss:  0.6299 (1.2695)  Acc@1: 84.3750 (61.1077)  Acc@5: 100.0000 (92.6671)
+Test: [ 104/104]  Time: 0.040 (0.716)  Loss:  0.0509 (1.2385)  Acc@1: 100.0000 (62.1062)  Acc@5: 100.0000 (92.8893)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-20.pth.tar', 62.76627662766277)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-21.pth.tar', 62.106210621062104)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-18.pth.tar', 61.17611761176118)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-16.pth.tar', 60.486048604860486)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-17.pth.tar', 58.985898589858984)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-13.pth.tar', 56.975697569756974)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-14.pth.tar', 56.495649564956494)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-15.pth.tar', 55.26552655265527)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-19.pth.tar', 53.765376537653765)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-11.pth.tar', 53.22532253225322)
+
+Epoch: 21 took 196.449s. It used 01:11:42 and still needs 03:12:18 to complete!
+
+Train: 22 [   0/104 (  0%)]  Loss:  5.222407 (5.2224)  Time: 14.249s,    2.25/s  (14.249s,    2.25/s)  LR: 1.620e-02  Data: 9.156 (9.156)
+Train: 22 [  50/104 ( 49%)]  Loss:  5.544483 (4.9382)  Time: 1.054s,   30.36/s  (1.397s,   22.91/s)  LR: 1.620e-02  Data: 0.013 (0.194)
+Train: 22 [ 100/104 ( 97%)]  Loss:  5.696716 (4.9755)  Time: 0.861s,   37.18/s  (1.169s,   27.38/s)  LR: 1.620e-02  Data: 0.006 (0.102)
+Train: 22 [ 103/104 (100%)]  Loss:  4.621167 (4.9612)  Time: 0.856s,   37.40/s  (1.160s,   27.59/s)  LR: 1.620e-02  Data: 0.000 (0.100)
+Test: [   0/104]  Time: 10.370 (10.370)  Loss:  2.2344 (2.2344)  Acc@1: 28.1250 (28.1250)  Acc@5: 90.6250 (90.6250)
+Test: [  50/104]  Time: 0.545 (0.915)  Loss:  0.6577 (1.3523)  Acc@1: 84.3750 (58.1495)  Acc@5: 93.7500 (91.1765)
+Test: [ 100/104]  Time: 0.123 (0.721)  Loss:  0.5620 (1.2104)  Acc@1: 87.5000 (64.5421)  Acc@5: 96.8750 (92.2649)
+Test: [ 104/104]  Time: 0.043 (0.697)  Loss:  0.0991 (1.1818)  Acc@1: 100.0000 (65.4965)  Acc@5: 100.0000 (92.4692)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-22.pth.tar', 65.49654965496549)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-20.pth.tar', 62.76627662766277)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-21.pth.tar', 62.106210621062104)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-18.pth.tar', 61.17611761176118)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-16.pth.tar', 60.486048604860486)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-17.pth.tar', 58.985898589858984)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-13.pth.tar', 56.975697569756974)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-14.pth.tar', 56.495649564956494)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-15.pth.tar', 55.26552655265527)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-19.pth.tar', 53.765376537653765)
+
+Epoch: 22 took 194.755s. It used 01:14:57 and still needs 03:09:00 to complete!
+
+Train: 23 [   0/104 (  0%)]  Loss:  5.085738 (5.0857)  Time: 15.002s,    2.13/s  (15.002s,    2.13/s)  LR: 1.620e-02  Data: 9.873 (9.873)
+Train: 23 [  50/104 ( 49%)]  Loss:  5.575331 (5.1357)  Time: 1.047s,   30.58/s  (1.393s,   22.97/s)  LR: 1.620e-02  Data: 0.008 (0.208)
+Train: 23 [ 100/104 ( 97%)]  Loss:  4.679255 (5.0628)  Time: 0.869s,   36.83/s  (1.164s,   27.50/s)  LR: 1.620e-02  Data: 0.007 (0.109)
+Train: 23 [ 103/104 (100%)]  Loss:  4.525201 (5.0498)  Time: 0.897s,   35.66/s  (1.155s,   27.70/s)  LR: 1.620e-02  Data: 0.000 (0.106)
+Test: [   0/104]  Time: 10.534 (10.534)  Loss:  2.2559 (2.2559)  Acc@1: 28.1250 (28.1250)  Acc@5: 75.0000 (75.0000)
+Test: [  50/104]  Time: 0.495 (0.954)  Loss:  0.4214 (1.4170)  Acc@1: 93.7500 (55.4534)  Acc@5: 93.7500 (90.5025)
+Test: [ 100/104]  Time: 0.125 (0.738)  Loss:  0.3950 (1.2461)  Acc@1: 90.6250 (63.3973)  Acc@5: 96.8750 (91.9554)
+Test: [ 104/104]  Time: 0.042 (0.714)  Loss:  0.2595 (1.2200)  Acc@1: 100.0000 (64.3264)  Acc@5: 100.0000 (92.1692)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-22.pth.tar', 65.49654965496549)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-23.pth.tar', 64.32643264326433)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-20.pth.tar', 62.76627662766277)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-21.pth.tar', 62.106210621062104)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-18.pth.tar', 61.17611761176118)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-16.pth.tar', 60.486048604860486)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-17.pth.tar', 58.985898589858984)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-13.pth.tar', 56.975697569756974)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-14.pth.tar', 56.495649564956494)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-15.pth.tar', 55.26552655265527)
+
+Epoch: 23 took 196.027s. It used 01:18:13 and still needs 03:05:46 to complete!
+
+Train: 24 [   0/104 (  0%)]  Loss:  4.023498 (4.0235)  Time: 14.427s,    2.22/s  (14.427s,    2.22/s)  LR: 1.620e-02  Data: 9.448 (9.448)
+Train: 24 [  50/104 ( 49%)]  Loss:  4.662649 (4.9359)  Time: 0.967s,   33.09/s  (1.382s,   23.15/s)  LR: 1.620e-02  Data: 0.008 (0.198)
+Train: 24 [ 100/104 ( 97%)]  Loss:  5.863231 (4.9523)  Time: 0.909s,   35.19/s  (1.157s,   27.66/s)  LR: 1.620e-02  Data: 0.006 (0.104)
+Train: 24 [ 103/104 (100%)]  Loss:  5.788519 (4.9528)  Time: 0.859s,   37.25/s  (1.148s,   27.86/s)  LR: 1.620e-02  Data: 0.000 (0.101)
+Test: [   0/104]  Time: 10.558 (10.558)  Loss:  1.9697 (1.9697)  Acc@1: 53.1250 (53.1250)  Acc@5: 87.5000 (87.5000)
+Test: [  50/104]  Time: 0.544 (0.918)  Loss:  0.8525 (1.5865)  Acc@1: 78.1250 (51.6544)  Acc@5: 93.7500 (88.4191)
+Test: [ 100/104]  Time: 0.126 (0.721)  Loss:  0.3281 (1.2976)  Acc@1: 96.8750 (62.0978)  Acc@5: 96.8750 (91.1510)
+Test: [ 104/104]  Time: 0.042 (0.697)  Loss:  0.3787 (1.2710)  Acc@1: 100.0000 (63.0663)  Acc@5: 100.0000 (91.3891)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-22.pth.tar', 65.49654965496549)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-23.pth.tar', 64.32643264326433)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-24.pth.tar', 63.066306630663064)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-20.pth.tar', 62.76627662766277)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-21.pth.tar', 62.106210621062104)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-18.pth.tar', 61.17611761176118)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-16.pth.tar', 60.486048604860486)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-17.pth.tar', 58.985898589858984)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-13.pth.tar', 56.975697569756974)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-14.pth.tar', 56.495649564956494)
+
+Epoch: 24 took 193.514s. It used 01:21:26 and still needs 03:02:26 to complete!
+
+Train: 25 [   0/104 (  0%)]  Loss:  5.371210 (5.3712)  Time: 14.534s,    2.20/s  (14.534s,    2.20/s)  LR: 1.620e-02  Data: 9.452 (9.452)
+Train: 25 [  50/104 ( 49%)]  Loss:  4.950091 (4.9183)  Time: 0.967s,   33.09/s  (1.391s,   23.01/s)  LR: 1.620e-02  Data: 0.008 (0.201)
+Train: 25 [ 100/104 ( 97%)]  Loss:  6.114383 (4.8824)  Time: 0.860s,   37.21/s  (1.166s,   27.43/s)  LR: 1.620e-02  Data: 0.006 (0.106)
+Train: 25 [ 103/104 (100%)]  Loss:  4.918910 (4.8752)  Time: 0.865s,   37.00/s  (1.158s,   27.64/s)  LR: 1.620e-02  Data: 0.000 (0.103)
+Test: [   0/104]  Time: 10.391 (10.391)  Loss:  2.3867 (2.3867)  Acc@1: 12.5000 (12.5000)  Acc@5: 81.2500 (81.2500)
+Test: [  50/104]  Time: 0.586 (0.914)  Loss:  0.6924 (1.6902)  Acc@1: 81.2500 (47.8554)  Acc@5: 93.7500 (87.2549)
+Test: [ 100/104]  Time: 0.125 (0.719)  Loss:  0.3025 (1.3671)  Acc@1: 96.8750 (59.6225)  Acc@5: 100.0000 (90.2847)
+Test: [ 104/104]  Time: 0.042 (0.696)  Loss:  0.3301 (1.3407)  Acc@1: 100.0000 (60.5761)  Acc@5: 100.0000 (90.5791)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-22.pth.tar', 65.49654965496549)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-23.pth.tar', 64.32643264326433)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-24.pth.tar', 63.066306630663064)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-20.pth.tar', 62.76627662766277)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-21.pth.tar', 62.106210621062104)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-18.pth.tar', 61.17611761176118)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-25.pth.tar', 60.576057605760575)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-16.pth.tar', 60.486048604860486)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-17.pth.tar', 58.985898589858984)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-13.pth.tar', 56.975697569756974)
+
+Epoch: 25 took 194.304s. It used 01:24:40 and still needs 02:59:08 to complete!
+
+Train: 26 [   0/104 (  0%)]  Loss:  4.849612 (4.8496)  Time: 14.858s,    2.15/s  (14.858s,    2.15/s)  LR: 1.620e-02  Data: 9.152 (9.152)
+Train: 26 [  50/104 ( 49%)]  Loss:  4.313393 (4.8332)  Time: 0.952s,   33.60/s  (1.394s,   22.96/s)  LR: 1.620e-02  Data: 0.008 (0.195)
+Train: 26 [ 100/104 ( 97%)]  Loss:  4.368555 (4.7762)  Time: 0.867s,   36.92/s  (1.165s,   27.47/s)  LR: 1.620e-02  Data: 0.007 (0.103)
+Train: 26 [ 103/104 (100%)]  Loss:  5.477637 (4.7805)  Time: 0.854s,   37.47/s  (1.157s,   27.67/s)  LR: 1.620e-02  Data: 0.000 (0.100)
+Test: [   0/104]  Time: 10.597 (10.597)  Loss:  1.5166 (1.5166)  Acc@1: 31.2500 (31.2500)  Acc@5: 93.7500 (93.7500)
+Test: [  50/104]  Time: 0.533 (0.919)  Loss:  1.0713 (1.5550)  Acc@1: 78.1250 (56.0049)  Acc@5: 93.7500 (90.9314)
+Test: [ 100/104]  Time: 0.127 (0.718)  Loss:  0.7339 (1.3013)  Acc@1: 93.7500 (65.9035)  Acc@5: 96.8750 (92.6980)
+Test: [ 104/104]  Time: 0.041 (0.695)  Loss:  0.6577 (1.2777)  Acc@1: 100.0000 (66.7867)  Acc@5: 100.0000 (92.9193)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-26.pth.tar', 66.78667866786678)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-22.pth.tar', 65.49654965496549)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-23.pth.tar', 64.32643264326433)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-24.pth.tar', 63.066306630663064)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-20.pth.tar', 62.76627662766277)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-21.pth.tar', 62.106210621062104)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-18.pth.tar', 61.17611761176118)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-25.pth.tar', 60.576057605760575)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-16.pth.tar', 60.486048604860486)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-17.pth.tar', 58.985898589858984)
+
+Epoch: 26 took 194.096s. It used 01:27:55 and still needs 02:55:50 to complete!
+
+Train: 27 [   0/104 (  0%)]  Loss:  4.267003 (4.2670)  Time: 14.473s,    2.21/s  (14.473s,    2.21/s)  LR: 1.620e-02  Data: 9.443 (9.443)
+Train: 27 [  50/104 ( 49%)]  Loss:  5.749075 (4.7944)  Time: 1.018s,   31.44/s  (1.384s,   23.12/s)  LR: 1.620e-02  Data: 0.013 (0.198)
+Train: 27 [ 100/104 ( 97%)]  Loss:  4.494704 (4.7906)  Time: 0.905s,   35.36/s  (1.174s,   27.26/s)  LR: 1.620e-02  Data: 0.006 (0.105)
+Train: 27 [ 103/104 (100%)]  Loss:  5.467732 (4.7941)  Time: 0.859s,   37.27/s  (1.165s,   27.47/s)  LR: 1.620e-02  Data: 0.000 (0.102)
+Test: [   0/104]  Time: 10.693 (10.693)  Loss:  1.6162 (1.6162)  Acc@1: 46.8750 (46.8750)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.527 (0.917)  Loss:  1.0938 (1.5265)  Acc@1: 75.0000 (49.0809)  Acc@5: 93.7500 (90.5637)
+Test: [ 100/104]  Time: 0.124 (0.719)  Loss:  0.4119 (1.2727)  Acc@1: 90.6250 (58.8490)  Acc@5: 100.0000 (92.5124)
+Test: [ 104/104]  Time: 0.042 (0.696)  Loss:  0.3557 (1.2544)  Acc@1: 100.0000 (59.6160)  Acc@5: 100.0000 (92.6493)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-26.pth.tar', 66.78667866786678)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-22.pth.tar', 65.49654965496549)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-23.pth.tar', 64.32643264326433)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-24.pth.tar', 63.066306630663064)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-20.pth.tar', 62.76627662766277)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-21.pth.tar', 62.106210621062104)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-18.pth.tar', 61.17611761176118)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-25.pth.tar', 60.576057605760575)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-16.pth.tar', 60.486048604860486)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-27.pth.tar', 59.615961596159615)
+
+Epoch: 27 took 195.151s. It used 01:31:10 and still needs 02:52:34 to complete!
+
+Train: 28 [   0/104 (  0%)]  Loss:  4.521475 (4.5215)  Time: 14.914s,    2.15/s  (14.914s,    2.15/s)  LR: 1.620e-02  Data: 9.837 (9.837)
+Train: 28 [  50/104 ( 49%)]  Loss:  4.370575 (4.7820)  Time: 1.105s,   28.97/s  (1.397s,   22.91/s)  LR: 1.620e-02  Data: 0.019 (0.208)
+Train: 28 [ 100/104 ( 97%)]  Loss:  4.195104 (4.7099)  Time: 0.857s,   37.33/s  (1.166s,   27.43/s)  LR: 1.620e-02  Data: 0.006 (0.109)
+Train: 28 [ 103/104 (100%)]  Loss:  4.829071 (4.7006)  Time: 0.855s,   37.42/s  (1.158s,   27.64/s)  LR: 1.620e-02  Data: 0.000 (0.106)
+Test: [   0/104]  Time: 10.539 (10.539)  Loss:  1.1270 (1.1270)  Acc@1: 84.3750 (84.3750)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.579 (0.917)  Loss:  1.0840 (1.4012)  Acc@1: 71.8750 (57.2917)  Acc@5: 93.7500 (91.1765)
+Test: [ 100/104]  Time: 0.123 (0.721)  Loss:  0.1884 (1.2265)  Acc@1: 96.8750 (64.6040)  Acc@5: 100.0000 (92.4505)
+Test: [ 104/104]  Time: 0.042 (0.697)  Loss:  1.0420 (1.2067)  Acc@1: 80.0000 (65.3765)  Acc@5: 100.0000 (92.6493)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-26.pth.tar', 66.78667866786678)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-22.pth.tar', 65.49654965496549)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-28.pth.tar', 65.37653765376538)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-23.pth.tar', 64.32643264326433)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-24.pth.tar', 63.066306630663064)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-20.pth.tar', 62.76627662766277)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-21.pth.tar', 62.106210621062104)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-18.pth.tar', 61.17611761176118)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-25.pth.tar', 60.576057605760575)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-16.pth.tar', 60.486048604860486)
+
+Epoch: 28 took 194.539s. It used 01:34:24 and still needs 02:49:17 to complete!
+
+Train: 29 [   0/104 (  0%)]  Loss:  5.583197 (5.5832)  Time: 15.259s,    2.10/s  (15.259s,    2.10/s)  LR: 1.620e-02  Data: 10.265 (10.265)
+Train: 29 [  50/104 ( 49%)]  Loss:  3.927165 (4.6918)  Time: 0.966s,   33.14/s  (1.425s,   22.46/s)  LR: 1.620e-02  Data: 0.023 (0.216)
+Train: 29 [ 100/104 ( 97%)]  Loss:  5.468564 (4.6779)  Time: 0.865s,   37.01/s  (1.178s,   27.16/s)  LR: 1.620e-02  Data: 0.006 (0.113)
+Train: 29 [ 103/104 (100%)]  Loss:  4.210801 (4.6719)  Time: 0.857s,   37.36/s  (1.170s,   27.36/s)  LR: 1.620e-02  Data: 0.000 (0.110)
+Test: [   0/104]  Time: 10.573 (10.573)  Loss:  2.1875 (2.1875)  Acc@1: 50.0000 (50.0000)  Acc@5: 81.2500 (81.2500)
+Test: [  50/104]  Time: 0.526 (0.919)  Loss:  0.6587 (1.5646)  Acc@1: 84.3750 (53.3701)  Acc@5: 93.7500 (89.7059)
+Test: [ 100/104]  Time: 0.124 (0.720)  Loss:  0.8735 (1.3846)  Acc@1: 78.1250 (61.5718)  Acc@5: 96.8750 (91.2129)
+Test: [ 104/104]  Time: 0.042 (0.696)  Loss:  0.4153 (1.3561)  Acc@1: 100.0000 (62.6163)  Acc@5: 100.0000 (91.4191)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-26.pth.tar', 66.78667866786678)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-22.pth.tar', 65.49654965496549)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-28.pth.tar', 65.37653765376538)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-23.pth.tar', 64.32643264326433)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-24.pth.tar', 63.066306630663064)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-20.pth.tar', 62.76627662766277)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-29.pth.tar', 62.61626162616262)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-21.pth.tar', 62.106210621062104)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-18.pth.tar', 61.17611761176118)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-25.pth.tar', 60.576057605760575)
+
+Epoch: 29 took 195.635s. It used 01:37:40 and still needs 02:46:02 to complete!
+
+Train: 30 [   0/104 (  0%)]  Loss:  4.097008 (4.0970)  Time: 15.252s,    2.10/s  (15.252s,    2.10/s)  LR: 1.458e-02  Data: 10.185 (10.185)
+Train: 30 [  50/104 ( 49%)]  Loss:  4.582359 (4.7683)  Time: 0.976s,   32.80/s  (1.396s,   22.92/s)  LR: 1.458e-02  Data: 0.008 (0.213)
+Train: 30 [ 100/104 ( 97%)]  Loss:  4.650490 (4.6925)  Time: 0.866s,   36.95/s  (1.164s,   27.48/s)  LR: 1.458e-02  Data: 0.006 (0.112)
+Train: 30 [ 103/104 (100%)]  Loss:  4.047681 (4.6810)  Time: 0.856s,   37.39/s  (1.156s,   27.69/s)  LR: 1.458e-02  Data: 0.000 (0.109)
+Test: [   0/104]  Time: 10.513 (10.513)  Loss:  1.5879 (1.5879)  Acc@1: 53.1250 (53.1250)  Acc@5: 96.8750 (96.8750)
+Test: [  50/104]  Time: 0.576 (0.916)  Loss:  0.6499 (1.3258)  Acc@1: 84.3750 (61.9485)  Acc@5: 93.7500 (92.3407)
+Test: [ 100/104]  Time: 0.123 (0.719)  Loss:  0.2068 (1.1477)  Acc@1: 96.8750 (68.0693)  Acc@5: 100.0000 (92.6671)
+Test: [ 104/104]  Time: 0.041 (0.695)  Loss:  0.1859 (1.1230)  Acc@1: 100.0000 (68.9169)  Acc@5: 100.0000 (92.8593)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-30.pth.tar', 68.91689168916892)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-26.pth.tar', 66.78667866786678)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-22.pth.tar', 65.49654965496549)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-28.pth.tar', 65.37653765376538)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-23.pth.tar', 64.32643264326433)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-24.pth.tar', 63.066306630663064)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-20.pth.tar', 62.76627662766277)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-29.pth.tar', 62.61626162616262)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-21.pth.tar', 62.106210621062104)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-18.pth.tar', 61.17611761176118)
+
+Epoch: 30 took 194.084s. It used 01:40:54 and still needs 02:42:45 to complete!
+
+Train: 31 [   0/104 (  0%)]  Loss:  4.410923 (4.4109)  Time: 14.441s,    2.22/s  (14.441s,    2.22/s)  LR: 1.458e-02  Data: 9.420 (9.420)
+Train: 31 [  50/104 ( 49%)]  Loss:  4.199896 (4.4182)  Time: 0.989s,   32.37/s  (1.419s,   22.56/s)  LR: 1.458e-02  Data: 0.008 (0.198)
+Train: 31 [ 100/104 ( 97%)]  Loss:  4.011069 (4.3846)  Time: 0.863s,   37.07/s  (1.178s,   27.16/s)  LR: 1.458e-02  Data: 0.006 (0.105)
+Train: 31 [ 103/104 (100%)]  Loss:  5.369860 (4.3932)  Time: 0.858s,   37.31/s  (1.169s,   27.37/s)  LR: 1.458e-02  Data: 0.000 (0.102)
+Test: [   0/104]  Time: 10.564 (10.564)  Loss:  0.9868 (0.9868)  Acc@1: 78.1250 (78.1250)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.567 (0.913)  Loss:  0.6030 (1.3740)  Acc@1: 87.5000 (59.8652)  Acc@5: 93.7500 (92.7083)
+Test: [ 100/104]  Time: 0.123 (0.720)  Loss:  0.4104 (1.0892)  Acc@1: 90.6250 (69.1832)  Acc@5: 100.0000 (94.0903)
+Test: [ 104/104]  Time: 0.044 (0.696)  Loss:  0.4717 (1.0681)  Acc@1: 100.0000 (69.9670)  Acc@5: 100.0000 (94.2394)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-31.pth.tar', 69.96699669966996)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-30.pth.tar', 68.91689168916892)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-26.pth.tar', 66.78667866786678)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-22.pth.tar', 65.49654965496549)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-28.pth.tar', 65.37653765376538)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-23.pth.tar', 64.32643264326433)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-24.pth.tar', 63.066306630663064)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-20.pth.tar', 62.76627662766277)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-29.pth.tar', 62.61626162616262)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-21.pth.tar', 62.106210621062104)
+
+Epoch: 31 took 195.615s. It used 01:44:10 and still needs 02:39:30 to complete!
+
+Train: 32 [   0/104 (  0%)]  Loss:  3.962447 (3.9624)  Time: 14.686s,    2.18/s  (14.686s,    2.18/s)  LR: 1.458e-02  Data: 9.684 (9.684)
+Train: 32 [  50/104 ( 49%)]  Loss:  4.062395 (4.4168)  Time: 1.035s,   30.91/s  (1.390s,   23.03/s)  LR: 1.458e-02  Data: 0.008 (0.204)
+Train: 32 [ 100/104 ( 97%)]  Loss:  5.287155 (4.4234)  Time: 0.862s,   37.14/s  (1.162s,   27.54/s)  LR: 1.458e-02  Data: 0.006 (0.108)
+Train: 32 [ 103/104 (100%)]  Loss:  3.993135 (4.4181)  Time: 0.859s,   37.25/s  (1.154s,   27.74/s)  LR: 1.458e-02  Data: 0.000 (0.105)
+Test: [   0/104]  Time: 10.650 (10.650)  Loss:  1.9434 (1.9434)  Acc@1: 53.1250 (53.1250)  Acc@5: 87.5000 (87.5000)
+Test: [  50/104]  Time: 0.573 (0.925)  Loss:  0.9355 (1.3983)  Acc@1: 71.8750 (55.4534)  Acc@5: 93.7500 (92.0956)
+Test: [ 100/104]  Time: 0.125 (0.725)  Loss:  0.2397 (1.1467)  Acc@1: 96.8750 (66.2438)  Acc@5: 100.0000 (93.3168)
+Test: [ 104/104]  Time: 0.042 (0.701)  Loss:  0.1189 (1.1306)  Acc@1: 100.0000 (66.8467)  Acc@5: 100.0000 (93.4593)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-31.pth.tar', 69.96699669966996)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-30.pth.tar', 68.91689168916892)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-32.pth.tar', 66.84668466846685)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-26.pth.tar', 66.78667866786678)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-22.pth.tar', 65.49654965496549)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-28.pth.tar', 65.37653765376538)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-23.pth.tar', 64.32643264326433)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-24.pth.tar', 63.066306630663064)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-20.pth.tar', 62.76627662766277)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-29.pth.tar', 62.61626162616262)
+
+Epoch: 32 took 194.481s. It used 01:47:24 and still needs 02:36:13 to complete!
+
+Train: 33 [   0/104 (  0%)]  Loss:  5.020989 (5.0210)  Time: 17.131s,    1.87/s  (17.131s,    1.87/s)  LR: 1.458e-02  Data: 10.319 (10.319)
+Train: 33 [  50/104 ( 49%)]  Loss:  3.998897 (4.3170)  Time: 1.023s,   31.29/s  (1.428s,   22.41/s)  LR: 1.458e-02  Data: 0.021 (0.216)
+Train: 33 [ 100/104 ( 97%)]  Loss:  5.395035 (4.4141)  Time: 0.870s,   36.76/s  (1.183s,   27.05/s)  LR: 1.458e-02  Data: 0.006 (0.113)
+Train: 33 [ 103/104 (100%)]  Loss:  5.335574 (4.4328)  Time: 0.859s,   37.26/s  (1.174s,   27.26/s)  LR: 1.458e-02  Data: 0.000 (0.110)
+Test: [   0/104]  Time: 10.634 (10.634)  Loss:  1.3691 (1.3691)  Acc@1: 65.6250 (65.6250)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.577 (0.919)  Loss:  0.5527 (1.4972)  Acc@1: 93.7500 (58.4559)  Acc@5: 93.7500 (91.1765)
+Test: [ 100/104]  Time: 0.124 (0.721)  Loss:  0.9189 (1.3251)  Acc@1: 93.7500 (64.3255)  Acc@5: 96.8750 (92.6052)
+Test: [ 104/104]  Time: 0.041 (0.698)  Loss:  0.1400 (1.3175)  Acc@1: 100.0000 (64.8665)  Acc@5: 100.0000 (92.4992)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-31.pth.tar', 69.96699669966996)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-30.pth.tar', 68.91689168916892)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-32.pth.tar', 66.84668466846685)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-26.pth.tar', 66.78667866786678)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-22.pth.tar', 65.49654965496549)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-28.pth.tar', 65.37653765376538)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-33.pth.tar', 64.86648664866486)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-23.pth.tar', 64.32643264326433)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-24.pth.tar', 63.066306630663064)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-20.pth.tar', 62.76627662766277)
+
+Epoch: 33 took 196.143s. It used 01:50:40 and still needs 02:32:59 to complete!
+
+Train: 34 [   0/104 (  0%)]  Loss:  4.070208 (4.0702)  Time: 14.814s,    2.16/s  (14.814s,    2.16/s)  LR: 1.458e-02  Data: 9.760 (9.760)
+Train: 34 [  50/104 ( 49%)]  Loss:  3.741329 (4.2962)  Time: 0.990s,   32.32/s  (1.387s,   23.08/s)  LR: 1.458e-02  Data: 0.008 (0.207)
+Train: 34 [ 100/104 ( 97%)]  Loss:  3.768447 (4.2914)  Time: 0.863s,   37.07/s  (1.159s,   27.60/s)  LR: 1.458e-02  Data: 0.006 (0.109)
+Train: 34 [ 103/104 (100%)]  Loss:  4.071903 (4.2858)  Time: 0.895s,   35.75/s  (1.151s,   27.79/s)  LR: 1.458e-02  Data: 0.000 (0.106)
+Test: [   0/104]  Time: 10.602 (10.602)  Loss:  1.5996 (1.5996)  Acc@1: 68.7500 (68.7500)  Acc@5: 93.7500 (93.7500)
+Test: [  50/104]  Time: 0.563 (0.918)  Loss:  0.8115 (1.3384)  Acc@1: 81.2500 (61.2132)  Acc@5: 93.7500 (92.5858)
+Test: [ 100/104]  Time: 0.126 (0.719)  Loss:  0.3118 (1.1386)  Acc@1: 96.8750 (67.6980)  Acc@5: 96.8750 (93.3787)
+Test: [ 104/104]  Time: 0.041 (0.695)  Loss:  0.0757 (1.1175)  Acc@1: 100.0000 (68.5269)  Acc@5: 100.0000 (93.5494)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-31.pth.tar', 69.96699669966996)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-30.pth.tar', 68.91689168916892)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-34.pth.tar', 68.52685268526852)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-32.pth.tar', 66.84668466846685)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-26.pth.tar', 66.78667866786678)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-22.pth.tar', 65.49654965496549)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-28.pth.tar', 65.37653765376538)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-33.pth.tar', 64.86648664866486)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-23.pth.tar', 64.32643264326433)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-24.pth.tar', 63.066306630663064)
+
+Epoch: 34 took 193.636s. It used 01:53:54 and still needs 02:29:42 to complete!
+
+Train: 35 [   0/104 (  0%)]  Loss:  3.717627 (3.7176)  Time: 16.697s,    1.92/s  (16.697s,    1.92/s)  LR: 1.458e-02  Data: 11.648 (11.648)
+Train: 35 [  50/104 ( 49%)]  Loss:  4.124728 (4.3512)  Time: 1.075s,   29.77/s  (1.421s,   22.53/s)  LR: 1.458e-02  Data: 0.008 (0.244)
+Train: 35 [ 100/104 ( 97%)]  Loss:  5.073296 (4.3418)  Time: 0.863s,   37.08/s  (1.177s,   27.18/s)  LR: 1.458e-02  Data: 0.006 (0.128)
+Train: 35 [ 103/104 (100%)]  Loss:  3.627188 (4.3264)  Time: 0.853s,   37.51/s  (1.169s,   27.38/s)  LR: 1.458e-02  Data: 0.000 (0.124)
+Test: [   0/104]  Time: 10.542 (10.542)  Loss:  2.2578 (2.2578)  Acc@1:  9.3750 ( 9.3750)  Acc@5: 90.6250 (90.6250)
+Test: [  50/104]  Time: 0.547 (0.918)  Loss:  1.5684 (1.4401)  Acc@1: 62.5000 (57.8431)  Acc@5: 93.7500 (90.7475)
+Test: [ 100/104]  Time: 0.125 (0.719)  Loss:  0.0925 (1.1510)  Acc@1: 96.8750 (67.6980)  Acc@5: 100.0000 (92.9765)
+Test: [ 104/104]  Time: 0.046 (0.695)  Loss:  0.0975 (1.1218)  Acc@1: 100.0000 (68.5569)  Acc@5: 100.0000 (93.1893)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-31.pth.tar', 69.96699669966996)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-30.pth.tar', 68.91689168916892)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-35.pth.tar', 68.55685568556855)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-34.pth.tar', 68.52685268526852)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-32.pth.tar', 66.84668466846685)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-26.pth.tar', 66.78667866786678)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-22.pth.tar', 65.49654965496549)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-28.pth.tar', 65.37653765376538)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-33.pth.tar', 64.86648664866486)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-23.pth.tar', 64.32643264326433)
+
+Epoch: 35 took 195.433s. It used 01:57:09 and still needs 02:26:27 to complete!
+
+Train: 36 [   0/104 (  0%)]  Loss:  3.484355 (3.4844)  Time: 14.554s,    2.20/s  (14.554s,    2.20/s)  LR: 1.458e-02  Data: 9.677 (9.677)
+Train: 36 [  50/104 ( 49%)]  Loss:  3.786168 (4.1915)  Time: 0.991s,   32.29/s  (1.392s,   22.99/s)  LR: 1.458e-02  Data: 0.018 (0.205)
+Train: 36 [ 100/104 ( 97%)]  Loss:  3.903110 (4.1484)  Time: 0.863s,   37.08/s  (1.162s,   27.53/s)  LR: 1.458e-02  Data: 0.006 (0.109)
+Train: 36 [ 103/104 (100%)]  Loss:  3.574232 (4.1621)  Time: 0.866s,   36.93/s  (1.154s,   27.73/s)  LR: 1.458e-02  Data: 0.000 (0.106)
+Test: [   0/104]  Time: 10.603 (10.603)  Loss:  1.0225 (1.0225)  Acc@1: 50.0000 (50.0000)  Acc@5: 96.8750 (96.8750)
+Test: [  50/104]  Time: 0.564 (0.913)  Loss:  0.9800 (1.3916)  Acc@1: 81.2500 (57.6593)  Acc@5: 96.8750 (91.6667)
+Test: [ 100/104]  Time: 0.125 (0.738)  Loss:  0.1715 (1.1336)  Acc@1: 96.8750 (68.2240)  Acc@5: 100.0000 (93.5953)
+Test: [ 104/104]  Time: 0.042 (0.714)  Loss:  0.2118 (1.1153)  Acc@1: 100.0000 (68.8869)  Acc@5: 100.0000 (93.7894)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-31.pth.tar', 69.96699669966996)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-30.pth.tar', 68.91689168916892)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-36.pth.tar', 68.8868886888689)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-35.pth.tar', 68.55685568556855)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-34.pth.tar', 68.52685268526852)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-32.pth.tar', 66.84668466846685)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-26.pth.tar', 66.78667866786678)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-22.pth.tar', 65.49654965496549)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-28.pth.tar', 65.37653765376538)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-33.pth.tar', 64.86648664866486)
+
+Epoch: 36 took 195.869s. It used 02:00:25 and still needs 02:23:12 to complete!
+
+Train: 37 [   0/104 (  0%)]  Loss:  4.178001 (4.1780)  Time: 15.160s,    2.11/s  (15.160s,    2.11/s)  LR: 1.458e-02  Data: 9.493 (9.493)
+Train: 37 [  50/104 ( 49%)]  Loss:  4.078768 (4.2721)  Time: 1.037s,   30.85/s  (1.388s,   23.05/s)  LR: 1.458e-02  Data: 0.015 (0.200)
+Train: 37 [ 100/104 ( 97%)]  Loss:  4.497344 (4.2824)  Time: 0.874s,   36.63/s  (1.163s,   27.50/s)  LR: 1.458e-02  Data: 0.006 (0.106)
+Train: 37 [ 103/104 (100%)]  Loss:  4.528051 (4.2951)  Time: 0.895s,   35.74/s  (1.155s,   27.70/s)  LR: 1.458e-02  Data: 0.000 (0.103)
+Test: [   0/104]  Time: 10.423 (10.423)  Loss:  1.0840 (1.0840)  Acc@1: 75.0000 (75.0000)  Acc@5: 96.8750 (96.8750)
+Test: [  50/104]  Time: 0.610 (0.918)  Loss:  1.0293 (1.3531)  Acc@1: 81.2500 (61.5196)  Acc@5: 93.7500 (91.8505)
+Test: [ 100/104]  Time: 0.125 (0.720)  Loss:  0.6558 (1.1732)  Acc@1: 84.3750 (67.7290)  Acc@5: 96.8750 (93.3787)
+Test: [ 104/104]  Time: 0.042 (0.697)  Loss:  0.1865 (1.1450)  Acc@1: 100.0000 (68.7069)  Acc@5: 100.0000 (93.5794)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-31.pth.tar', 69.96699669966996)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-30.pth.tar', 68.91689168916892)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-36.pth.tar', 68.8868886888689)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-37.pth.tar', 68.7068706870687)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-35.pth.tar', 68.55685568556855)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-34.pth.tar', 68.52685268526852)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-32.pth.tar', 66.84668466846685)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-26.pth.tar', 66.78667866786678)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-22.pth.tar', 65.49654965496549)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-28.pth.tar', 65.37653765376538)
+
+Epoch: 37 took 194.097s. It used 02:03:39 and still needs 02:19:56 to complete!
+
+Train: 38 [   0/104 (  0%)]  Loss:  3.886899 (3.8869)  Time: 14.916s,    2.15/s  (14.916s,    2.15/s)  LR: 1.458e-02  Data: 9.808 (9.808)
+Train: 38 [  50/104 ( 49%)]  Loss:  3.564606 (4.2933)  Time: 0.967s,   33.11/s  (1.390s,   23.02/s)  LR: 1.458e-02  Data: 0.008 (0.207)
+Train: 38 [ 100/104 ( 97%)]  Loss:  4.044506 (4.2271)  Time: 0.910s,   35.17/s  (1.161s,   27.56/s)  LR: 1.458e-02  Data: 0.006 (0.109)
+Train: 38 [ 103/104 (100%)]  Loss:  4.123532 (4.2306)  Time: 0.871s,   36.73/s  (1.153s,   27.76/s)  LR: 1.458e-02  Data: 0.000 (0.106)
+Test: [   0/104]  Time: 10.488 (10.488)  Loss:  0.5640 (0.5640)  Acc@1: 90.6250 (90.6250)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.566 (0.950)  Loss:  0.5806 (1.3765)  Acc@1: 87.5000 (58.6397)  Acc@5: 90.6250 (91.6054)
+Test: [ 100/104]  Time: 0.123 (0.736)  Loss:  0.1396 (1.1283)  Acc@1: 96.8750 (67.2339)  Acc@5: 100.0000 (93.5334)
+Test: [ 104/104]  Time: 0.043 (0.712)  Loss:  0.0337 (1.1010)  Acc@1: 100.0000 (68.1368)  Acc@5: 100.0000 (93.7294)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-31.pth.tar', 69.96699669966996)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-30.pth.tar', 68.91689168916892)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-36.pth.tar', 68.8868886888689)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-37.pth.tar', 68.7068706870687)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-35.pth.tar', 68.55685568556855)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-34.pth.tar', 68.52685268526852)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-38.pth.tar', 68.13681368136814)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-32.pth.tar', 66.84668466846685)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-26.pth.tar', 66.78667866786678)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-22.pth.tar', 65.49654965496549)
+
+Epoch: 38 took 195.493s. It used 02:06:55 and still needs 02:16:41 to complete!
+
+Train: 39 [   0/104 (  0%)]  Loss:  4.235034 (4.2350)  Time: 14.624s,    2.19/s  (14.624s,    2.19/s)  LR: 1.458e-02  Data: 9.554 (9.554)
+Train: 39 [  50/104 ( 49%)]  Loss:  5.346321 (4.2129)  Time: 1.056s,   30.32/s  (1.393s,   22.97/s)  LR: 1.458e-02  Data: 0.018 (0.205)
+Train: 39 [ 100/104 ( 97%)]  Loss:  4.428952 (4.1508)  Time: 0.877s,   36.48/s  (1.166s,   27.44/s)  LR: 1.458e-02  Data: 0.006 (0.108)
+Train: 39 [ 103/104 (100%)]  Loss:  5.378375 (4.1625)  Time: 0.852s,   37.57/s  (1.157s,   27.65/s)  LR: 1.458e-02  Data: 0.000 (0.105)
+Test: [   0/104]  Time: 10.429 (10.429)  Loss:  1.6777 (1.6777)  Acc@1: 59.3750 (59.3750)  Acc@5: 90.6250 (90.6250)
+Test: [  50/104]  Time: 0.551 (0.918)  Loss:  1.1660 (1.4291)  Acc@1: 71.8750 (57.0466)  Acc@5: 93.7500 (91.2377)
+Test: [ 100/104]  Time: 0.124 (0.720)  Loss:  0.1035 (1.1895)  Acc@1: 96.8750 (66.7079)  Acc@5: 100.0000 (92.8837)
+Test: [ 104/104]  Time: 0.043 (0.696)  Loss:  0.2534 (1.1771)  Acc@1: 100.0000 (67.3567)  Acc@5: 100.0000 (93.0093)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-31.pth.tar', 69.96699669966996)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-30.pth.tar', 68.91689168916892)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-36.pth.tar', 68.8868886888689)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-37.pth.tar', 68.7068706870687)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-35.pth.tar', 68.55685568556855)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-34.pth.tar', 68.52685268526852)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-38.pth.tar', 68.13681368136814)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-39.pth.tar', 67.35673567356736)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-32.pth.tar', 66.84668466846685)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-26.pth.tar', 66.78667866786678)
+
+Epoch: 39 took 194.314s. It used 02:10:09 and still needs 02:13:24 to complete!
+
+Train: 40 [   0/104 (  0%)]  Loss:  3.600466 (3.6005)  Time: 14.962s,    2.14/s  (14.962s,    2.14/s)  LR: 1.312e-02  Data: 9.242 (9.242)
+Train: 40 [  50/104 ( 49%)]  Loss:  3.781042 (4.1000)  Time: 1.017s,   31.48/s  (1.388s,   23.06/s)  LR: 1.312e-02  Data: 0.008 (0.195)
+Train: 40 [ 100/104 ( 97%)]  Loss:  3.997359 (4.1048)  Time: 0.875s,   36.59/s  (1.163s,   27.51/s)  LR: 1.312e-02  Data: 0.007 (0.103)
+Train: 40 [ 103/104 (100%)]  Loss:  3.805973 (4.1062)  Time: 0.865s,   37.00/s  (1.155s,   27.70/s)  LR: 1.312e-02  Data: 0.000 (0.100)
+Test: [   0/104]  Time: 10.765 (10.765)  Loss:  1.8818 (1.8818)  Acc@1: 46.8750 (46.8750)  Acc@5: 90.6250 (90.6250)
+Test: [  50/104]  Time: 0.499 (0.960)  Loss:  0.8018 (1.3630)  Acc@1: 81.2500 (56.6176)  Acc@5: 93.7500 (91.9118)
+Test: [ 100/104]  Time: 0.125 (0.742)  Loss:  0.5933 (1.1281)  Acc@1: 90.6250 (67.1411)  Acc@5: 100.0000 (93.5644)
+Test: [ 104/104]  Time: 0.043 (0.718)  Loss:  0.3042 (1.1054)  Acc@1: 100.0000 (67.9868)  Acc@5: 100.0000 (93.7294)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-31.pth.tar', 69.96699669966996)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-30.pth.tar', 68.91689168916892)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-36.pth.tar', 68.8868886888689)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-37.pth.tar', 68.7068706870687)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-35.pth.tar', 68.55685568556855)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-34.pth.tar', 68.52685268526852)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-38.pth.tar', 68.13681368136814)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-40.pth.tar', 67.98679867986799)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-39.pth.tar', 67.35673567356736)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-32.pth.tar', 66.84668466846685)
+
+Epoch: 40 took 196.431s. It used 02:13:25 and still needs 02:10:10 to complete!
+
+Train: 41 [   0/104 (  0%)]  Loss:  5.358311 (5.3583)  Time: 15.147s,    2.11/s  (15.147s,    2.11/s)  LR: 1.312e-02  Data: 10.021 (10.021)
+Train: 41 [  50/104 ( 49%)]  Loss:  4.220431 (4.1533)  Time: 1.001s,   31.98/s  (1.400s,   22.85/s)  LR: 1.312e-02  Data: 0.007 (0.209)
+Train: 41 [ 100/104 ( 97%)]  Loss:  3.670555 (4.0769)  Time: 0.854s,   37.47/s  (1.178s,   27.16/s)  LR: 1.312e-02  Data: 0.006 (0.110)
+Train: 41 [ 103/104 (100%)]  Loss:  4.083802 (4.0661)  Time: 0.852s,   37.56/s  (1.169s,   27.38/s)  LR: 1.312e-02  Data: 0.000 (0.107)
+Test: [   0/104]  Time: 10.597 (10.597)  Loss:  1.3066 (1.3066)  Acc@1: 62.5000 (62.5000)  Acc@5: 96.8750 (96.8750)
+Test: [  50/104]  Time: 0.586 (0.916)  Loss:  0.8687 (1.1188)  Acc@1: 81.2500 (66.5441)  Acc@5: 93.7500 (93.6887)
+Test: [ 100/104]  Time: 0.126 (0.720)  Loss:  0.1874 (0.9522)  Acc@1: 96.8750 (71.6894)  Acc@5: 96.8750 (94.9257)
+Test: [ 104/104]  Time: 0.043 (0.696)  Loss:  0.0743 (0.9334)  Acc@1: 100.0000 (72.3972)  Acc@5: 100.0000 (95.0795)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-41.pth.tar', 72.39723972397239)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-31.pth.tar', 69.96699669966996)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-30.pth.tar', 68.91689168916892)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-36.pth.tar', 68.8868886888689)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-37.pth.tar', 68.7068706870687)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-35.pth.tar', 68.55685568556855)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-34.pth.tar', 68.52685268526852)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-38.pth.tar', 68.13681368136814)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-40.pth.tar', 67.98679867986799)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-39.pth.tar', 67.35673567356736)
+
+Epoch: 41 took 195.518s. It used 02:16:41 and still needs 02:06:55 to complete!
+
+Train: 42 [   0/104 (  0%)]  Loss:  3.311091 (3.3111)  Time: 14.380s,    2.23/s  (14.380s,    2.23/s)  LR: 1.312e-02  Data: 9.307 (9.307)
+Train: 42 [  50/104 ( 49%)]  Loss:  3.500156 (4.0278)  Time: 1.007s,   31.79/s  (1.393s,   22.98/s)  LR: 1.312e-02  Data: 0.020 (0.197)
+Train: 42 [ 100/104 ( 97%)]  Loss:  3.533748 (3.9406)  Time: 0.861s,   37.14/s  (1.164s,   27.48/s)  LR: 1.312e-02  Data: 0.006 (0.104)
+Train: 42 [ 103/104 (100%)]  Loss:  4.107178 (3.9432)  Time: 0.855s,   37.41/s  (1.156s,   27.69/s)  LR: 1.312e-02  Data: 0.000 (0.101)
+Test: [   0/104]  Time: 12.304 (12.304)  Loss:  1.2852 (1.2852)  Acc@1: 59.3750 (59.3750)  Acc@5: 93.7500 (93.7500)
+Test: [  50/104]  Time: 0.543 (0.951)  Loss:  0.6455 (1.2403)  Acc@1: 84.3750 (62.1936)  Acc@5: 93.7500 (92.1569)
+Test: [ 100/104]  Time: 0.124 (0.737)  Loss:  0.6074 (1.0334)  Acc@1: 96.8750 (70.6993)  Acc@5: 100.0000 (93.7500)
+Test: [ 104/104]  Time: 0.042 (0.713)  Loss:  0.0945 (1.0081)  Acc@1: 100.0000 (71.4971)  Acc@5: 100.0000 (93.9394)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-41.pth.tar', 72.39723972397239)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-42.pth.tar', 71.4971497149715)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-31.pth.tar', 69.96699669966996)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-30.pth.tar', 68.91689168916892)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-36.pth.tar', 68.8868886888689)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-37.pth.tar', 68.7068706870687)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-35.pth.tar', 68.55685568556855)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-34.pth.tar', 68.52685268526852)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-38.pth.tar', 68.13681368136814)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-40.pth.tar', 67.98679867986799)
+
+Epoch: 42 took 196.035s. It used 02:19:57 and still needs 02:03:41 to complete!
+
+Train: 43 [   0/104 (  0%)]  Loss:  3.973669 (3.9737)  Time: 15.122s,    2.12/s  (15.122s,    2.12/s)  LR: 1.312e-02  Data: 10.294 (10.294)
+Train: 43 [  50/104 ( 49%)]  Loss:  4.300451 (3.9747)  Time: 1.048s,   30.53/s  (1.390s,   23.02/s)  LR: 1.312e-02  Data: 0.008 (0.216)
+Train: 43 [ 100/104 ( 97%)]  Loss:  3.190107 (4.0275)  Time: 0.864s,   37.06/s  (1.162s,   27.55/s)  LR: 1.312e-02  Data: 0.007 (0.114)
+Train: 43 [ 103/104 (100%)]  Loss:  3.697513 (4.0220)  Time: 0.863s,   37.06/s  (1.153s,   27.75/s)  LR: 1.312e-02  Data: 0.000 (0.110)
+Test: [   0/104]  Time: 10.477 (10.477)  Loss:  0.7935 (0.7935)  Acc@1: 84.3750 (84.3750)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.559 (0.910)  Loss:  1.3691 (1.1630)  Acc@1: 78.1250 (65.9926)  Acc@5: 87.5000 (93.0760)
+Test: [ 100/104]  Time: 0.123 (0.717)  Loss:  0.2595 (0.9807)  Acc@1: 96.8750 (73.2364)  Acc@5: 100.0000 (94.3069)
+Test: [ 104/104]  Time: 0.042 (0.694)  Loss:  0.2472 (0.9587)  Acc@1: 100.0000 (73.9874)  Acc@5: 100.0000 (94.4494)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-43.pth.tar', 73.98739873987398)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-41.pth.tar', 72.39723972397239)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-42.pth.tar', 71.4971497149715)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-31.pth.tar', 69.96699669966996)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-30.pth.tar', 68.91689168916892)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-36.pth.tar', 68.8868886888689)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-37.pth.tar', 68.7068706870687)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-35.pth.tar', 68.55685568556855)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-34.pth.tar', 68.52685268526852)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-38.pth.tar', 68.13681368136814)
+
+Epoch: 43 took 193.762s. It used 02:23:11 and still needs 02:00:24 to complete!
+
+Train: 44 [   0/104 (  0%)]  Loss:  4.986854 (4.9869)  Time: 14.999s,    2.13/s  (14.999s,    2.13/s)  LR: 1.312e-02  Data: 9.899 (9.899)
+Train: 44 [  50/104 ( 49%)]  Loss:  3.488999 (3.8080)  Time: 1.023s,   31.28/s  (1.393s,   22.96/s)  LR: 1.312e-02  Data: 0.007 (0.207)
+Train: 44 [ 100/104 ( 97%)]  Loss:  3.338854 (3.9513)  Time: 0.866s,   36.94/s  (1.168s,   27.39/s)  LR: 1.312e-02  Data: 0.006 (0.109)
+Train: 44 [ 103/104 (100%)]  Loss:  5.107058 (3.9654)  Time: 0.873s,   36.67/s  (1.160s,   27.59/s)  LR: 1.312e-02  Data: 0.000 (0.106)
+Test: [   0/104]  Time: 10.587 (10.587)  Loss:  1.5029 (1.5029)  Acc@1: 56.2500 (56.2500)  Acc@5: 93.7500 (93.7500)
+Test: [  50/104]  Time: 0.551 (0.922)  Loss:  1.1162 (1.2743)  Acc@1: 78.1250 (61.2132)  Acc@5: 90.6250 (93.5049)
+Test: [ 100/104]  Time: 0.123 (0.723)  Loss:  0.4751 (1.0656)  Acc@1: 90.6250 (68.9356)  Acc@5: 100.0000 (94.3688)
+Test: [ 104/104]  Time: 0.047 (0.700)  Loss:  0.1675 (1.0417)  Acc@1: 100.0000 (69.7570)  Acc@5: 100.0000 (94.5395)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-43.pth.tar', 73.98739873987398)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-41.pth.tar', 72.39723972397239)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-42.pth.tar', 71.4971497149715)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-31.pth.tar', 69.96699669966996)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-44.pth.tar', 69.75697569756976)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-30.pth.tar', 68.91689168916892)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-36.pth.tar', 68.8868886888689)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-37.pth.tar', 68.7068706870687)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-35.pth.tar', 68.55685568556855)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-34.pth.tar', 68.52685268526852)
+
+Epoch: 44 took 194.935s. It used 02:26:26 and still needs 01:57:08 to complete!
+
+Train: 45 [   0/104 (  0%)]  Loss:  4.128860 (4.1289)  Time: 14.784s,    2.16/s  (14.784s,    2.16/s)  LR: 1.312e-02  Data: 9.729 (9.729)
+Train: 45 [  50/104 ( 49%)]  Loss:  4.754259 (3.9481)  Time: 0.975s,   32.81/s  (1.401s,   22.85/s)  LR: 1.312e-02  Data: 0.014 (0.204)
+Train: 45 [ 100/104 ( 97%)]  Loss:  3.375943 (3.9772)  Time: 0.864s,   37.03/s  (1.167s,   27.42/s)  LR: 1.312e-02  Data: 0.006 (0.107)
+Train: 45 [ 103/104 (100%)]  Loss:  3.373525 (3.9649)  Time: 0.913s,   35.07/s  (1.159s,   27.62/s)  LR: 1.312e-02  Data: 0.000 (0.105)
+Test: [   0/104]  Time: 10.423 (10.423)  Loss:  0.9941 (0.9941)  Acc@1: 71.8750 (71.8750)  Acc@5: 96.8750 (96.8750)
+Test: [  50/104]  Time: 0.560 (0.921)  Loss:  0.4451 (1.0928)  Acc@1: 90.6250 (66.2990)  Acc@5: 93.7500 (93.9951)
+Test: [ 100/104]  Time: 0.124 (0.724)  Loss:  0.2178 (0.9533)  Acc@1: 96.8750 (73.0817)  Acc@5: 100.0000 (94.5235)
+Test: [ 104/104]  Time: 0.042 (0.700)  Loss:  0.0181 (0.9359)  Acc@1: 100.0000 (73.6874)  Acc@5: 100.0000 (94.6295)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-43.pth.tar', 73.98739873987398)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-45.pth.tar', 73.6873687368737)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-41.pth.tar', 72.39723972397239)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-42.pth.tar', 71.4971497149715)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-31.pth.tar', 69.96699669966996)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-44.pth.tar', 69.75697569756976)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-30.pth.tar', 68.91689168916892)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-36.pth.tar', 68.8868886888689)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-37.pth.tar', 68.7068706870687)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-35.pth.tar', 68.55685568556855)
+
+Epoch: 45 took 194.911s. It used 02:29:41 and still needs 01:53:53 to complete!
+
+Train: 46 [   0/104 (  0%)]  Loss:  5.035532 (5.0355)  Time: 14.073s,    2.27/s  (14.073s,    2.27/s)  LR: 1.312e-02  Data: 8.806 (8.806)
+Train: 46 [  50/104 ( 49%)]  Loss:  3.755811 (3.8218)  Time: 1.035s,   30.92/s  (1.391s,   23.01/s)  LR: 1.312e-02  Data: 0.007 (0.188)
+Train: 46 [ 100/104 ( 97%)]  Loss:  4.893996 (3.9086)  Time: 0.864s,   37.03/s  (1.172s,   27.30/s)  LR: 1.312e-02  Data: 0.006 (0.099)
+Train: 46 [ 103/104 (100%)]  Loss:  4.334409 (3.9044)  Time: 0.867s,   36.91/s  (1.164s,   27.50/s)  LR: 1.312e-02  Data: 0.000 (0.097)
+Test: [   0/104]  Time: 10.492 (10.492)  Loss:  1.5273 (1.5273)  Acc@1: 62.5000 (62.5000)  Acc@5: 84.3750 (84.3750)
+Test: [  50/104]  Time: 0.605 (0.916)  Loss:  1.0225 (1.2584)  Acc@1: 84.3750 (63.7255)  Acc@5: 93.7500 (93.6887)
+Test: [ 100/104]  Time: 0.125 (0.719)  Loss:  0.2428 (1.0278)  Acc@1: 96.8750 (71.4109)  Acc@5: 100.0000 (94.5545)
+Test: [ 104/104]  Time: 0.050 (0.696)  Loss:  0.1790 (1.0136)  Acc@1: 100.0000 (72.0672)  Acc@5: 100.0000 (94.7195)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-43.pth.tar', 73.98739873987398)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-45.pth.tar', 73.6873687368737)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-41.pth.tar', 72.39723972397239)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-46.pth.tar', 72.06720672067206)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-42.pth.tar', 71.4971497149715)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-31.pth.tar', 69.96699669966996)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-44.pth.tar', 69.75697569756976)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-30.pth.tar', 68.91689168916892)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-36.pth.tar', 68.8868886888689)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-37.pth.tar', 68.7068706870687)
+
+Epoch: 46 took 194.985s. It used 02:32:56 and still needs 01:50:38 to complete!
+
+Train: 47 [   0/104 (  0%)]  Loss:  3.561449 (3.5614)  Time: 14.617s,    2.19/s  (14.617s,    2.19/s)  LR: 1.312e-02  Data: 9.562 (9.562)
+Train: 47 [  50/104 ( 49%)]  Loss:  3.212312 (3.8410)  Time: 0.959s,   33.38/s  (1.389s,   23.04/s)  LR: 1.312e-02  Data: 0.008 (0.201)
+Train: 47 [ 100/104 ( 97%)]  Loss:  3.413307 (3.9132)  Time: 0.863s,   37.06/s  (1.163s,   27.51/s)  LR: 1.312e-02  Data: 0.006 (0.106)
+Train: 47 [ 103/104 (100%)]  Loss:  4.515400 (3.9136)  Time: 0.869s,   36.81/s  (1.155s,   27.71/s)  LR: 1.312e-02  Data: 0.000 (0.104)
+Test: [   0/104]  Time: 10.500 (10.500)  Loss:  1.1748 (1.1748)  Acc@1: 78.1250 (78.1250)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.594 (0.918)  Loss:  0.6475 (1.2687)  Acc@1: 87.5000 (62.3162)  Acc@5: 93.7500 (93.2598)
+Test: [ 100/104]  Time: 0.126 (0.721)  Loss:  0.1903 (1.0905)  Acc@1: 96.8750 (69.8020)  Acc@5: 100.0000 (93.7500)
+Test: [ 104/104]  Time: 0.043 (0.698)  Loss:  0.0670 (1.0638)  Acc@1: 100.0000 (70.6271)  Acc@5: 100.0000 (93.9394)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-43.pth.tar', 73.98739873987398)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-45.pth.tar', 73.6873687368737)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-41.pth.tar', 72.39723972397239)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-46.pth.tar', 72.06720672067206)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-42.pth.tar', 71.4971497149715)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-47.pth.tar', 70.62706270627062)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-31.pth.tar', 69.96699669966996)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-44.pth.tar', 69.75697569756976)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-30.pth.tar', 68.91689168916892)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-36.pth.tar', 68.8868886888689)
+
+Epoch: 47 took 194.301s. It used 02:36:10 and still needs 01:47:22 to complete!
+
+Train: 48 [   0/104 (  0%)]  Loss:  4.584226 (4.5842)  Time: 15.706s,    2.04/s  (15.706s,    2.04/s)  LR: 1.312e-02  Data: 9.992 (9.992)
+Train: 48 [  50/104 ( 49%)]  Loss:  5.044358 (3.6694)  Time: 0.992s,   32.25/s  (1.393s,   22.98/s)  LR: 1.312e-02  Data: 0.008 (0.209)
+Train: 48 [ 100/104 ( 97%)]  Loss:  3.643755 (3.8836)  Time: 0.865s,   36.98/s  (1.177s,   27.18/s)  LR: 1.312e-02  Data: 0.006 (0.110)
+Train: 48 [ 103/104 (100%)]  Loss:  3.317195 (3.8820)  Time: 0.896s,   35.73/s  (1.169s,   27.38/s)  LR: 1.312e-02  Data: 0.000 (0.107)
+Test: [   0/104]  Time: 10.684 (10.684)  Loss:  0.7646 (0.7646)  Acc@1: 90.6250 (90.6250)  Acc@5: 96.8750 (96.8750)
+Test: [  50/104]  Time: 0.585 (0.920)  Loss:  0.9390 (1.3650)  Acc@1: 75.0000 (62.1936)  Acc@5: 93.7500 (93.3211)
+Test: [ 100/104]  Time: 0.124 (0.722)  Loss:  0.5552 (1.1919)  Acc@1: 100.0000 (68.5953)  Acc@5: 100.0000 (94.2141)
+Test: [ 104/104]  Time: 0.042 (0.699)  Loss:  0.0550 (1.1717)  Acc@1: 100.0000 (69.3369)  Acc@5: 100.0000 (94.3594)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-43.pth.tar', 73.98739873987398)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-45.pth.tar', 73.6873687368737)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-41.pth.tar', 72.39723972397239)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-46.pth.tar', 72.06720672067206)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-42.pth.tar', 71.4971497149715)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-47.pth.tar', 70.62706270627062)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-31.pth.tar', 69.96699669966996)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-44.pth.tar', 69.75697569756976)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-48.pth.tar', 69.33693369336933)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-30.pth.tar', 68.91689168916892)
+
+Epoch: 48 took 195.774s. It used 02:39:26 and still needs 01:44:07 to complete!
+
+Train: 49 [   0/104 (  0%)]  Loss:  4.882226 (4.8822)  Time: 14.577s,    2.20/s  (14.577s,    2.20/s)  LR: 1.312e-02  Data: 9.476 (9.476)
+Train: 49 [  50/104 ( 49%)]  Loss:  3.545997 (3.9362)  Time: 0.967s,   33.08/s  (1.389s,   23.04/s)  LR: 1.312e-02  Data: 0.008 (0.202)
+Train: 49 [ 100/104 ( 97%)]  Loss:  3.429261 (3.8436)  Time: 0.916s,   34.94/s  (1.160s,   27.59/s)  LR: 1.312e-02  Data: 0.006 (0.107)
+Train: 49 [ 103/104 (100%)]  Loss:  3.424003 (3.8467)  Time: 0.852s,   37.55/s  (1.151s,   27.79/s)  LR: 1.312e-02  Data: 0.000 (0.104)
+Test: [   0/104]  Time: 10.640 (10.640)  Loss:  0.8213 (0.8213)  Acc@1: 81.2500 (81.2500)  Acc@5: 96.8750 (96.8750)
+Test: [  50/104]  Time: 0.563 (0.921)  Loss:  1.1523 (1.2561)  Acc@1: 71.8750 (63.5417)  Acc@5: 87.5000 (93.1373)
+Test: [ 100/104]  Time: 0.125 (0.720)  Loss:  0.4736 (1.0141)  Acc@1: 96.8750 (71.5037)  Acc@5: 96.8750 (94.4307)
+Test: [ 104/104]  Time: 0.043 (0.696)  Loss:  0.0080 (0.9917)  Acc@1: 100.0000 (72.2172)  Acc@5: 100.0000 (94.5995)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-43.pth.tar', 73.98739873987398)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-45.pth.tar', 73.6873687368737)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-41.pth.tar', 72.39723972397239)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-49.pth.tar', 72.21722172217221)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-46.pth.tar', 72.06720672067206)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-42.pth.tar', 71.4971497149715)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-47.pth.tar', 70.62706270627062)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-31.pth.tar', 69.96699669966996)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-44.pth.tar', 69.75697569756976)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-48.pth.tar', 69.33693369336933)
+
+Epoch: 49 took 193.742s. It used 02:42:39 and still needs 01:40:51 to complete!
+
+Train: 50 [   0/104 (  0%)]  Loss:  4.596440 (4.5964)  Time: 14.562s,    2.20/s  (14.562s,    2.20/s)  LR: 1.181e-02  Data: 9.480 (9.480)
+Train: 50 [  50/104 ( 49%)]  Loss:  3.592800 (3.7279)  Time: 0.981s,   32.62/s  (1.423s,   22.48/s)  LR: 1.181e-02  Data: 0.008 (0.201)
+Train: 50 [ 100/104 ( 97%)]  Loss:  3.435013 (3.6794)  Time: 0.875s,   36.58/s  (1.180s,   27.12/s)  LR: 1.181e-02  Data: 0.006 (0.105)
+Train: 50 [ 103/104 (100%)]  Loss:  3.546698 (3.6806)  Time: 0.859s,   37.25/s  (1.171s,   27.33/s)  LR: 1.181e-02  Data: 0.000 (0.102)
+Test: [   0/104]  Time: 10.504 (10.504)  Loss:  0.7515 (0.7515)  Acc@1: 78.1250 (78.1250)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.543 (0.922)  Loss:  0.7495 (1.1779)  Acc@1: 81.2500 (64.4608)  Acc@5: 93.7500 (93.8725)
+Test: [ 100/104]  Time: 0.125 (0.718)  Loss:  0.6479 (1.0092)  Acc@1: 90.6250 (71.6275)  Acc@5: 96.8750 (94.4307)
+Test: [ 104/104]  Time: 0.041 (0.695)  Loss:  0.0496 (0.9826)  Acc@1: 100.0000 (72.4872)  Acc@5: 100.0000 (94.5995)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-43.pth.tar', 73.98739873987398)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-45.pth.tar', 73.6873687368737)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-50.pth.tar', 72.48724872487249)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-41.pth.tar', 72.39723972397239)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-49.pth.tar', 72.21722172217221)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-46.pth.tar', 72.06720672067206)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-42.pth.tar', 71.4971497149715)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-47.pth.tar', 70.62706270627062)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-31.pth.tar', 69.96699669966996)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-44.pth.tar', 69.75697569756976)
+
+Epoch: 50 took 195.642s. It used 02:45:55 and still needs 01:37:36 to complete!
+
+Train: 51 [   0/104 (  0%)]  Loss:  2.775380 (2.7754)  Time: 15.473s,    2.07/s  (15.473s,    2.07/s)  LR: 1.181e-02  Data: 9.832 (9.832)
+Train: 51 [  50/104 ( 49%)]  Loss:  4.569029 (3.8638)  Time: 0.949s,   33.71/s  (1.390s,   23.02/s)  LR: 1.181e-02  Data: 0.008 (0.208)
+Train: 51 [ 100/104 ( 97%)]  Loss:  3.504016 (3.7843)  Time: 0.873s,   36.65/s  (1.164s,   27.49/s)  LR: 1.181e-02  Data: 0.006 (0.109)
+Train: 51 [ 103/104 (100%)]  Loss:  3.229653 (3.7880)  Time: 0.862s,   37.11/s  (1.156s,   27.69/s)  LR: 1.181e-02  Data: 0.000 (0.106)
+Test: [   0/104]  Time: 10.294 (10.294)  Loss:  0.9390 (0.9390)  Acc@1: 65.6250 (65.6250)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.573 (0.911)  Loss:  0.8672 (1.1259)  Acc@1: 78.1250 (67.0343)  Acc@5: 93.7500 (94.3627)
+Test: [ 100/104]  Time: 0.127 (0.720)  Loss:  0.2917 (0.9492)  Acc@1: 100.0000 (74.8144)  Acc@5: 100.0000 (95.1423)
+Test: [ 104/104]  Time: 0.042 (0.697)  Loss:  0.1613 (0.9274)  Acc@1: 100.0000 (75.4575)  Acc@5: 100.0000 (95.2595)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-51.pth.tar', 75.45754575457546)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-43.pth.tar', 73.98739873987398)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-45.pth.tar', 73.6873687368737)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-50.pth.tar', 72.48724872487249)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-41.pth.tar', 72.39723972397239)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-49.pth.tar', 72.21722172217221)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-46.pth.tar', 72.06720672067206)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-42.pth.tar', 71.4971497149715)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-47.pth.tar', 70.62706270627062)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-31.pth.tar', 69.96699669966996)
+
+Epoch: 51 took 194.222s. It used 02:49:09 and still needs 01:34:20 to complete!
+
+Train: 52 [   0/104 (  0%)]  Loss:  4.053266 (4.0533)  Time: 14.303s,    2.24/s  (14.303s,    2.24/s)  LR: 1.181e-02  Data: 9.056 (9.056)
+Train: 52 [  50/104 ( 49%)]  Loss:  3.187347 (3.7315)  Time: 0.972s,   32.94/s  (1.413s,   22.64/s)  LR: 1.181e-02  Data: 0.010 (0.195)
+Train: 52 [ 100/104 ( 97%)]  Loss:  3.979567 (3.6959)  Time: 0.867s,   36.92/s  (1.173s,   27.28/s)  LR: 1.181e-02  Data: 0.006 (0.103)
+Train: 52 [ 103/104 (100%)]  Loss:  3.298034 (3.6972)  Time: 0.855s,   37.44/s  (1.164s,   27.48/s)  LR: 1.181e-02  Data: 0.000 (0.100)
+Test: [   0/104]  Time: 10.531 (10.531)  Loss:  1.8643 (1.8643)  Acc@1: 31.2500 (31.2500)  Acc@5: 90.6250 (90.6250)
+Test: [  50/104]  Time: 0.556 (0.917)  Loss:  1.1709 (1.3044)  Acc@1: 71.8750 (63.9093)  Acc@5: 96.8750 (92.8922)
+Test: [ 100/104]  Time: 0.125 (0.722)  Loss:  0.3477 (1.0869)  Acc@1: 90.6250 (71.8131)  Acc@5: 100.0000 (94.2141)
+Test: [ 104/104]  Time: 0.043 (0.698)  Loss:  0.3098 (1.0642)  Acc@1: 100.0000 (72.6073)  Acc@5: 100.0000 (94.3894)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-51.pth.tar', 75.45754575457546)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-43.pth.tar', 73.98739873987398)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-45.pth.tar', 73.6873687368737)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-52.pth.tar', 72.60726072607261)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-50.pth.tar', 72.48724872487249)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-41.pth.tar', 72.39723972397239)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-49.pth.tar', 72.21722172217221)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-46.pth.tar', 72.06720672067206)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-42.pth.tar', 71.4971497149715)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-47.pth.tar', 70.62706270627062)
+
+Epoch: 52 took 195.297s. It used 02:52:25 and still needs 01:31:05 to complete!
+
+Train: 53 [   0/104 (  0%)]  Loss:  2.967345 (2.9673)  Time: 14.496s,    2.21/s  (14.496s,    2.21/s)  LR: 1.181e-02  Data: 9.390 (9.390)
+Train: 53 [  50/104 ( 49%)]  Loss:  3.759140 (3.6428)  Time: 0.984s,   32.51/s  (1.385s,   23.10/s)  LR: 1.181e-02  Data: 0.008 (0.198)
+Train: 53 [ 100/104 ( 97%)]  Loss:  4.128960 (3.6342)  Time: 0.867s,   36.90/s  (1.157s,   27.65/s)  LR: 1.181e-02  Data: 0.006 (0.104)
+Train: 53 [ 103/104 (100%)]  Loss:  3.478004 (3.6262)  Time: 0.856s,   37.38/s  (1.149s,   27.85/s)  LR: 1.181e-02  Data: 0.000 (0.102)
+Test: [   0/104]  Time: 10.580 (10.580)  Loss:  0.2917 (0.2917)  Acc@1: 96.8750 (96.8750)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.530 (0.917)  Loss:  1.1045 (1.2433)  Acc@1: 81.2500 (66.4216)  Acc@5: 93.7500 (93.3211)
+Test: [ 100/104]  Time: 0.126 (0.720)  Loss:  0.6367 (1.0820)  Acc@1: 93.7500 (72.1225)  Acc@5: 96.8750 (94.4307)
+Test: [ 104/104]  Time: 0.042 (0.696)  Loss:  0.2430 (1.0570)  Acc@1: 100.0000 (72.8773)  Acc@5: 100.0000 (94.5995)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-51.pth.tar', 75.45754575457546)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-43.pth.tar', 73.98739873987398)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-45.pth.tar', 73.6873687368737)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-53.pth.tar', 72.87728772877287)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-52.pth.tar', 72.60726072607261)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-50.pth.tar', 72.48724872487249)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-41.pth.tar', 72.39723972397239)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-49.pth.tar', 72.21722172217221)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-46.pth.tar', 72.06720672067206)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-42.pth.tar', 71.4971497149715)
+
+Epoch: 53 took 193.555s. It used 02:55:38 and still needs 01:27:49 to complete!
+
+Train: 54 [   0/104 (  0%)]  Loss:  3.503002 (3.5030)  Time: 14.893s,    2.15/s  (14.893s,    2.15/s)  LR: 1.181e-02  Data: 9.827 (9.827)
+Train: 54 [  50/104 ( 49%)]  Loss:  4.653762 (3.5378)  Time: 1.117s,   28.64/s  (1.414s,   22.63/s)  LR: 1.181e-02  Data: 0.007 (0.205)
+Train: 54 [ 100/104 ( 97%)]  Loss:  3.702739 (3.5267)  Time: 0.864s,   37.04/s  (1.175s,   27.23/s)  LR: 1.181e-02  Data: 0.006 (0.108)
+Train: 54 [ 103/104 (100%)]  Loss:  4.616318 (3.5485)  Time: 0.855s,   37.41/s  (1.167s,   27.42/s)  LR: 1.181e-02  Data: 0.000 (0.105)
+Test: [   0/104]  Time: 10.575 (10.575)  Loss:  0.3782 (0.3782)  Acc@1: 96.8750 (96.8750)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.704 (0.917)  Loss:  0.9839 (1.2846)  Acc@1: 75.0000 (64.6446)  Acc@5: 93.7500 (92.8922)
+Test: [ 100/104]  Time: 0.125 (0.721)  Loss:  0.5093 (1.0814)  Acc@1: 87.5000 (72.1844)  Acc@5: 100.0000 (93.7500)
+Test: [ 104/104]  Time: 0.044 (0.698)  Loss:  0.3660 (1.0627)  Acc@1: 100.0000 (72.7573)  Acc@5: 100.0000 (93.9394)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-51.pth.tar', 75.45754575457546)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-43.pth.tar', 73.98739873987398)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-45.pth.tar', 73.6873687368737)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-53.pth.tar', 72.87728772877287)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-54.pth.tar', 72.75727572757276)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-52.pth.tar', 72.60726072607261)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-50.pth.tar', 72.48724872487249)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-41.pth.tar', 72.39723972397239)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-49.pth.tar', 72.21722172217221)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-46.pth.tar', 72.06720672067206)
+
+Epoch: 54 took 195.525s. It used 02:58:54 and still needs 01:24:34 to complete!
+
+Train: 55 [   0/104 (  0%)]  Loss:  3.614523 (3.6145)  Time: 14.673s,    2.18/s  (14.673s,    2.18/s)  LR: 1.181e-02  Data: 9.717 (9.717)
+Train: 55 [  50/104 ( 49%)]  Loss:  4.292949 (3.6519)  Time: 1.074s,   29.80/s  (1.392s,   22.98/s)  LR: 1.181e-02  Data: 0.017 (0.205)
+Train: 55 [ 100/104 ( 97%)]  Loss:  3.617261 (3.7041)  Time: 0.864s,   37.02/s  (1.164s,   27.50/s)  LR: 1.181e-02  Data: 0.007 (0.108)
+Train: 55 [ 103/104 (100%)]  Loss:  4.564941 (3.7015)  Time: 0.852s,   37.57/s  (1.155s,   27.71/s)  LR: 1.181e-02  Data: 0.000 (0.105)
+Test: [   0/104]  Time: 10.568 (10.568)  Loss:  1.3887 (1.3887)  Acc@1: 71.8750 (71.8750)  Acc@5: 96.8750 (96.8750)
+Test: [  50/104]  Time: 0.558 (0.919)  Loss:  1.1465 (1.2386)  Acc@1: 71.8750 (63.9093)  Acc@5: 93.7500 (94.4240)
+Test: [ 100/104]  Time: 0.125 (0.721)  Loss:  0.3215 (1.0541)  Acc@1: 96.8750 (71.5347)  Acc@5: 100.0000 (95.0495)
+Test: [ 104/104]  Time: 0.046 (0.697)  Loss:  0.4331 (1.0324)  Acc@1: 100.0000 (72.3372)  Acc@5: 100.0000 (95.1995)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-51.pth.tar', 75.45754575457546)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-43.pth.tar', 73.98739873987398)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-45.pth.tar', 73.6873687368737)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-53.pth.tar', 72.87728772877287)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-54.pth.tar', 72.75727572757276)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-52.pth.tar', 72.60726072607261)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-50.pth.tar', 72.48724872487249)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-41.pth.tar', 72.39723972397239)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-55.pth.tar', 72.33723372337234)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-49.pth.tar', 72.21722172217221)
+
+Epoch: 55 took 194.115s. It used 03:02:08 and still needs 01:21:18 to complete!
+
+Train: 56 [   0/104 (  0%)]  Loss:  4.738770 (4.7388)  Time: 14.500s,    2.21/s  (14.500s,    2.21/s)  LR: 1.181e-02  Data: 9.305 (9.305)
+Train: 56 [  50/104 ( 49%)]  Loss:  4.460587 (3.5124)  Time: 0.991s,   32.31/s  (1.417s,   22.58/s)  LR: 1.181e-02  Data: 0.025 (0.198)
+Train: 56 [ 100/104 ( 97%)]  Loss:  4.272424 (3.5611)  Time: 0.863s,   37.06/s  (1.179s,   27.15/s)  LR: 1.181e-02  Data: 0.006 (0.105)
+Train: 56 [ 103/104 (100%)]  Loss:  4.882013 (3.5767)  Time: 0.899s,   35.61/s  (1.170s,   27.35/s)  LR: 1.181e-02  Data: 0.000 (0.102)
+Test: [   0/104]  Time: 10.605 (10.605)  Loss:  1.4746 (1.4746)  Acc@1: 46.8750 (46.8750)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.524 (0.927)  Loss:  0.8579 (1.3298)  Acc@1: 78.1250 (61.8873)  Acc@5: 93.7500 (92.5245)
+Test: [ 100/104]  Time: 0.126 (0.723)  Loss:  0.5020 (1.1100)  Acc@1: 96.8750 (70.2351)  Acc@5: 100.0000 (94.0903)
+Test: [ 104/104]  Time: 0.044 (0.699)  Loss:  0.0934 (1.0860)  Acc@1: 100.0000 (70.9871)  Acc@5: 100.0000 (94.2094)
+Epoch: 56 took 195.965s. It used 03:05:24 and still needs 01:18:03 to complete!
+
+Train: 57 [   0/104 (  0%)]  Loss:  4.289014 (4.2890)  Time: 14.491s,    2.21/s  (14.491s,    2.21/s)  LR: 1.181e-02  Data: 9.418 (9.418)
+Train: 57 [  50/104 ( 49%)]  Loss:  3.572397 (3.4372)  Time: 1.088s,   29.42/s  (1.387s,   23.07/s)  LR: 1.181e-02  Data: 0.018 (0.198)
+Train: 57 [ 100/104 ( 97%)]  Loss:  3.159702 (3.4764)  Time: 0.862s,   37.11/s  (1.159s,   27.61/s)  LR: 1.181e-02  Data: 0.006 (0.105)
+Train: 57 [ 103/104 (100%)]  Loss:  4.111805 (3.4955)  Time: 0.859s,   37.25/s  (1.151s,   27.81/s)  LR: 1.181e-02  Data: 0.000 (0.102)
+Test: [   0/104]  Time: 10.638 (10.638)  Loss:  2.1582 (2.1582)  Acc@1: 40.6250 (40.6250)  Acc@5: 81.2500 (81.2500)
+Test: [  50/104]  Time: 0.528 (0.919)  Loss:  0.8428 (1.3689)  Acc@1: 84.3750 (60.2941)  Acc@5: 93.7500 (91.8505)
+Test: [ 100/104]  Time: 0.125 (0.720)  Loss:  0.4021 (1.1050)  Acc@1: 90.6250 (69.5235)  Acc@5: 96.8750 (93.5644)
+Test: [ 104/104]  Time: 0.045 (0.697)  Loss:  0.3379 (1.0829)  Acc@1: 100.0000 (70.1770)  Acc@5: 100.0000 (93.7594)
+Epoch: 57 took 193.757s. It used 03:08:38 and still needs 01:14:48 to complete!
+
+Train: 58 [   0/104 (  0%)]  Loss:  3.350002 (3.3500)  Time: 14.993s,    2.13/s  (14.993s,    2.13/s)  LR: 1.181e-02  Data: 9.865 (9.865)
+Train: 58 [  50/104 ( 49%)]  Loss:  3.685452 (3.4610)  Time: 0.997s,   32.09/s  (1.430s,   22.38/s)  LR: 1.181e-02  Data: 0.014 (0.210)
+Train: 58 [ 100/104 ( 97%)]  Loss:  3.398951 (3.5031)  Time: 0.863s,   37.07/s  (1.182s,   27.08/s)  LR: 1.181e-02  Data: 0.007 (0.110)
+Train: 58 [ 103/104 (100%)]  Loss:  3.079523 (3.5196)  Time: 0.859s,   37.27/s  (1.173s,   27.29/s)  LR: 1.181e-02  Data: 0.000 (0.107)
+Test: [   0/104]  Time: 10.445 (10.445)  Loss:  1.7832 (1.7832)  Acc@1: 46.8750 (46.8750)  Acc@5: 90.6250 (90.6250)
+Test: [  50/104]  Time: 0.554 (0.916)  Loss:  0.9595 (1.2273)  Acc@1: 81.2500 (64.9510)  Acc@5: 93.7500 (93.4436)
+Test: [ 100/104]  Time: 0.126 (0.719)  Loss:  0.6245 (1.0302)  Acc@1: 87.5000 (72.6176)  Acc@5: 100.0000 (94.5545)
+Test: [ 104/104]  Time: 0.043 (0.696)  Loss:  0.1877 (1.0112)  Acc@1: 100.0000 (73.3273)  Acc@5: 100.0000 (94.7195)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-51.pth.tar', 75.45754575457546)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-43.pth.tar', 73.98739873987398)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-45.pth.tar', 73.6873687368737)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-58.pth.tar', 73.32733273327332)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-53.pth.tar', 72.87728772877287)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-54.pth.tar', 72.75727572757276)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-52.pth.tar', 72.60726072607261)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-50.pth.tar', 72.48724872487249)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-41.pth.tar', 72.39723972397239)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-55.pth.tar', 72.33723372337234)
+
+Epoch: 58 took 195.955s. It used 03:11:53 and still needs 01:11:33 to complete!
+
+Train: 59 [   0/104 (  0%)]  Loss:  2.812050 (2.8120)  Time: 14.989s,    2.13/s  (14.989s,    2.13/s)  LR: 1.181e-02  Data: 9.216 (9.216)
+Train: 59 [  50/104 ( 49%)]  Loss:  3.113039 (3.6126)  Time: 0.974s,   32.87/s  (1.388s,   23.06/s)  LR: 1.181e-02  Data: 0.008 (0.194)
+Train: 59 [ 100/104 ( 97%)]  Loss:  4.548262 (3.5732)  Time: 0.860s,   37.21/s  (1.162s,   27.53/s)  LR: 1.181e-02  Data: 0.006 (0.102)
+Train: 59 [ 103/104 (100%)]  Loss:  3.009967 (3.5570)  Time: 0.896s,   35.70/s  (1.154s,   27.73/s)  LR: 1.181e-02  Data: 0.000 (0.099)
+Test: [   0/104]  Time: 10.489 (10.489)  Loss:  1.2568 (1.2568)  Acc@1: 71.8750 (71.8750)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.525 (0.919)  Loss:  1.0703 (1.0512)  Acc@1: 68.7500 (69.1789)  Acc@5: 93.7500 (93.9338)
+Test: [ 100/104]  Time: 0.126 (0.720)  Loss:  0.3325 (0.9010)  Acc@1: 100.0000 (75.6498)  Acc@5: 100.0000 (94.9876)
+Test: [ 104/104]  Time: 0.041 (0.696)  Loss:  0.1170 (0.8815)  Acc@1: 100.0000 (76.3576)  Acc@5: 100.0000 (95.1395)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-59.pth.tar', 76.35763576357635)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-51.pth.tar', 75.45754575457546)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-43.pth.tar', 73.98739873987398)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-45.pth.tar', 73.6873687368737)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-58.pth.tar', 73.32733273327332)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-53.pth.tar', 72.87728772877287)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-54.pth.tar', 72.75727572757276)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-52.pth.tar', 72.60726072607261)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-50.pth.tar', 72.48724872487249)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-41.pth.tar', 72.39723972397239)
+
+Epoch: 59 took 194.020s. It used 03:15:07 and still needs 01:08:17 to complete!
+
+Train: 60 [   0/104 (  0%)]  Loss:  3.512839 (3.5128)  Time: 14.721s,    2.17/s  (14.721s,    2.17/s)  LR: 1.063e-02  Data: 9.770 (9.770)
+Train: 60 [  50/104 ( 49%)]  Loss:  4.347227 (3.4574)  Time: 0.961s,   33.31/s  (1.413s,   22.64/s)  LR: 1.063e-02  Data: 0.008 (0.206)
+Train: 60 [ 100/104 ( 97%)]  Loss:  4.261514 (3.5414)  Time: 0.907s,   35.29/s  (1.172s,   27.30/s)  LR: 1.063e-02  Data: 0.006 (0.109)
+Train: 60 [ 103/104 (100%)]  Loss:  3.340962 (3.5341)  Time: 0.856s,   37.37/s  (1.163s,   27.51/s)  LR: 1.063e-02  Data: 0.000 (0.106)
+Test: [   0/104]  Time: 10.631 (10.631)  Loss:  0.5327 (0.5327)  Acc@1: 90.6250 (90.6250)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.556 (0.915)  Loss:  0.8394 (1.0953)  Acc@1: 75.0000 (65.9926)  Acc@5: 93.7500 (94.5466)
+Test: [ 100/104]  Time: 0.123 (0.720)  Loss:  0.3992 (0.9006)  Acc@1: 96.8750 (73.7314)  Acc@5: 100.0000 (95.2042)
+Test: [ 104/104]  Time: 0.043 (0.697)  Loss:  0.0263 (0.8806)  Acc@1: 100.0000 (74.4074)  Acc@5: 100.0000 (95.3495)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-59.pth.tar', 76.35763576357635)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-51.pth.tar', 75.45754575457546)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-60.pth.tar', 74.4074407440744)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-43.pth.tar', 73.98739873987398)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-45.pth.tar', 73.6873687368737)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-58.pth.tar', 73.32733273327332)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-53.pth.tar', 72.87728772877287)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-54.pth.tar', 72.75727572757276)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-52.pth.tar', 72.60726072607261)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-50.pth.tar', 72.48724872487249)
+
+Epoch: 60 took 195.026s. It used 03:18:23 and still needs 01:05:02 to complete!
+
+Train: 61 [   0/104 (  0%)]  Loss:  3.160352 (3.1604)  Time: 14.068s,    2.27/s  (14.068s,    2.27/s)  LR: 1.063e-02  Data: 9.041 (9.041)
+Train: 61 [  50/104 ( 49%)]  Loss:  4.341507 (3.5032)  Time: 1.090s,   29.36/s  (1.395s,   22.95/s)  LR: 1.063e-02  Data: 0.013 (0.192)
+Train: 61 [ 100/104 ( 97%)]  Loss:  2.996497 (3.4169)  Time: 0.866s,   36.97/s  (1.164s,   27.49/s)  LR: 1.063e-02  Data: 0.006 (0.101)
+Train: 61 [ 103/104 (100%)]  Loss:  3.297578 (3.4110)  Time: 0.858s,   37.29/s  (1.155s,   27.70/s)  LR: 1.063e-02  Data: 0.000 (0.098)
+Test: [   0/104]  Time: 10.567 (10.567)  Loss:  0.8887 (0.8887)  Acc@1: 84.3750 (84.3750)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.558 (0.918)  Loss:  0.6733 (1.1385)  Acc@1: 84.3750 (66.8505)  Acc@5: 96.8750 (94.5466)
+Test: [ 100/104]  Time: 0.124 (0.722)  Loss:  0.0559 (0.9569)  Acc@1: 100.0000 (73.6386)  Acc@5: 100.0000 (95.2351)
+Test: [ 104/104]  Time: 0.042 (0.698)  Loss:  0.1786 (0.9413)  Acc@1: 100.0000 (74.3174)  Acc@5: 100.0000 (95.3795)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-59.pth.tar', 76.35763576357635)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-51.pth.tar', 75.45754575457546)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-60.pth.tar', 74.4074407440744)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-61.pth.tar', 74.31743174317431)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-43.pth.tar', 73.98739873987398)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-45.pth.tar', 73.6873687368737)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-58.pth.tar', 73.32733273327332)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-53.pth.tar', 72.87728772877287)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-54.pth.tar', 72.75727572757276)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-52.pth.tar', 72.60726072607261)
+
+Epoch: 61 took 194.312s. It used 03:21:37 and still needs 01:01:47 to complete!
+
+Train: 62 [   0/104 (  0%)]  Loss:  3.925666 (3.9257)  Time: 15.168s,    2.11/s  (15.168s,    2.11/s)  LR: 1.063e-02  Data: 9.473 (9.473)
+Train: 62 [  50/104 ( 49%)]  Loss:  3.911804 (3.3826)  Time: 0.968s,   33.05/s  (1.415s,   22.61/s)  LR: 1.063e-02  Data: 0.007 (0.200)
+Train: 62 [ 100/104 ( 97%)]  Loss:  2.754676 (3.3699)  Time: 0.873s,   36.66/s  (1.176s,   27.20/s)  LR: 1.063e-02  Data: 0.007 (0.106)
+Train: 62 [ 103/104 (100%)]  Loss:  3.575581 (3.3709)  Time: 0.858s,   37.29/s  (1.168s,   27.40/s)  LR: 1.063e-02  Data: 0.000 (0.103)
+Test: [   0/104]  Time: 10.667 (10.667)  Loss:  0.4976 (0.4976)  Acc@1: 87.5000 (87.5000)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.558 (0.919)  Loss:  0.8423 (1.0809)  Acc@1: 87.5000 (69.7304)  Acc@5: 93.7500 (94.6691)
+Test: [ 100/104]  Time: 0.124 (0.721)  Loss:  0.3413 (0.8958)  Acc@1: 96.8750 (76.8564)  Acc@5: 100.0000 (95.5136)
+Test: [ 104/104]  Time: 0.048 (0.698)  Loss:  0.0200 (0.8716)  Acc@1: 100.0000 (77.5578)  Acc@5: 100.0000 (95.6496)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-62.pth.tar', 77.55775577557756)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-59.pth.tar', 76.35763576357635)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-51.pth.tar', 75.45754575457546)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-60.pth.tar', 74.4074407440744)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-61.pth.tar', 74.31743174317431)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-43.pth.tar', 73.98739873987398)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-45.pth.tar', 73.6873687368737)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-58.pth.tar', 73.32733273327332)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-53.pth.tar', 72.87728772877287)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-54.pth.tar', 72.75727572757276)
+
+Epoch: 62 took 195.564s. It used 03:24:52 and still needs 00:58:32 to complete!
+
+Train: 63 [   0/104 (  0%)]  Loss:  2.910702 (2.9107)  Time: 14.577s,    2.20/s  (14.577s,    2.20/s)  LR: 1.063e-02  Data: 9.651 (9.651)
+Train: 63 [  50/104 ( 49%)]  Loss:  2.898317 (3.3055)  Time: 0.996s,   32.13/s  (1.391s,   23.01/s)  LR: 1.063e-02  Data: 0.019 (0.203)
+Train: 63 [ 100/104 ( 97%)]  Loss:  2.999857 (3.3353)  Time: 0.859s,   37.26/s  (1.161s,   27.56/s)  LR: 1.063e-02  Data: 0.006 (0.107)
+Train: 63 [ 103/104 (100%)]  Loss:  3.215053 (3.3303)  Time: 0.855s,   37.43/s  (1.152s,   27.77/s)  LR: 1.063e-02  Data: 0.000 (0.104)
+Test: [   0/104]  Time: 10.465 (10.465)  Loss:  1.2764 (1.2764)  Acc@1: 59.3750 (59.3750)  Acc@5: 96.8750 (96.8750)
+Test: [  50/104]  Time: 0.531 (0.910)  Loss:  1.0713 (1.2493)  Acc@1: 81.2500 (63.7255)  Acc@5: 90.6250 (92.2794)
+Test: [ 100/104]  Time: 0.124 (0.719)  Loss:  0.4795 (0.9917)  Acc@1: 96.8750 (72.6176)  Acc@5: 96.8750 (93.9356)
+Test: [ 104/104]  Time: 0.042 (0.695)  Loss:  0.3350 (0.9673)  Acc@1: 100.0000 (73.3873)  Acc@5: 100.0000 (94.1194)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-62.pth.tar', 77.55775577557756)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-59.pth.tar', 76.35763576357635)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-51.pth.tar', 75.45754575457546)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-60.pth.tar', 74.4074407440744)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-61.pth.tar', 74.31743174317431)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-43.pth.tar', 73.98739873987398)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-45.pth.tar', 73.6873687368737)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-63.pth.tar', 73.38733873387339)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-58.pth.tar', 73.32733273327332)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-53.pth.tar', 72.87728772877287)
+
+Epoch: 63 took 193.732s. It used 03:28:06 and still needs 00:55:16 to complete!
+
+Train: 64 [   0/104 (  0%)]  Loss:  3.230376 (3.2304)  Time: 15.273s,    2.10/s  (15.273s,    2.10/s)  LR: 1.063e-02  Data: 10.286 (10.286)
+Train: 64 [  50/104 ( 49%)]  Loss:  2.828044 (3.4516)  Time: 1.008s,   31.74/s  (1.391s,   23.01/s)  LR: 1.063e-02  Data: 0.007 (0.216)
+Train: 64 [ 100/104 ( 97%)]  Loss:  2.932735 (3.4509)  Time: 0.866s,   36.94/s  (1.164s,   27.50/s)  LR: 1.063e-02  Data: 0.006 (0.114)
+Train: 64 [ 103/104 (100%)]  Loss:  4.233704 (3.4667)  Time: 0.869s,   36.82/s  (1.155s,   27.70/s)  LR: 1.063e-02  Data: 0.000 (0.110)
+Test: [   0/104]  Time: 10.327 (10.327)  Loss:  1.6143 (1.6143)  Acc@1: 62.5000 (62.5000)  Acc@5: 81.2500 (81.2500)
+Test: [  50/104]  Time: 0.585 (0.913)  Loss:  0.3315 (1.1791)  Acc@1: 93.7500 (66.7279)  Acc@5: 93.7500 (94.1176)
+Test: [ 100/104]  Time: 0.124 (0.718)  Loss:  0.1099 (0.9980)  Acc@1: 100.0000 (73.3292)  Acc@5: 100.0000 (94.6782)
+Test: [ 104/104]  Time: 0.042 (0.695)  Loss:  0.1205 (0.9768)  Acc@1: 100.0000 (74.0474)  Acc@5: 100.0000 (94.8395)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-62.pth.tar', 77.55775577557756)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-59.pth.tar', 76.35763576357635)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-51.pth.tar', 75.45754575457546)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-60.pth.tar', 74.4074407440744)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-61.pth.tar', 74.31743174317431)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-64.pth.tar', 74.04740474047405)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-43.pth.tar', 73.98739873987398)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-45.pth.tar', 73.6873687368737)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-63.pth.tar', 73.38733873387339)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-58.pth.tar', 73.32733273327332)
+
+Epoch: 64 took 193.984s. It used 03:31:20 and still needs 00:52:01 to complete!
+
+Train: 65 [   0/104 (  0%)]  Loss:  3.201678 (3.2017)  Time: 14.693s,    2.18/s  (14.693s,    2.18/s)  LR: 1.063e-02  Data: 9.604 (9.604)
+Train: 65 [  50/104 ( 49%)]  Loss:  3.347591 (3.4243)  Time: 1.039s,   30.81/s  (1.391s,   23.01/s)  LR: 1.063e-02  Data: 0.008 (0.204)
+Train: 65 [ 100/104 ( 97%)]  Loss:  2.661842 (3.3595)  Time: 0.868s,   36.88/s  (1.159s,   27.62/s)  LR: 1.063e-02  Data: 0.006 (0.107)
+Train: 65 [ 103/104 (100%)]  Loss:  3.851856 (3.3550)  Time: 0.853s,   37.53/s  (1.151s,   27.81/s)  LR: 1.063e-02  Data: 0.000 (0.104)
+Test: [   0/104]  Time: 10.712 (10.712)  Loss:  1.9229 (1.9229)  Acc@1: 56.2500 (56.2500)  Acc@5: 90.6250 (90.6250)
+Test: [  50/104]  Time: 0.545 (0.925)  Loss:  1.2607 (1.1612)  Acc@1: 71.8750 (66.8505)  Acc@5: 90.6250 (93.2598)
+Test: [ 100/104]  Time: 0.126 (0.723)  Loss:  0.1306 (0.9904)  Acc@1: 100.0000 (73.5458)  Acc@5: 100.0000 (94.2450)
+Test: [ 104/104]  Time: 0.044 (0.700)  Loss:  0.0206 (0.9679)  Acc@1: 100.0000 (74.2274)  Acc@5: 100.0000 (94.3894)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-62.pth.tar', 77.55775577557756)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-59.pth.tar', 76.35763576357635)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-51.pth.tar', 75.45754575457546)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-60.pth.tar', 74.4074407440744)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-61.pth.tar', 74.31743174317431)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-65.pth.tar', 74.22742274227423)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-64.pth.tar', 74.04740474047405)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-43.pth.tar', 73.98739873987398)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-45.pth.tar', 73.6873687368737)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-63.pth.tar', 73.38733873387339)
+
+Epoch: 65 took 193.975s. It used 03:34:34 and still needs 00:48:46 to complete!
+
+Train: 66 [   0/104 (  0%)]  Loss:  4.006045 (4.0060)  Time: 14.526s,    2.20/s  (14.526s,    2.20/s)  LR: 1.063e-02  Data: 9.397 (9.397)
+Train: 66 [  50/104 ( 49%)]  Loss:  2.613150 (3.4138)  Time: 0.977s,   32.77/s  (1.391s,   23.00/s)  LR: 1.063e-02  Data: 0.008 (0.200)
+Train: 66 [ 100/104 ( 97%)]  Loss:  3.366789 (3.4383)  Time: 0.860s,   37.20/s  (1.162s,   27.54/s)  LR: 1.063e-02  Data: 0.006 (0.106)
+Train: 66 [ 103/104 (100%)]  Loss:  3.082764 (3.4390)  Time: 0.851s,   37.61/s  (1.153s,   27.75/s)  LR: 1.063e-02  Data: 0.000 (0.103)
+Test: [   0/104]  Time: 10.459 (10.459)  Loss:  0.8037 (0.8037)  Acc@1: 78.1250 (78.1250)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.561 (0.918)  Loss:  1.0410 (1.2185)  Acc@1: 81.2500 (64.5833)  Acc@5: 93.7500 (92.4020)
+Test: [ 100/104]  Time: 0.126 (0.722)  Loss:  0.3335 (1.0125)  Acc@1: 93.7500 (72.1535)  Acc@5: 100.0000 (93.8119)
+Test: [ 104/104]  Time: 0.044 (0.698)  Loss:  0.1727 (0.9914)  Acc@1: 100.0000 (72.8773)  Acc@5: 100.0000 (93.9694)
+Epoch: 66 took 194.112s. It used 03:37:48 and still needs 00:45:30 to complete!
+
+Train: 67 [   0/104 (  0%)]  Loss:  3.853364 (3.8534)  Time: 14.466s,    2.21/s  (14.466s,    2.21/s)  LR: 1.063e-02  Data: 9.353 (9.353)
+Train: 67 [  50/104 ( 49%)]  Loss:  2.634784 (3.4303)  Time: 0.989s,   32.37/s  (1.389s,   23.04/s)  LR: 1.063e-02  Data: 0.021 (0.199)
+Train: 67 [ 100/104 ( 97%)]  Loss:  4.048381 (3.3733)  Time: 0.866s,   36.97/s  (1.159s,   27.60/s)  LR: 1.063e-02  Data: 0.006 (0.105)
+Train: 67 [ 103/104 (100%)]  Loss:  3.469663 (3.3808)  Time: 0.904s,   35.38/s  (1.151s,   27.79/s)  LR: 1.063e-02  Data: 0.000 (0.102)
+Test: [   0/104]  Time: 10.419 (10.419)  Loss:  0.8486 (0.8486)  Acc@1: 78.1250 (78.1250)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.575 (0.913)  Loss:  0.5776 (1.1430)  Acc@1: 93.7500 (65.5637)  Acc@5: 93.7500 (94.2402)
+Test: [ 100/104]  Time: 0.124 (0.719)  Loss:  0.5220 (0.9696)  Acc@1: 81.2500 (72.5557)  Acc@5: 100.0000 (95.1114)
+Test: [ 104/104]  Time: 0.042 (0.696)  Loss:  0.1187 (0.9549)  Acc@1: 100.0000 (73.1473)  Acc@5: 100.0000 (95.2295)
+Epoch: 67 took 193.715s. It used 03:41:02 and still needs 00:42:15 to complete!
+
+Train: 68 [   0/104 (  0%)]  Loss:  2.931122 (2.9311)  Time: 15.289s,    2.09/s  (15.289s,    2.09/s)  LR: 1.063e-02  Data: 10.491 (10.491)
+Train: 68 [  50/104 ( 49%)]  Loss:  3.439028 (3.3261)  Time: 1.155s,   27.70/s  (1.388s,   23.05/s)  LR: 1.063e-02  Data: 0.018 (0.221)
+Train: 68 [ 100/104 ( 97%)]  Loss:  4.001305 (3.2479)  Time: 0.861s,   37.15/s  (1.161s,   27.55/s)  LR: 1.063e-02  Data: 0.006 (0.116)
+Train: 68 [ 103/104 (100%)]  Loss:  2.780961 (3.2517)  Time: 0.858s,   37.31/s  (1.153s,   27.75/s)  LR: 1.063e-02  Data: 0.000 (0.113)
+Test: [   0/104]  Time: 10.466 (10.466)  Loss:  0.8247 (0.8247)  Acc@1: 81.2500 (81.2500)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.540 (0.912)  Loss:  0.4221 (1.0945)  Acc@1: 93.7500 (68.8113)  Acc@5: 96.8750 (94.4240)
+Test: [ 100/104]  Time: 0.124 (0.720)  Loss:  0.8906 (0.9487)  Acc@1: 87.5000 (74.5359)  Acc@5: 96.8750 (95.1733)
+Test: [ 104/104]  Time: 0.041 (0.696)  Loss:  0.2498 (0.9355)  Acc@1: 100.0000 (75.1575)  Acc@5: 100.0000 (95.3195)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-62.pth.tar', 77.55775577557756)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-59.pth.tar', 76.35763576357635)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-51.pth.tar', 75.45754575457546)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-68.pth.tar', 75.15751575157516)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-60.pth.tar', 74.4074407440744)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-61.pth.tar', 74.31743174317431)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-65.pth.tar', 74.22742274227423)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-64.pth.tar', 74.04740474047405)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-43.pth.tar', 73.98739873987398)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-45.pth.tar', 73.6873687368737)
+
+Epoch: 68 took 193.957s. It used 03:44:16 and still needs 00:39:00 to complete!
+
+Train: 69 [   0/104 (  0%)]  Loss:  3.042424 (3.0424)  Time: 14.199s,    2.25/s  (14.199s,    2.25/s)  LR: 1.063e-02  Data: 9.040 (9.040)
+Train: 69 [  50/104 ( 49%)]  Loss:  3.920249 (3.3903)  Time: 1.031s,   31.04/s  (1.382s,   23.15/s)  LR: 1.063e-02  Data: 0.013 (0.193)
+Train: 69 [ 100/104 ( 97%)]  Loss:  3.032132 (3.3356)  Time: 0.864s,   37.03/s  (1.158s,   27.64/s)  LR: 1.063e-02  Data: 0.006 (0.102)
+Train: 69 [ 103/104 (100%)]  Loss:  2.873416 (3.3360)  Time: 0.854s,   37.48/s  (1.149s,   27.85/s)  LR: 1.063e-02  Data: 0.000 (0.099)
+Test: [   0/104]  Time: 10.449 (10.449)  Loss:  1.7383 (1.7383)  Acc@1: 37.5000 (37.5000)  Acc@5: 90.6250 (90.6250)
+Test: [  50/104]  Time: 0.586 (0.916)  Loss:  0.3599 (1.1932)  Acc@1: 93.7500 (63.0515)  Acc@5: 96.8750 (92.9534)
+Test: [ 100/104]  Time: 0.123 (0.719)  Loss:  0.3369 (0.9954)  Acc@1: 96.8750 (71.5037)  Acc@5: 96.8750 (94.2450)
+Test: [ 104/104]  Time: 0.043 (0.695)  Loss:  0.0692 (0.9702)  Acc@1: 100.0000 (72.3372)  Acc@5: 100.0000 (94.4194)
+Epoch: 69 took 193.388s. It used 03:47:29 and still needs 00:35:44 to complete!
+
+Train: 70 [   0/104 (  0%)]  Loss:  2.817817 (2.8178)  Time: 15.079s,    2.12/s  (15.079s,    2.12/s)  LR: 9.566e-03  Data: 9.461 (9.461)
+Train: 70 [  50/104 ( 49%)]  Loss:  3.862642 (3.3607)  Time: 1.008s,   31.75/s  (1.388s,   23.06/s)  LR: 9.566e-03  Data: 0.008 (0.200)
+Train: 70 [ 100/104 ( 97%)]  Loss:  4.582601 (3.4329)  Time: 0.873s,   36.67/s  (1.159s,   27.60/s)  LR: 9.566e-03  Data: 0.006 (0.105)
+Train: 70 [ 103/104 (100%)]  Loss:  2.411475 (3.4144)  Time: 0.909s,   35.21/s  (1.151s,   27.79/s)  LR: 9.566e-03  Data: 0.000 (0.102)
+Test: [   0/104]  Time: 10.680 (10.680)  Loss:  1.2412 (1.2412)  Acc@1: 65.6250 (65.6250)  Acc@5: 93.7500 (93.7500)
+Test: [  50/104]  Time: 0.538 (0.916)  Loss:  0.5322 (1.1742)  Acc@1: 90.6250 (68.0147)  Acc@5: 93.7500 (93.8113)
+Test: [ 100/104]  Time: 0.127 (0.720)  Loss:  0.6064 (0.9785)  Acc@1: 87.5000 (76.7327)  Acc@5: 96.8750 (94.9876)
+Test: [ 104/104]  Time: 0.042 (0.697)  Loss:  0.6904 (0.9603)  Acc@1: 100.0000 (77.4077)  Acc@5: 100.0000 (95.1395)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-62.pth.tar', 77.55775577557756)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-70.pth.tar', 77.40774077407741)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-59.pth.tar', 76.35763576357635)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-51.pth.tar', 75.45754575457546)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-68.pth.tar', 75.15751575157516)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-60.pth.tar', 74.4074407440744)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-61.pth.tar', 74.31743174317431)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-65.pth.tar', 74.22742274227423)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-64.pth.tar', 74.04740474047405)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-43.pth.tar', 73.98739873987398)
+
+Epoch: 70 took 193.879s. It used 03:50:43 and still needs 00:32:29 to complete!
+
+Train: 71 [   0/104 (  0%)]  Loss:  2.932155 (2.9322)  Time: 14.831s,    2.16/s  (14.831s,    2.16/s)  LR: 9.566e-03  Data: 9.743 (9.743)
+Train: 71 [  50/104 ( 49%)]  Loss:  2.741738 (3.0792)  Time: 1.032s,   31.02/s  (1.394s,   22.96/s)  LR: 9.566e-03  Data: 0.008 (0.206)
+Train: 71 [ 100/104 ( 97%)]  Loss:  2.952710 (3.2126)  Time: 0.908s,   35.26/s  (1.164s,   27.48/s)  LR: 9.566e-03  Data: 0.006 (0.108)
+Train: 71 [ 103/104 (100%)]  Loss:  4.203084 (3.2192)  Time: 0.856s,   37.37/s  (1.156s,   27.69/s)  LR: 9.566e-03  Data: 0.000 (0.105)
+Test: [   0/104]  Time: 10.481 (10.481)  Loss:  1.1689 (1.1689)  Acc@1: 81.2500 (81.2500)  Acc@5: 90.6250 (90.6250)
+Test: [  50/104]  Time: 0.532 (0.915)  Loss:  1.3066 (1.1418)  Acc@1: 90.6250 (69.6691)  Acc@5: 93.7500 (93.9338)
+Test: [ 100/104]  Time: 0.126 (0.719)  Loss:  0.1478 (0.9939)  Acc@1: 100.0000 (75.8354)  Acc@5: 100.0000 (94.9257)
+Test: [ 104/104]  Time: 0.042 (0.695)  Loss:  0.3813 (0.9751)  Acc@1: 100.0000 (76.4476)  Acc@5: 100.0000 (95.0795)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-62.pth.tar', 77.55775577557756)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-70.pth.tar', 77.40774077407741)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-71.pth.tar', 76.44764476447645)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-59.pth.tar', 76.35763576357635)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-51.pth.tar', 75.45754575457546)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-68.pth.tar', 75.15751575157516)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-60.pth.tar', 74.4074407440744)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-61.pth.tar', 74.31743174317431)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-65.pth.tar', 74.22742274227423)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-64.pth.tar', 74.04740474047405)
+
+Epoch: 71 took 194.012s. It used 03:53:57 and still needs 00:29:14 to complete!
+
+Train: 72 [   0/104 (  0%)]  Loss:  3.007226 (3.0072)  Time: 14.296s,    2.24/s  (14.296s,    2.24/s)  LR: 9.566e-03  Data: 9.281 (9.281)
+Train: 72 [  50/104 ( 49%)]  Loss:  2.635836 (3.2759)  Time: 0.971s,   32.95/s  (1.387s,   23.07/s)  LR: 9.566e-03  Data: 0.009 (0.197)
+Train: 72 [ 100/104 ( 97%)]  Loss:  2.717298 (3.1557)  Time: 0.868s,   36.87/s  (1.159s,   27.62/s)  LR: 9.566e-03  Data: 0.006 (0.104)
+Train: 72 [ 103/104 (100%)]  Loss:  3.105199 (3.1548)  Time: 0.855s,   37.45/s  (1.150s,   27.82/s)  LR: 9.566e-03  Data: 0.000 (0.101)
+Test: [   0/104]  Time: 10.767 (10.767)  Loss:  1.4014 (1.4014)  Acc@1: 62.5000 (62.5000)  Acc@5: 84.3750 (84.3750)
+Test: [  50/104]  Time: 0.557 (0.924)  Loss:  0.4424 (1.1243)  Acc@1: 93.7500 (66.9730)  Acc@5: 93.7500 (93.4436)
+Test: [ 100/104]  Time: 0.124 (0.721)  Loss:  0.1476 (0.8767)  Acc@1: 96.8750 (75.7735)  Acc@5: 100.0000 (94.7401)
+Test: [ 104/104]  Time: 0.042 (0.697)  Loss:  0.0798 (0.8540)  Acc@1: 100.0000 (76.4776)  Acc@5: 100.0000 (94.8995)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-62.pth.tar', 77.55775577557756)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-70.pth.tar', 77.40774077407741)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-72.pth.tar', 76.47764776477648)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-71.pth.tar', 76.44764476447645)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-59.pth.tar', 76.35763576357635)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-51.pth.tar', 75.45754575457546)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-68.pth.tar', 75.15751575157516)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-60.pth.tar', 74.4074407440744)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-61.pth.tar', 74.31743174317431)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-65.pth.tar', 74.22742274227423)
+
+Epoch: 72 took 193.699s. It used 03:57:11 and still needs 00:25:59 to complete!
+
+Train: 73 [   0/104 (  0%)]  Loss:  3.162449 (3.1624)  Time: 15.267s,    2.10/s  (15.267s,    2.10/s)  LR: 9.566e-03  Data: 9.583 (9.583)
+Train: 73 [  50/104 ( 49%)]  Loss:  4.441093 (3.0012)  Time: 1.002s,   31.93/s  (1.425s,   22.45/s)  LR: 9.566e-03  Data: 0.014 (0.203)
+Train: 73 [ 100/104 ( 97%)]  Loss:  2.513494 (3.1043)  Time: 0.866s,   36.97/s  (1.178s,   27.16/s)  LR: 9.566e-03  Data: 0.007 (0.107)
+Train: 73 [ 103/104 (100%)]  Loss:  3.606165 (3.1138)  Time: 0.854s,   37.45/s  (1.169s,   27.37/s)  LR: 9.566e-03  Data: 0.000 (0.104)
+Test: [   0/104]  Time: 10.400 (10.400)  Loss:  0.7612 (0.7612)  Acc@1: 90.6250 (90.6250)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.602 (0.913)  Loss:  1.0303 (1.1203)  Acc@1: 81.2500 (68.6887)  Acc@5: 93.7500 (94.9142)
+Test: [ 100/104]  Time: 0.124 (0.721)  Loss:  0.1243 (0.9368)  Acc@1: 100.0000 (76.0829)  Acc@5: 100.0000 (95.6064)
+Test: [ 104/104]  Time: 0.042 (0.697)  Loss:  0.1177 (0.9134)  Acc@1: 100.0000 (76.7777)  Acc@5: 100.0000 (95.7396)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-62.pth.tar', 77.55775577557756)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-70.pth.tar', 77.40774077407741)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-73.pth.tar', 76.77767776777678)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-72.pth.tar', 76.47764776477648)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-71.pth.tar', 76.44764476447645)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-59.pth.tar', 76.35763576357635)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-51.pth.tar', 75.45754575457546)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-68.pth.tar', 75.15751575157516)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-60.pth.tar', 74.4074407440744)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-61.pth.tar', 74.31743174317431)
+
+Epoch: 73 took 195.735s. It used 04:00:27 and still needs 00:22:44 to complete!
+
+Train: 74 [   0/104 (  0%)]  Loss:  3.372619 (3.3726)  Time: 14.892s,    2.15/s  (14.892s,    2.15/s)  LR: 9.566e-03  Data: 9.852 (9.852)
+Train: 74 [  50/104 ( 49%)]  Loss:  3.846120 (3.3605)  Time: 0.989s,   32.35/s  (1.389s,   23.03/s)  LR: 9.566e-03  Data: 0.008 (0.207)
+Train: 74 [ 100/104 ( 97%)]  Loss:  3.060359 (3.3324)  Time: 0.875s,   36.58/s  (1.164s,   27.48/s)  LR: 9.566e-03  Data: 0.006 (0.109)
+Train: 74 [ 103/104 (100%)]  Loss:  3.615148 (3.3375)  Time: 0.856s,   37.40/s  (1.156s,   27.69/s)  LR: 9.566e-03  Data: 0.000 (0.106)
+Test: [   0/104]  Time: 10.533 (10.533)  Loss:  1.4697 (1.4697)  Acc@1: 59.3750 (59.3750)  Acc@5: 81.2500 (81.2500)
+Test: [  50/104]  Time: 0.552 (0.921)  Loss:  1.7695 (1.6775)  Acc@1: 62.5000 (54.5956)  Acc@5: 81.2500 (86.5196)
+Test: [ 100/104]  Time: 0.125 (0.721)  Loss:  0.4934 (1.4176)  Acc@1: 90.6250 (63.0260)  Acc@5: 96.8750 (89.2327)
+Test: [ 104/104]  Time: 0.045 (0.697)  Loss:  1.1582 (1.4086)  Acc@1: 80.0000 (63.4863)  Acc@5: 80.0000 (89.1989)
+Epoch: 74 took 194.313s. It used 04:03:41 and still needs 00:19:29 to complete!
+
+Train: 75 [   0/104 (  0%)]  Loss:  4.236552 (4.2366)  Time: 15.787s,    2.03/s  (15.787s,    2.03/s)  LR: 9.566e-03  Data: 10.788 (10.788)
+Train: 75 [  50/104 ( 49%)]  Loss:  2.827356 (3.1219)  Time: 0.986s,   32.46/s  (1.397s,   22.91/s)  LR: 9.566e-03  Data: 0.020 (0.226)
+Train: 75 [ 100/104 ( 97%)]  Loss:  3.966578 (3.2504)  Time: 0.860s,   37.20/s  (1.162s,   27.53/s)  LR: 9.566e-03  Data: 0.006 (0.118)
+Train: 75 [ 103/104 (100%)]  Loss:  2.897948 (3.2438)  Time: 0.860s,   37.19/s  (1.154s,   27.74/s)  LR: 9.566e-03  Data: 0.000 (0.115)
+Test: [   0/104]  Time: 10.557 (10.557)  Loss:  0.8516 (0.8516)  Acc@1: 71.8750 (71.8750)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.551 (0.954)  Loss:  0.6572 (1.0247)  Acc@1: 90.6250 (71.0784)  Acc@5: 93.7500 (94.3015)
+Test: [ 100/104]  Time: 0.125 (0.740)  Loss:  0.1092 (0.8374)  Acc@1: 100.0000 (78.3416)  Acc@5: 100.0000 (95.2351)
+Test: [ 104/104]  Time: 0.042 (0.715)  Loss:  0.1519 (0.8181)  Acc@1: 100.0000 (78.9379)  Acc@5: 100.0000 (95.3795)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-75.pth.tar', 78.93789378937893)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-62.pth.tar', 77.55775577557756)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-70.pth.tar', 77.40774077407741)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-73.pth.tar', 76.77767776777678)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-72.pth.tar', 76.47764776477648)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-71.pth.tar', 76.44764476447645)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-59.pth.tar', 76.35763576357635)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-51.pth.tar', 75.45754575457546)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-68.pth.tar', 75.15751575157516)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-60.pth.tar', 74.4074407440744)
+
+Epoch: 75 took 196.030s. It used 04:06:57 and still needs 00:16:14 to complete!
+
+Train: 76 [   0/104 (  0%)]  Loss:  3.970026 (3.9700)  Time: 14.702s,    2.18/s  (14.702s,    2.18/s)  LR: 9.566e-03  Data: 9.693 (9.693)
+Train: 76 [  50/104 ( 49%)]  Loss:  4.346706 (3.2225)  Time: 1.099s,   29.12/s  (1.391s,   23.00/s)  LR: 9.566e-03  Data: 0.018 (0.205)
+Train: 76 [ 100/104 ( 97%)]  Loss:  2.490454 (3.2682)  Time: 0.859s,   37.24/s  (1.161s,   27.57/s)  LR: 9.566e-03  Data: 0.006 (0.109)
+Train: 76 [ 103/104 (100%)]  Loss:  4.623200 (3.2730)  Time: 0.854s,   37.45/s  (1.152s,   27.77/s)  LR: 9.566e-03  Data: 0.000 (0.106)
+Test: [   0/104]  Time: 10.484 (10.484)  Loss:  0.8838 (0.8838)  Acc@1: 78.1250 (78.1250)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.561 (0.916)  Loss:  0.7305 (1.1344)  Acc@1: 87.5000 (69.7917)  Acc@5: 93.7500 (94.1176)
+Test: [ 100/104]  Time: 0.125 (0.720)  Loss:  0.0922 (0.9510)  Acc@1: 96.8750 (75.9592)  Acc@5: 100.0000 (94.9876)
+Test: [ 104/104]  Time: 0.042 (0.696)  Loss:  0.0605 (0.9294)  Acc@1: 100.0000 (76.6577)  Acc@5: 100.0000 (95.1395)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-75.pth.tar', 78.93789378937893)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-62.pth.tar', 77.55775577557756)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-70.pth.tar', 77.40774077407741)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-73.pth.tar', 76.77767776777678)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-76.pth.tar', 76.65766576657666)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-72.pth.tar', 76.47764776477648)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-71.pth.tar', 76.44764476447645)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-59.pth.tar', 76.35763576357635)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-51.pth.tar', 75.45754575457546)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-68.pth.tar', 75.15751575157516)
+
+Epoch: 76 took 193.863s. It used 04:10:11 and still needs 00:12:59 to complete!
+
+Train: 77 [   0/104 (  0%)]  Loss:  2.461240 (2.4612)  Time: 15.476s,    2.07/s  (15.476s,    2.07/s)  LR: 9.566e-03  Data: 10.513 (10.513)
+Train: 77 [  50/104 ( 49%)]  Loss:  2.646588 (3.2479)  Time: 1.084s,   29.51/s  (1.398s,   22.90/s)  LR: 9.566e-03  Data: 0.020 (0.219)
+Train: 77 [ 100/104 ( 97%)]  Loss:  2.327190 (3.1644)  Time: 0.869s,   36.80/s  (1.167s,   27.43/s)  LR: 9.566e-03  Data: 0.006 (0.115)
+Train: 77 [ 103/104 (100%)]  Loss:  3.654557 (3.1643)  Time: 0.857s,   37.32/s  (1.158s,   27.63/s)  LR: 9.566e-03  Data: 0.000 (0.112)
+Test: [   0/104]  Time: 10.498 (10.498)  Loss:  1.3916 (1.3916)  Acc@1: 46.8750 (46.8750)  Acc@5: 100.0000 (100.0000)
+Test: [  50/104]  Time: 0.536 (0.959)  Loss:  0.7778 (1.2167)  Acc@1: 87.5000 (66.3603)  Acc@5: 93.7500 (93.1985)
+Test: [ 100/104]  Time: 0.126 (0.740)  Loss:  0.1807 (0.9733)  Acc@1: 96.8750 (74.3193)  Acc@5: 100.0000 (94.7092)
+Test: [ 104/104]  Time: 0.044 (0.716)  Loss:  0.1387 (0.9500)  Acc@1: 100.0000 (75.0375)  Acc@5: 100.0000 (94.8695)
+Epoch: 77 took 196.488s. It used 04:13:27 and still needs 00:09:44 to complete!
+
+Train: 78 [   0/104 (  0%)]  Loss:  2.296786 (2.2968)  Time: 15.128s,    2.12/s  (15.128s,    2.12/s)  LR: 9.566e-03  Data: 10.141 (10.141)
+Train: 78 [  50/104 ( 49%)]  Loss:  2.657033 (3.0436)  Time: 0.983s,   32.56/s  (1.378s,   23.21/s)  LR: 9.566e-03  Data: 0.009 (0.212)
+Train: 78 [ 100/104 ( 97%)]  Loss:  4.392707 (3.1442)  Time: 0.861s,   37.18/s  (1.158s,   27.63/s)  LR: 9.566e-03  Data: 0.006 (0.111)
+Train: 78 [ 103/104 (100%)]  Loss:  2.928906 (3.1472)  Time: 0.858s,   37.29/s  (1.150s,   27.84/s)  LR: 9.566e-03  Data: 0.000 (0.108)
+Test: [   0/104]  Time: 10.459 (10.459)  Loss:  1.5293 (1.5293)  Acc@1: 56.2500 (56.2500)  Acc@5: 93.7500 (93.7500)
+Test: [  50/104]  Time: 0.552 (0.919)  Loss:  0.6284 (1.2016)  Acc@1: 90.6250 (67.8309)  Acc@5: 93.7500 (93.8113)
+Test: [ 100/104]  Time: 0.125 (0.720)  Loss:  0.0880 (1.0152)  Acc@1: 100.0000 (73.2673)  Acc@5: 100.0000 (94.7092)
+Test: [ 104/104]  Time: 0.044 (0.697)  Loss:  0.8169 (0.9987)  Acc@1: 100.0000 (74.0474)  Acc@5: 100.0000 (94.8695)
+Epoch: 78 took 193.649s. It used 04:16:41 and still needs 00:06:29 to complete!
+
+Train: 79 [   0/104 (  0%)]  Loss:  3.750229 (3.7502)  Time: 15.426s,    2.07/s  (15.426s,    2.07/s)  LR: 9.566e-03  Data: 10.499 (10.499)
+Train: 79 [  50/104 ( 49%)]  Loss:  2.815987 (3.2981)  Time: 1.042s,   30.70/s  (1.388s,   23.06/s)  LR: 9.566e-03  Data: 0.008 (0.222)
+Train: 79 [ 100/104 ( 97%)]  Loss:  4.177979 (3.2323)  Time: 0.865s,   37.00/s  (1.162s,   27.53/s)  LR: 9.566e-03  Data: 0.006 (0.117)
+Train: 79 [ 103/104 (100%)]  Loss:  3.526746 (3.2406)  Time: 0.860s,   37.22/s  (1.154s,   27.73/s)  LR: 9.566e-03  Data: 0.000 (0.114)
+Test: [   0/104]  Time: 10.643 (10.643)  Loss:  2.1875 (2.1875)  Acc@1: 28.1250 (28.1250)  Acc@5: 81.2500 (81.2500)
+Test: [  50/104]  Time: 0.558 (0.920)  Loss:  1.0156 (1.1507)  Acc@1: 84.3750 (68.9951)  Acc@5: 93.7500 (94.3015)
+Test: [ 100/104]  Time: 0.125 (0.721)  Loss:  0.6890 (0.9674)  Acc@1: 93.7500 (76.2686)  Acc@5: 100.0000 (95.0804)
+Test: [ 104/104]  Time: 0.043 (0.698)  Loss:  0.1277 (0.9479)  Acc@1: 100.0000 (76.9877)  Acc@5: 100.0000 (95.2295)
+Current checkpoints:
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-75.pth.tar', 78.93789378937893)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-62.pth.tar', 77.55775577557756)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-70.pth.tar', 77.40774077407741)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-79.pth.tar', 76.98769876987699)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-73.pth.tar', 76.77767776777678)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-76.pth.tar', 76.65766576657666)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-72.pth.tar', 76.47764776477648)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-71.pth.tar', 76.44764476447645)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-59.pth.tar', 76.35763576357635)
+ ('./experiments/.../train/20220601-102401-inception_v4-299/checkpoint-51.pth.tar', 75.45754575457546)
+
+Epoch: 79 took 194.221s. It used 04:19:55 and still needs 00:03:14 to complete!
+
+*** Best metric: 78.93789378937893 (epoch 75)
