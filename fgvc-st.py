@@ -12,7 +12,7 @@ model = inception_v4(num_classes=105)
 checkpoint = torch.load('/content/drive/MyDrive/FGVC-Aircraft/checkpoint-72.pth.tar')
 model.load_state_dict(checkpoint['state_dict'])
 
-with open('/content/FGVC-Aircraft-Inception-v4/data/fgvc-aircraft-2013b/data/variants.txt', 'rb') as f:
+with open('/content/FGVC-Aircraft-Inception-v4/data/labels/variants.txt', 'rb') as f:
   classes = list(map(lambda x: x.decode("utf-8").strip('\n'), f.readlines()))
 
 def load_image(image_file):
